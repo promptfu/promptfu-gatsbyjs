@@ -1,0 +1,17 @@
+- url: https://dl.dropboxusercontent.com/s/tvfxnrwmiqwnexj/tetris_header.jpg?dl=0
+  name: tetris
+  alt: tetris_header
+  title: tetris
+  credit: Matthew Hassel
+
+# Sourced from https://www.pexels.com/
+- url: https://dl.dropboxusercontent.com/s/vn0ukskfl8ypgho/stress-large.jpg?dl=0
+  name: stress
+  alt: all the stress
+  title: stress
+  credit: https://www.pexels.com/
+- url: https://dl.dropboxusercontent.com/s/pm92mc9grot6hzc/black-and-white-factory-industrial-plant-large.jpg?dl=0
+  name: black-and-white-factory-industrial-plant
+  alt: all the pipes
+  title: black-and-white-factory-industrial-plant
+  credit: https://www.pexels.com/

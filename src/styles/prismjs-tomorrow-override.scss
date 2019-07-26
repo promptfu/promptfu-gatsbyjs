@@ -1,0 +1,21 @@
+code[class*="language-"],
+pre[class*="language-"] {
+    background: #343a40;
+    border-radius: .25rem;
+    color: #eff;
+    font-size: 0.85em;
+    line-height: 1.5;
+}
+
+code[class*="language-text"],
+pre[class*="language-text"] {
+    color: #e83e8c;
+}
+
+:not(pre) > code[class*="language-text"],
+pre[class*="language-text"] {
+    background: unset;
+    border: 1px solid #e8e8e8;
+    border-radius: .25rem;
+    font-size: 1em;
+}

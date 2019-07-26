@@ -1,0 +1,12 @@
+.grow {
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+  }
+  
+  .grow:hover {
+    transform: scale(1.2);
+    -moz-transition: scale(1.2);
+    -webkit-transition: scale(1.2);
+  }
+  

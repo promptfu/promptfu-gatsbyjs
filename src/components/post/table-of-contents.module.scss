@@ -1,0 +1,15 @@
+.tableOfContents{
+  margin-left: 0;
+  padding: 7.5px;
+  list-style: none;
+
+  > ul {
+    padding: 7.5px;
+    list-style: none;
+  }
+}
+  
+.tableOfContents::before{
+  content: "Contents";
+  font-weight: bold;
+}
