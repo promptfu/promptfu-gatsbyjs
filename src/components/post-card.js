@@ -4,12 +4,15 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "../components/post/image"
 import { Card, Row, Col } from "react-bootstrap"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faClock } from "@fortawesome/free-regular-svg-icons"
 import { faFolder, faTags } from "@fortawesome/free-solid-svg-icons"
 import PostCategories from "./post-categories"
 import PostCommentCount from "./post-comment-count"
 import PostTags from "./post-tags"
+
+config.autoAddCss = false
 
 const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, timeToRead, title, cardClass, cardBodyClass, cardButtonClass, horizontal }) => {
   const verticalPostCard = (
@@ -89,7 +92,7 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
               </span>
               <PostCommentCount slug={slug} title={title} className="d-inline-block" />
             </div>
-            <Card.Text dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
+            <Card.Text as="div" dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
             {/* <Button variant="dark" as={Link} to={slug} type="null" className={cardButtonClass}>read more</Button> */}
           </Card.Body>
         </Col>

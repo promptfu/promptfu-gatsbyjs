@@ -3,9 +3,12 @@ import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
 
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faComments } from "@fortawesome/free-regular-svg-icons"
 import { CommentCount } from "disqus-react"
+
+config.autoAddCss = false
 
 const propTypes = {
   className: PropTypes.string,

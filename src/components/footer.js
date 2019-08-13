@@ -5,6 +5,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { Container, Row, Col, Navbar } from "react-bootstrap"
 import Img from "gatsby-image"
 
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,
@@ -13,6 +14,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { faCopyright } from "@fortawesome/free-regular-svg-icons"
+
+config.autoAddCss = false
 
 const Footer = ({ siteDescription, siteTitle }) => {
   const data = useStaticQuery(graphql`

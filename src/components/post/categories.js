@@ -2,9 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Row, Col } from "react-bootstrap"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFolder } from "@fortawesome/free-solid-svg-icons"
 import PostCategories from "../post-categories"
+
+config.autoAddCss = false
 
 const Categories = ({ categories, pathPrefix }) => {
   return (

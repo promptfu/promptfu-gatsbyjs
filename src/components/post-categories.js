@@ -19,7 +19,7 @@ const PostCategories = ({ categories, pathPrefix }) => {
         return (
           <span key={`${category}-${index}`}>
             <Badge variant="info">
-            <Link to={slug} className="text-white">{category.toLowerCase()}</Link>
+            <Link to={slug} className="text-white">#{category.toLowerCase()}</Link>
             </Badge>
             {separator}
           </span>

@@ -3,9 +3,12 @@ import PropTypes from "prop-types"
 
 // Components
 import { Row, Col } from "react-bootstrap"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTags } from "@fortawesome/free-solid-svg-icons"
 import PostTags from "../post-tags"
+
+config.autoAddCss = false
 
 const Tags = ({ pathPrefix, tags }) => {
   return (

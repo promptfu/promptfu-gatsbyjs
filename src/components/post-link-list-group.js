@@ -4,11 +4,14 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { Row, Col, ListGroup } from "react-bootstrap"
+import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEdit } from "@fortawesome/free-regular-svg-icons"
 import PostCategories from "./post-categories"
 import PostCommentCount from "./post-comment-count"
 // import styles from "./post-link-list-group.module.scss"
+
+config.autoAddCss = false
 
 const propTypes = {
   items: PropTypes.array

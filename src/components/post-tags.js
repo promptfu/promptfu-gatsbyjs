@@ -18,7 +18,7 @@ const PostTags = ({ tags, pathPrefix }) => {
         return (
           <span key={`${tag}-${index}`}>
             <Badge variant="info">
-              <Link to={slug} className="text-white">{tag.toLowerCase()}</Link>
+              <Link to={slug} className="text-white">#{tag.toLowerCase()}</Link>
             </Badge>
             {separator}
           </span>
