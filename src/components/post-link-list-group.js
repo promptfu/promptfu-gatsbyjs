@@ -8,7 +8,7 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEdit } from "@fortawesome/free-regular-svg-icons"
 import PostCategories from "./post-categories"
-import PostCommentCount from "./post-comment-count"
+import PostCommentCount from "components/post-comment-count"
 // import styles from "./post-link-list-group.module.scss"
 
 config.autoAddCss = false
@@ -67,27 +67,3 @@ export default PostLinkListGroup
 const spanStyle = {
   fontSize: `.8rem`
 }
-
-
-                //   {/* <ul>
-                //     <li>
-                //       <div class="row">
-                //         <div class="col">
-                //           <a href="/wiki/linux/xargs" class="text-dark page-a-link"><i class="far fa-edit text-dark mr-1"></i>xargs</a>
-                //         </div>
-                //       </div>
-                //       <div class="row">
-                //         <div class="col">
-                //           <span class="page-meta">
-                //             Updated on Jun 25, 2019 in
-                //             <a href="/wiki/categories/#linux">linux</a>
-                //             <span class="page-comments-count">
-                //               <i class="far fa-comments mr-1"></i>
-                //               <a href="/wiki/linux/xargs#disqus_thread">1 Comment</a>
-                //             </span>
-                //           </span>
-                //         </div>
-                //       </div>
-                //       <hr />
-                //     </li>
-                //   </ul> */}

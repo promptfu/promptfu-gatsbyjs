@@ -184,3 +184,14 @@ exports.createPages = ({ graphql, actions }) => {
 
   return Promise.all([blogs, wikis])
 }
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        templates: path.resolve(__dirname, 'src/templates'),
+      },
+    },
+  })
+}

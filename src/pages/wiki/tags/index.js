@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 
 import slugify from "slugify"
 
-import Layout from "../../../components/layout"
+import Layout from "components/layout"
 import { Badge, Button, Container, Row, Col } from "react-bootstrap"
 
 const tagsPage = ({

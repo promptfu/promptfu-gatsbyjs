@@ -2,15 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
-import Image from "../components/post/image"
+import Image from "components/post/image"
 import { Card, Row, Col } from "react-bootstrap"
 import { config } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faClock } from "@fortawesome/free-regular-svg-icons"
 import { faFolder, faTags } from "@fortawesome/free-solid-svg-icons"
-import PostCategories from "./post-categories"
-import PostCommentCount from "./post-comment-count"
-import PostTags from "./post-tags"
+import PostCategories from "components/post-categories"
+import PostCommentCount from "components/post-comment-count"
+import PostTags from "components/post-tags"
 
 config.autoAddCss = false
 

@@ -1,10 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-import Layout from "../../components/layout"
-import Pagination from "../../components/pagination"
+import Layout from "components/layout"
+// import { SEO } from "components/seo"
+import Pagination from "components/pagination"
 import { Container } from "react-bootstrap"
-import PostCardDeck from "../../components/post-card-deck"
+import PostCardDeck from "components/post-card-deck"
 
 
 class BlogIndexPage extends React.Component {
@@ -12,7 +13,6 @@ class BlogIndexPage extends React.Component {
     super(props)
     console.log("BlogIndexPage")
     console.log(this.props)
-    console.log(this.state)
 
     var blogPostsFeatured = this.props.data.blogPostsFeatured.edges
     var blogPosts = this.props.data.blogPosts.edges
@@ -54,6 +54,9 @@ class BlogIndexPage extends React.Component {
 
     return (
       <Layout>
+        {/* <SEO
+          location={this.props.location.pathname}
+        /> */}
         <Container>
           {/* Display featured blog posts as cards that can take the full width of the container */}
           <PostCardDeck items={postsFeatured} cardClass={"my-3 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} />

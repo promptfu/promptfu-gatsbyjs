@@ -1,8 +1,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-import Layout from "../../components/layout"
-import PostLinkListGroup from "../../components/post-link-list-group"
+import Layout from "components/layout"
+import PostLinkListGroup from "components/post-link-list-group"
 import { Container, Row, Col } from "react-bootstrap"
 
 
@@ -11,7 +11,6 @@ class WikiIndexPage extends React.Component {
     super(props)
     console.log("WikiIndexPage")
     console.log(this.props)
-    console.log(this.state)
 
     this.state = {
     }

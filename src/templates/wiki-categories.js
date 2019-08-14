@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import PostCardDeck from "../components/post-card-deck"
-import Pagination from "../components/pagination"
+import Layout from "components/layout"
+import PostCardDeck from "components/post-card-deck"
+import Pagination from "components/pagination"
 import { Container, Row, Col } from "react-bootstrap"
 
 const propTypes = {
@@ -20,7 +20,7 @@ const propTypes = {
              excerpt: PropTypes.string,
              frontmatter: PropTypes.shape({
                categories: PropTypes.arrayOf(
-                 PropTypes.string, 
+                 PropTypes.string,
                ),
                created: PropTypes.string,
                feature: PropTypes.bool,
@@ -54,9 +54,6 @@ class Categories extends React.Component {
     super(props)
     console.log("Categories")
     console.log(this.props)
-    console.log(this.state)
-
-    console.log(this.props.data.allMarkdownRemark.edges)
 
     this.state = {
       paginateItems: this.props.data.allMarkdownRemark.edges,

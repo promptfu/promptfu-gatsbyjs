@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import PostCardDeck from "../components/post-card-deck"
-import Pagination from "../components/pagination"
+import Layout from "components/layout"
+import PostCardDeck from "components/post-card-deck"
+import Pagination from "components/pagination"
 import { Container, Row, Col } from "react-bootstrap"
 
 const propTypes = {
@@ -54,9 +54,6 @@ class Tags extends React.Component {
     super(props)
     console.log("Tags")
     console.log(this.props)
-    console.log(this.state)
-
-    console.log(this.props.data.allMarkdownRemark.edges)
 
     this.state = {
       paginateItems: this.props.data.allMarkdownRemark.edges,

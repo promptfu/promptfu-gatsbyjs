@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import JumbotronHeader from "../components/jumbotron"
+import Layout from "components/layout"
+import { SEO } from "components/seo"
+import JumbotronHeader from "components/jumbotron"
 import { Container, Row, Col } from "react-bootstrap"
-import PostCardDeck from "../components/post-card-deck"
+import PostCardDeck from "components/post-card-deck"
 
 
 class IndexPage extends React.Component {
@@ -12,7 +13,6 @@ class IndexPage extends React.Component {
     super(props)
     console.log("IndexPage")
     console.log(this.props)
-    console.log(this.state)
 
     this.state = {
     }
@@ -23,6 +23,7 @@ class IndexPage extends React.Component {
   render() {
 
     const siteDescription = this.props.data.site.siteMetadata.description
+    const siteImage = this.props.data.site.siteMetadata.siteImage
     const siteTitle = this.props.data.site.siteMetadata.title
 
     const blogPostsFeatured = this.props.data.blogPostsFeatured.edges
@@ -30,6 +31,10 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <SEO
+          image={siteImage}
+          location={this.props.location.pathname}
+        />
         <JumbotronHeader
           siteDescription={siteDescription}
           siteTitle={siteTitle}
@@ -73,6 +78,7 @@ export default props => (
         site {
           siteMetadata {
             description
+            siteImage
             title
           }
         }

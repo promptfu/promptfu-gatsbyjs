@@ -8,7 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 const JumbotronHeader = ({ siteDescription, siteTitle }) => {
   const data = useStaticQuery(graphql`
     {
-      file(name: {eq: "tetris_header"}) {
+      file(name: {eq: "tetris"}) {
         childImageSharp {
           fluid(
             maxWidth: 4160,
@@ -37,12 +37,6 @@ const JumbotronHeader = ({ siteDescription, siteTitle }) => {
         </Container>
       </BackgroundImage>
     </Jumbotron>
-    //   <div>
-    //     <div class="jumbotron jumbotron-fluid xpros-jumbo">
-    //     <h1 class="display-4"><span>Welcome to {{ site.title }}.</span></h1>
-    //     <h4><p><span>Where geekin' it up is good for the soul.</span></p></h4>
-    //   </div>
-    // </div>
   )
 }
 

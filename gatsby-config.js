@@ -8,11 +8,10 @@ var path = require('path');
 
 module.exports = {
   siteMetadata: {
+    author: `Matthew Hassel`,
     description: `A wiki where collaboration and shared knowledge meet. Share knowledge,
     share and discuss questions, answers, wikis, and projects.`,
-    title: `Prompt Fu`,
-    author: `Matthew Hassel`,
-    siteUrl: `https://promptfu.com`,
+    siteImage: `tetris.jpg`,
     siteLinks: [
       {
         name: 'home',
@@ -29,7 +28,14 @@ module.exports = {
         title: 'wiki',
         link: '/wiki',
       }
-    ]
+    ],
+    siteUrl: `https://promptfu.com`,
+    social: {
+      twitter: {
+        site: `promptfu`
+      }
+    },
+    title: `Prompt Fu`,
   },
   plugins: [
     {

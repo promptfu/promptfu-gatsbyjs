@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import PostCard from "./post-card"
+import PostCard from "components/post-card"
 import { CardDeck, Card, Row, Col } from "react-bootstrap"
 
 const propTypes = {
