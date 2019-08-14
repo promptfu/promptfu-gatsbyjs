@@ -3,7 +3,7 @@ author: mhassel
 categories: ["linux"]
 created: 2015-02-27 00:00:00 -0600
 feature: false
-layout: wiki
+image: binoculars-black-equipment-large.jpg
 show: true
 tags: ["linux"]
 title: grep

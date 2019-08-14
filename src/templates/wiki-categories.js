@@ -96,7 +96,7 @@ class Categories extends React.Component {
           </Row>
           <Row className="my-3">
             <Col className="text-center">
-              <Link to={`/wiki/categories/`}>all categories</Link>
+              <Link to={`/wiki/categories`}>all categories</Link>
             </Col>
           </Row>
         </Container>

@@ -19,12 +19,17 @@ class BlogIndexPage extends React.Component {
     var paginateItems = [].concat(blogPostsFeatured, blogPosts)
 
     this.state = {
+      isLoading: true,
       paginateItems: paginateItems,
       pageOfItems: []
     }
 
     // bind function(s) in constructor instead of render
     this.onChangePage = this.onChangePage.bind(this)
+  }
+
+  componentDidMount() {
+    this.setState({ isLoading: false })
   }
   
   onChangePage(pageOfItems) {
@@ -56,7 +61,7 @@ class BlogIndexPage extends React.Component {
           {/* Display blog posts as cards in a CardDeck */}
           <PostCardDeck items={posts} columnsSM={1} columnsMD={1} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />
 
-          <Pagination items={this.state.paginateItems} onChangePage={this.onChangePage} />
+          {(this.state.isLoading) ? <div /> : <Pagination items={this.state.paginateItems} onChangePage={this.onChangePage} /> }
         </Container>
       </Layout>
     )

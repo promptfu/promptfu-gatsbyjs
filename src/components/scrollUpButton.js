@@ -59,7 +59,7 @@ class ScrollUpButton extends React.Component {
     return (
     <div className={this.state.visibleClass} onClick={this.scrollToTop} style={goTopStyle}>
       Go Top
-      </div>
+    </div>
     )
   }
 }

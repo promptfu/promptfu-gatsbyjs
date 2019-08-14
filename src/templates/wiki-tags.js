@@ -96,7 +96,7 @@ class Tags extends React.Component {
           </Row>
           <Row className="my-3">
             <Col className="text-center">
-              <Link to={`/wiki/tags/`}>all tags</Link>
+              <Link to={`/wiki/tags`}>all tags</Link>
             </Col>
           </Row>
         </Container>
