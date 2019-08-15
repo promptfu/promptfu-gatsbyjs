@@ -4,15 +4,10 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "components/post/image"
 import { Card, Row, Col } from "react-bootstrap"
-import { config } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendarAlt, faClock } from "@fortawesome/free-regular-svg-icons"
-import { faFolder, faTags } from "@fortawesome/free-solid-svg-icons"
+import { FaRegCalendarAlt, FaRegClock, FaFolder, FaTags } from 'react-icons/fa'
 import PostCategories from "components/post-categories"
 import PostCommentCount from "components/post-comment-count"
 import PostTags from "components/post-tags"
-
-config.autoAddCss = false
 
 const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, timeToRead, title, cardClass, cardBodyClass, cardButtonClass, horizontal }) => {
   const verticalPostCard = (
@@ -27,18 +22,12 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
         {/* <Card.Subtitle>Card Subtitle</Card.Subtitle> */}
         <div style={cardMetaStyle} className="my-1 text-muted">
           <span className="mr-2 d-line-block">
-            <FontAwesomeIcon
-              icon={faCalendarAlt}
-              size="1x"
-            />
+            <FaRegCalendarAlt />
             &nbsp;
             {created}
           </span>
           <span className="mr-2 d-inline-block">
-            <FontAwesomeIcon
-              icon={faClock}
-              size="1x"
-            />
+            <FaRegClock />
             &nbsp;
             {timeToRead} minute read
           </span>
@@ -49,12 +38,12 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
       </Card.Body>
       <Card.Footer className="text-muted">
         <span className="mr-2 d-inline-block">
-          <FontAwesomeIcon icon={faFolder} size="1x" />
+          <FaFolder />
           <span>&nbsp;Categories:&nbsp;</span>
           <PostCategories categories={categories} pathPrefix={pathPrefix} />
         </span>
         <span className="mr-2 d-inline-block">
-          <FontAwesomeIcon icon={faTags} size="1x" />
+          <FaTags />
           <span>&nbsp;Tags:&nbsp;</span>
           <PostTags tags={tags} pathPrefix={pathPrefix} />
         </span>
@@ -75,18 +64,12 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
             {/* <Card.Subtitle>Card Subtitle</Card.Subtitle> */}
             <div style={cardMetaStyle} className="my-1 text-muted">
               <span className="mr-2 d-line-block">
-                <FontAwesomeIcon
-                  icon={faCalendarAlt}
-                  size="1x"
-                />
+                <FaRegCalendarAlt />
                 &nbsp;
                 {created}
               </span>
               <span className="mr-2 d-inline-block">
-                <FontAwesomeIcon
-                  icon={faClock}
-                  size="1x"
-                />
+                <FaRegClock />
                 &nbsp;
                 {timeToRead} minute read
               </span>
@@ -97,18 +80,6 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
           </Card.Body>
         </Col>
       </Row>
-      {/* <Card.Footer className="text-muted">
-        <span className="mr-2 d-inline-block">
-          <FontAwesomeIcon icon={faFolder} size="1x" />
-          <span>&nbsp;Categories:&nbsp;</span>
-          <PostCategories categories={categories} pathPrefix={pathPrefix} />
-        </span>
-        <span className="mr-2 d-inline-block">
-          <FontAwesomeIcon icon={faTags} size="1x" />
-          <span>&nbsp;Tags:&nbsp;</span>
-          <PostTags tags={tags} pathPrefix={pathPrefix} />
-        </span>
-      </Card.Footer> */}
     </Card>
   )
   return (

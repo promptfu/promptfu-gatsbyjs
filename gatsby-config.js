@@ -113,37 +113,6 @@ module.exports = {
     },
     // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-//    {
-//      resolve: `gatsby-plugin-favicon`,
-//      options: {
-//        logo: "./content/assets/images/favicon.png",
-//
-//        // WebApp Manifest Configuration
-//        appName: 'promptfu', // Inferred with your package.json
-//        appDescription: 'A wiki where collaboration and shared knowledge meet. Share knowledge, share and discuss questions, answers, wiki, and projects.',
-//        developerName: null,
-//        developerURL: null,
-//        dir: 'auto',
-//        lang: 'en-US',
-//        background: '#fff',
-//        theme_color: '#fff',
-//        display: 'standalone',
-//        orientation: 'any',
-//        start_url: '/?homescreen=1',
-//        version: '1.0',
-//
-//        icons: {
-//          android: true,
-//          appleIcon: true,
-//          appleStartup: true,
-//          coast: false,
-//          favicons: true,
-//          firefox: true,
-//          yandex: false,
-//          windows: false
-//        }
-//      }
-//    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-twitter`,
     `gatsby-transformer-yaml`,

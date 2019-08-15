@@ -3,19 +3,13 @@ import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import { Container, Row, Col, Navbar } from "react-bootstrap"
-import Img from "gatsby-image"
-
-import { config } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faGithub,
-  // faLinkedin,
-  // faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons"
-import { faCopyright } from "@fortawesome/free-regular-svg-icons"
-
-config.autoAddCss = false
+  FaRegCopyright,
+  FaGithub,
+  // FaInstagram,
+  FaTwitter
+} from 'react-icons/fa'
+import Img from "gatsby-image"
 
 const Footer = ({ siteDescription, siteTitle }) => {
   const data = useStaticQuery(graphql`
@@ -42,23 +36,21 @@ const Footer = ({ siteDescription, siteTitle }) => {
               rel="noopener noreferrer"
               className="xpros-social-icon"
             >
-              <FontAwesomeIcon
-                icon={faGithub}
-                size="2x"
-                className="text-white mx-2 grow"
+              <FaGithub
+                size={`2em`}
+                className="text-white mx-2 grow" 
               />
             </a>
 
             {/* Instagram */}
             {/* <a
-              href="https://www.instagram.com/matthew.hassel/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="xpros-social-icon"
             >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                size="2x"
+              <FaInstagram
+                size={`2em`}
                 className="text-white mx-2 grow"
               />
             </a> */}
@@ -70,10 +62,9 @@ const Footer = ({ siteDescription, siteTitle }) => {
               rel="noopener noreferrer"
               className="xpros-social-icon"
             >
-              <FontAwesomeIcon
-                icon={faTwitter}
-                size="2x"
-                className="text-white mx-2 grow"
+              <FaTwitter
+                size={`2em`}
+                className="text-white mx-2 grow" 
               />
             </a>
           </Col>
@@ -109,7 +100,7 @@ const Footer = ({ siteDescription, siteTitle }) => {
                     <div>
                       <span>
                         {/* Copyright */}
-                        <FontAwesomeIcon icon={faCopyright} size="1x" />
+                        <FaRegCopyright />
                         {/* Copyright */}
                         &nbsp;
                         {new Date().getFullYear()}

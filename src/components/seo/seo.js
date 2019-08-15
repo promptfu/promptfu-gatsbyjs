@@ -73,8 +73,8 @@ class SEO extends React.Component {
       >
         <html lang={lang} />
         <title>{title}</title>
-    
         {/* General tags */}
+
         <meta name="description" content={description} />
         {keywords.length > 0 ? <meta name="keywords" content={keywords.join(`, `)} /> : ''}
         <meta name="image" content={`${siteUrl}${imageUrl}`} />
@@ -115,7 +115,6 @@ const detailsQuery = graphql`
           }
         }
         title
-        
       }
     }
     allImageSharp {
