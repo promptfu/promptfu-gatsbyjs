@@ -111,7 +111,7 @@ export default props => (
       query($category: String) {
         allMarkdownRemark(
           limit: 2000
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { fields: [frontmatter___created], order: DESC }
           filter: { fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: { categories: { in: [$category] } } }
         ) {
           totalCount

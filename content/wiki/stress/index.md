@@ -13,10 +13,8 @@ I cannot `stress` it enough... use this utility! It is really convenient for, we
 has several commandline arguments to target various components.
 
 For example, if you would like to use up a whole mess of RAM:
-<!--more-->
 
-```
+```shell
 $ stress -m 1 --vm-bytes 50G --vm-keep
 ```
-
-More can be found at this great reference => https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
+<!--more-->

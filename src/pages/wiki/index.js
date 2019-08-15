@@ -79,7 +79,7 @@ export default props => (
 
         wikiPosts: 
           allMarkdownRemark(
-            sort: {order: DESC, fields: [frontmatter___date]},
+            sort: {order: DESC, fields: [frontmatter___created]},
             filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
             frontmatter: {feature: {eq: false}}}
           ) {
@@ -92,8 +92,7 @@ export default props => (
               excerpt(pruneLength: 125, format: HTML)
               frontmatter {
                 categories
-                created
-                date(formatString: "YYYY-MM-DD")
+                created(formatString: "YYYY-MM-DD")
                 feature
                 image
                 show
@@ -113,7 +112,7 @@ export default props => (
         }
 
         wikiPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___date]},
+          sort: {order: DESC, fields: [frontmatter___created]},
           filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
           frontmatter: {feature: {eq: true}}}
           ) {
@@ -126,8 +125,7 @@ export default props => (
               excerpt(pruneLength: 125, format: HTML)
               frontmatter {
                 categories
-                created
-                date(formatString: "YYYY-MM-DD")
+                created(formatString: "YYYY-MM-DD")
                 feature
                 image
                 show

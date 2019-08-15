@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       blogs: allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/content/blog/**/*.md" } }
-        sort: { order: DESC, fields: frontmatter___date }
+        sort: { order: DESC, fields: frontmatter___created }
       ) {
         edges {
           node {
@@ -118,7 +118,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       wikis: allMarkdownRemark(
         filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"}}, 
-        sort: {order: DESC, fields: frontmatter___date}) {
+        sort: {order: DESC, fields: frontmatter___created}) {
         edges {
           node {
             fields {
