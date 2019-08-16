@@ -32,7 +32,6 @@ class SEO extends React.Component {
     console.log(this.props)
 
     this.state = {
-
     }
 
     this.getImageUrl = this.getImageUrl.bind(this)
@@ -62,7 +61,7 @@ class SEO extends React.Component {
     // const meta = this.props.
     const siteTitle = site.siteMetadata.title
     const siteUrl = site.siteMetadata.siteUrl
-    const title = this.props.title
+    const title = this.props.title ? this.props.title : defaultTitle
 
     const twitterSite = site.siteMetadata.social.twitter.site
 

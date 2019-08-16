@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "components/layout"
-// import { SEO } from "components/seo"
+import { SEO } from "components/seo"
 import Pagination from "components/pagination"
 import { Container } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"
@@ -54,9 +54,10 @@ class BlogIndexPage extends React.Component {
 
     return (
       <Layout>
-        {/* <SEO
+        <SEO
           location={this.props.location.pathname}
-        /> */}
+          title="Blog"
+        />
         <Container>
           {/* Display featured blog posts as cards that can take the full width of the container */}
           <PostCardDeck items={postsFeatured} cardClass={"my-3 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} />
