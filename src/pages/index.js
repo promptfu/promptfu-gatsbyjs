@@ -41,8 +41,13 @@ class IndexPage extends React.Component {
         />
         <Container>
           <Row>
-            <Col>
-            <h2>RECENT POSTS</h2>
+            <Col className="text-center">
+            <h2>
+              <span className="font-weight-light">THE </span>
+              <span className="font-weight-bold">LATEST </span>
+              <span className="font-weight-light">FROM THE </span>
+              <span className="font-weight-blod">BLOG</span>
+            </h2>
             </Col>
           </Row>
           {/* Display featured blog posts as cards that can take the full width of the container */}
@@ -55,8 +60,13 @@ class IndexPage extends React.Component {
         </Container>
         <Container>
           <Row>
-            <Col>
-            <h2>RECENT WIKIS</h2>
+            <Col className="text-center">
+              <h2>
+                <span className="font-weight-light">THE </span>
+                <span className="font-weight-bold">LATEST </span>
+                <span className="font-weight-light">FROM THE </span>
+                <span className="font-weight-blod">WIKI</span>
+              </h2>
             </Col>
           </Row>
           <PostCardDeck items={wikiPostsFeatured} cardClass={"my-4 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} horizontal />

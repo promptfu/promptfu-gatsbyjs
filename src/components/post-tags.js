@@ -6,19 +6,18 @@ import slugify from "slugify"
 import { Link } from "gatsby"
 import { Badge } from "react-bootstrap"
 
-const PostTags = ({ tags, pathPrefix }) => {
+const PostTags = ({ linkClassName, linkStyle, separator, tags, pathPrefix }) => {
   return (
     <React.Fragment>
       {tags.map((tag, index) => {
         const slug = `/${pathPrefix}/tags/${slugify(tag)}`.toLowerCase()
-        var separator = ` | `
         if((index + 1) === tags.length) { // Check if item is last in array
           separator = ``
         }
         return (
           <span key={`${tag}-${index}`}>
             <Badge variant="info">
-              <Link to={slug} className="text-white">#{tag.toLowerCase()}</Link>
+              <Link to={slug} style={linkStyle} className={`text-white ${linkClassName}`}>#{tag.toLowerCase()}</Link>
             </Badge>
             {separator}
           </span>
@@ -31,11 +30,17 @@ const PostTags = ({ tags, pathPrefix }) => {
 export default PostTags
 
 PostTags.propTypes = {
+  linkClassName: PropTypes.object,
+  linkStyle: PropTypes.object,
+  separator: PropTypes.string,
   tags: PropTypes.array,
   pathPrefix: PropTypes.string
 }
 
 PostTags.defaultProps = {
+  linkClassName: ``,
+  linkStyle: {},
+  separator: ` | `,
   tags: [],
   pathPrefix: '',
 }
