@@ -1,142 +1,160 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import {graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
+import Facebook from "./Facebook"
+import Twitter from "./Twitter"
+import { PageType } from "./PageType"
+import { getImageUrl } from "utils/getImageUrl"
+import { Article, WebPage } from "./SchemaOrgType"
 
 const propTypes = {
   author: PropTypes.string,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        defaultDescription: PropTypes.string.isRequired,
+        defaultImage: PropTypes.string.isRequired,
+        defaultTitle: PropTypes.string.isRequired,
+        defaultUrl: PropTypes.string.isRequired,
+        language: PropTypes.string.isRequired,
+        social: PropTypes.shape({
+          facebook: PropTypes.shape({
+            language: PropTypes.string,
+            name: PropTypes.string.isRequired,
+            site: PropTypes.string,
+          }),
+          twitter: PropTypes.shape({
+            name: PropTypes.name,
+            site: PropTypes.string.isRequired,
+          }),
+        }),          
+        url: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
   description: PropTypes.string,
   image: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  lang: PropTypes.string,
-  location: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+  // node: PropTypes.any,
+  pathname: PropTypes.string,
+  pageType: PropTypes.string,
   title: PropTypes.string,
+  article: PropTypes.bool,
 }
 
 const defaultProps = {
-  author: '',
-  description: '',
-  image: '',
+  author: ``,
+  description: ``,
+  image: ``,
   keywords: [],
-  lang: 'en',
-  location: '',
-  meta: [],
-  title: '',
+  pathname: ``,
+  pageType: PageType.WEBPAGE,
+  title: ``,
+  article: false,
 }
 
-class SEO extends React.Component {
-  constructor(props) {
-    super(props)
-    console.log("SEO")
-    console.log(this.props)
+const SEO = (props) => {
+  console.log("SEO")
+  console.log(props)
+  
+  const {
+    siteMetadata: {
+      defaultDescription,
+      defaultImage,
+      defaultTitle,
+      language,
+      social,
+      url,
+    },
+  } = props.data.site
 
-    this.state = {
-    }
-
-    this.getImageUrl = this.getImageUrl.bind(this)
+  const seo = {
+    description: props.description || defaultDescription,
+    image: props.image || defaultImage,
+    title: props.title ? `${props.title} | ${defaultTitle}` : `${defaultTitle} | ${defaultDescription}`,
+    url: `${url}${props.pathname || ''}`
   }
 
-  getImageUrl(imgName) {
-    const image = this.props.data.allImageSharp.edges.find(
-      edge => edge.node.fixed.originalName === imgName
-    )
-    if (!image) {
-      return
+  const renderSchemaOrg = (pageType) => {
+    switch(pageType) {
+      case PageType.ARTICLE:
+        return (
+          <Article
+          />
+        )
+      default:
+        return (
+          <WebPage
+          />          
+        )
     }
-    return image.node.fixed.src
+
   }
 
-  render() {
-
-    const { site } = this.props.data
-    const defaultTitle = `${site.siteMetadata.title} | ${site.siteMetadata.description}`
-    const titleTemplate = `%s | ${site.siteMetadata.title}`
-
-    const description = this.props.description || site.siteMetadata.description
-    const keywords = this.props.keywords
-    const imageUrl = this.props.image ? this.getImageUrl(this.props.image) : this.getImageUrl(this.props.data.site.siteMetadata.siteImage)
-    const lang = this.props.lang
-    const location = this.props.location
-    // const meta = this.props.
-    const siteTitle = site.siteMetadata.title
-    const siteUrl = site.siteMetadata.siteUrl
-    const title = this.props.title ? this.props.title : defaultTitle
-
-    const twitterSite = site.siteMetadata.social.twitter.site
-
-    return(
-      <Helmet
-        defaultTitle={defaultTitle}
-        titleTemplate={titleTemplate}
-      >
-        <html lang={lang} />
-        <title>{title}</title>
-        {/* General tags */}
-
-        <meta name="description" content={description} />
-        {keywords.length > 0 ? <meta name="keywords" content={keywords.join(`, `)} /> : ''}
-        <meta name="image" content={`${siteUrl}${imageUrl}`} />
-
-        {/* Opengraph tags */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={`${siteUrl}${imageUrl}`} />
-        <meta property="og:url" content={`${siteUrl}${location}`} />
-        <meta property="og:site_name" content={siteTitle} />
-
-        {/* Twitter cards */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content={`@${twitterSite}`} />
-        {/* <meta name="twitter:creator" content="" /> */}
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={`${siteUrl}${imageUrl}`} />
+  return (
+    <>
+      <Helmet>
+        <title>{seo.title}</title>
+        <html lang={language} />
+        <meta name="description" content={seo.description} />
+        <meta name="image" content={`${url}${getImageUrl(seo.image)}`} />
+        {props.keywords.length > 0 ? <meta name="keywords" content={props.keywords.join(`, `)} /> : ''}
       </Helmet>
-    )
-  }
+
+      <Facebook
+        description={seo.description}
+        image={`${url}${getImageUrl(seo.image)}`}
+        locale={social.facebook.language}
+        site={social.facebook.name}
+        title={seo.title}
+        type={props.article ? 'article' : 'website'}
+        url={seo.url}
+      />
+
+      <Twitter
+        description={seo.description}
+        image={`${url}${getImageUrl(seo.image)}`}
+        site={social.twitter.site}
+        title={seo.title}
+      />
+
+      {renderSchemaOrg(props.pageType)}
+    </>
+  )
 }
 
 SEO.propTypes = propTypes
 SEO.defaultProps = defaultProps
+export default props => (
+  <StaticQuery
+    query={query}
+    render={data => <SEO data={data} {...props} />}
+  />
+)
 
-const detailsQuery = graphql`
+const query = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
-        description
-        siteImage
-        siteUrl
+        defaultDescription: description
+        defaultImage: image
+        defaultTitle: title
+        defaultUrl: url
+        language
         social {
+          facebook {
+            language
+            name
+            site
+          }
           twitter {
+            name
             site
           }
         }
-        title
-      }
-    }
-    allImageSharp {
-      edges {
-        node {
-          fixed(width: 1200, height: 630) {
-            originalName
-            src
-          }
-        }
+        url
       }
     }
   }
 `
-
-
-export default props => (
-  <StaticQuery
-    query={detailsQuery}
-    render={ data => {
-      return (
-        <SEO data={data} {...props} />
-      )
-    }}
-  />
-)

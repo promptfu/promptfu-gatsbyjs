@@ -34,7 +34,6 @@ class PostCardDeck extends React.Component {
     super(props)
     console.log("PostCardDeck")
     console.log(this.props)
-    console.log(this.state)
 
     this.state = {}
 

@@ -1,6 +1,6 @@
 ---
 author: Matthew Hassel
-categories: ["linux", "example"]
+categories: ["linux"]
 created: 2015-02-27 00:00:00 -0600
 feature: true
 image: black-and-white-factory-industrial-plant-large.jpg

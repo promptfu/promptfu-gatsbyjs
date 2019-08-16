@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "components/layout"
-import { SEO } from "components/seo"
+import SEO from "components/seo"
 import Pagination from "components/pagination"
 import { Container } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"

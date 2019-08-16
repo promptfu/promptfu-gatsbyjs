@@ -27,3 +27,10 @@ before_script:
 script:
   - "npm run test"
   - "npm run build"
+
+notifications:
+  email:
+    recipients:
+      - ci@promptfu.com
+    on_sucess: always
+    on_failure: always

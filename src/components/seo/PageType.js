@@ -1,0 +1,5 @@
+export const PageType = {
+  ARTICLE: 'ARTICLE',
+  BREADCRUMB: 'BREADCRUMB',
+  WEBPAGE: 'WEBPAGE',
+}

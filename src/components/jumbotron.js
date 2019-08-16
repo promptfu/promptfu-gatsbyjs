@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Jumbotron, Container } from "react-bootstrap"
 import BackgroundImage from "gatsby-background-image"
 
-const JumbotronHeader = ({ siteDescription, siteTitle }) => {
+const JumbotronHeader = ({ description, title }) => {
   const data = useStaticQuery(graphql`
     {
       file(name: {eq: "tetris"}) {
@@ -32,8 +32,8 @@ const JumbotronHeader = ({ siteDescription, siteTitle }) => {
         className="p-5"
       >
         <Container>
-          <h1>{siteTitle}</h1>
-          <p>{siteDescription}</p>
+          <h1>{title}</h1>
+          <p>{description}</p>
         </Container>
       </BackgroundImage>
     </Jumbotron>
@@ -41,13 +41,13 @@ const JumbotronHeader = ({ siteDescription, siteTitle }) => {
 }
 
 JumbotronHeader.propTypes = {
-  siteDescription: PropTypes.string,
-  siteTitle: PropTypes.string,
+  description: PropTypes.string,
+  title: PropTypes.string,
 }
 
 JumbotronHeader.defaultProps = {
-  siteDescription: ``,
-  siteTitle: ``,
+  description: ``,
+  title: ``,
 }
 
 export default JumbotronHeader

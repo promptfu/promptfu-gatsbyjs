@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa'
 import Img from "gatsby-image"
 
-const Footer = ({ siteDescription, siteTitle }) => {
+const Footer = ({ description, title }) => {
   const data = useStaticQuery(graphql`
     {
       navbarBrandImage: file(relativePath: { eq: "favicon.png" }) {
@@ -84,7 +84,7 @@ const Footer = ({ siteDescription, siteTitle }) => {
                           className="d-inline-block align-top"
                           alt="Promptfu Logo"
                         />
-                        {siteTitle}
+                        {title}
                       </Navbar.Brand>
                       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     </Navbar>
@@ -92,7 +92,7 @@ const Footer = ({ siteDescription, siteTitle }) => {
                 </Row>
                 <Row>
                   <Col>
-                    <p>{siteDescription}</p>
+                    <p>{description}</p>
                   </Col>
                 </Row>
                 <Row>
@@ -118,13 +118,13 @@ const Footer = ({ siteDescription, siteTitle }) => {
 }
 
 Footer.propTypes = {
-  siteDescription: PropTypes.string,
-  siteTitle: PropTypes.string,
+  description: PropTypes.string,
+  title: PropTypes.string,
 }
 
 Footer.defaultProps = {
-  siteDescription: ``,
-  siteTitle: ``,
+  description: ``,
+  title: ``,
 }
 
 export default Footer

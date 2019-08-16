@@ -11,8 +11,9 @@ module.exports = {
     author: `Matthew Hassel`,
     description: `A wiki where collaboration and shared knowledge meet. Share knowledge,
     share and discuss questions, answers, wikis, and projects.`,
-    siteImage: `tetris.jpg`,
-    siteLinks: [
+    image: `tetris.jpg`,
+    language: 'en',
+    links: [
       {
         name: 'home',
         title: 'home',
@@ -29,11 +30,17 @@ module.exports = {
         link: '/wiki',
       }
     ],
-    siteUrl: `https://promptfu.com`,
+    url: `https://promptfu.com`,
     social: {
+      facebook: {
+        language: 'en_US',
+        name: `Prompt Fu`,
+        site: ``,
+      },
       twitter: {
-        site: `promptfu`
-      }
+        name: `Prompt Fu`,
+        site: `promptfu`,
+      },
     },
     title: `Prompt Fu`,
   },

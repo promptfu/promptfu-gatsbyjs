@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
 import Image from "components/post/image"
-import { Badge, Card, Row, Col } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
 import { FaRegCalendarAlt, FaRegClock, FaFolder, FaTags } from 'react-icons/fa'
 import PostCategories from "components/post-categories"
 import PostCommentCount from "components/post-comment-count"
@@ -81,7 +81,7 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
         </Col>
       </Row>
       <Card.Footer className="text-muted bg-white border-0 p-0">
-        <span style={cardTagsStyle} className="mr-2 d-inline-block position-absolute">
+        <span style={cardTagsStyle} className="mr-3 d-inline-block position-absolute">
           <PostTags tags={tags} pathPrefix={pathPrefix} separator={` `} linkStyle={{fontSize:`1rem`}} />
         </span>
       </Card.Footer>

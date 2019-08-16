@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         siteMetadata {
           description
           title
-          siteLinks {
+          links {
             name
             title
             link
@@ -27,14 +27,14 @@ const Layout = ({ children }) => {
     <>
       <div className="d-flex flex-column min-vh-100">
         <Header
-          siteLinks={data.site.siteMetadata.siteLinks}
-          siteTitle={data.site.siteMetadata.title}
+          links={data.site.siteMetadata.links}
+          title={data.site.siteMetadata.title}
         />
         <ScrollUpButton />
         <main className="flex-grow-1 flex-shrink-1">{children}</main>
         <Footer
-          siteDescription={data.site.siteMetadata.description}
-          siteTitle={data.site.siteMetadata.title}
+          description={data.site.siteMetadata.description}
+          title={data.site.siteMetadata.title}
         />
       </div>
     </>

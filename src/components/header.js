@@ -5,7 +5,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { Container, Nav, Navbar } from "react-bootstrap"
 import Img from "gatsby-image"
 
-const Header = ({ siteLinks, siteTitle }) => {
+const Header = ({ links, title }) => {
   const data = useStaticQuery(graphql`
     {
       navbarBrandImage: file(relativePath: { eq: "favicon.png" }) {
@@ -30,12 +30,12 @@ const Header = ({ siteLinks, siteTitle }) => {
               className="d-inline-block align-top"
               alt="Promptfu Logo"
             />
-            {siteTitle}
+            {title}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              {siteLinks.map(link => (
+              {links.map(link => (
                 <Nav.Link
                   as={Link}
                   to={link.link}
@@ -55,13 +55,13 @@ const Header = ({ siteLinks, siteTitle }) => {
 }
 
 Header.propTypes = {
-  siteLinks: PropTypes.array,
-  siteTitle: PropTypes.string,
+  links: PropTypes.array,
+  title: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteLinks: [],
-  siteTitle: ``,
+  links: [],
+  title: ``,
 }
 
 export default Header
