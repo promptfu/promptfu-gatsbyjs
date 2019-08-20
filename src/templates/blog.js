@@ -3,28 +3,54 @@ import { graphql } from "gatsby"
 
 
 import Layout from "components/layout"
+import SEO from "components/seo"
+import { PageType } from "components/seo"
 import Post from "components/post"
 
-export default ({ data }) => {
-  const post = data.markdownRemark
-  console.log(post)
-  return (
-    <Layout>
-      <Post
-        categories={post.frontmatter.categories}
-        content={post.html}
-        imgName={post.frontmatter.image}
-        pathPrefix={post.parent.sourceInstanceName}
-        slug={post.fields.slug}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        toc={post.tableOfContents}
-      />
-    </Layout>
-  )
+class BlogPost extends React.Component {
+  constructor(props) {
+    super(props)
+    console.log("BlogPost")
+    console.log(this.props)
+
+    this.state = {
+    }
+
+  }
+  render() {
+    
+    const post = this.props.data.markdownRemark
+
+    return (
+      <Layout>
+        <SEO
+          dateCreated={post.frontmatter.created}
+          dateModified={post.frontmatter.updated}
+          datePublished={post.frontmatter.created}
+          image={post.frontmatter.image}
+          pathname={this.props.location.pathname}
+          pageType={PageType.BLOGPOST}
+          title={post.frontmatter.title}
+        />
+        <Post
+          categories={post.frontmatter.categories}
+          content={post.html}
+          imgName={post.frontmatter.image}
+          pathPrefix={post.parent.sourceInstanceName}
+          slug={post.fields.slug}
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          toc={post.tableOfContents}
+        />
+      </Layout>
+    )
+  }
 }
 
-export const query = graphql`
+
+export default BlogPost
+
+export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -33,10 +59,15 @@ export const query = graphql`
         slug
       }
       frontmatter {
+        author
         categories
+        created
+        feature
         image
+        show
         tags
         title
+        updated
       }
       parent {
         ... on File {

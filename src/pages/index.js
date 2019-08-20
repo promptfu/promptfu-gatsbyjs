@@ -23,7 +23,6 @@ class IndexPage extends React.Component {
   render() {
 
     const description = this.props.data.site.siteMetadata.description
-    const image = this.props.data.site.siteMetadata.image
     const title = this.props.data.site.siteMetadata.title
 
     const blogPostsFeatured = this.props.data.blogPostsFeatured.edges
@@ -31,10 +30,7 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO
-          image={image}
-          pathname={this.props.location.pathname}
-        />
+        <SEO />
         <JumbotronHeader
           description={description}
           title={title}

@@ -6,7 +6,14 @@ import Facebook from "./Facebook"
 import Twitter from "./Twitter"
 import { PageType } from "./PageType"
 import { getImageUrl } from "utils/getImageUrl"
-import { Article, WebPage } from "./SchemaOrgType"
+import {
+  Article,
+  Blog,
+  BlogPost,
+  SiteNavigationElement,
+  WebPage,
+  WebSite
+} from "./SchemaOrgType"
 
 const propTypes = {
   author: PropTypes.string,
@@ -33,10 +40,13 @@ const propTypes = {
       }),
     }),
   }),
+  dateCreated: PropTypes.string,
+  dateModified: PropTypes.string,
+  datePublished: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  // node: PropTypes.any,
+  node: PropTypes.any,
   pathname: PropTypes.string,
   pageType: PropTypes.string,
   title: PropTypes.string,
@@ -48,6 +58,7 @@ const defaultProps = {
   description: ``,
   image: ``,
   keywords: [],
+  node: {},
   pathname: ``,
   pageType: PageType.WEBPAGE,
   title: ``,
@@ -63,7 +74,9 @@ const SEO = (props) => {
       defaultDescription,
       defaultImage,
       defaultTitle,
+      defaultUrl,
       language,
+      links,
       social,
       url,
     },
@@ -71,21 +84,80 @@ const SEO = (props) => {
 
   const seo = {
     description: props.description || defaultDescription,
-    image: props.image || defaultImage,
+    image: props.image || defaultImage, // node image or props.image or (lastly) defaultImage 
     title: props.title ? `${props.title} | ${defaultTitle}` : `${defaultTitle} | ${defaultDescription}`,
     url: `${url}${props.pathname || ''}`
   }
 
-  const renderSchemaOrg = (pageType) => {
+  const renderSchemaOrgSwitch = (pageType) => {
+    console.log("MY PAGE TYPE: ", pageType)
     switch(pageType) {
       case PageType.ARTICLE:
         return (
           <Article
+            dateCreated={props.dateCreated}
+            dateModified={props.dateModified}
+            datePublished={props.datePublished}
+            description={seo.description}
+            headline={seo.title}
+            image={`${url}${getImageUrl(seo.image)}`}
+            mainEntityOfPage={seo.url}
+            name={seo.title}
+            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgName={defaultTitle}
+            orgUrl={defaultUrl}
+            url={seo.url}
+          />
+        )
+      case PageType.BLOG:
+        return (
+          <Blog
+            // dateCreated={props.dateCreated}
+            // dateModified={props.dateModified}
+            // datePublished={props.datePublished}
+            description={seo.description}
+            headline={seo.title}
+            image={`${url}${getImageUrl(seo.image)}`}
+            mainEntityOfPage={seo.url}
+            name={seo.title}
+            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgName={defaultTitle}
+            orgUrl={defaultUrl}
+            url={seo.url}
+          />
+        )
+      case PageType.BLOGPOST:
+        return (
+          <BlogPost
+            dateCreated={props.dateCreated}
+            dateModified={props.dateModified}
+            datePublished={props.datePublished}
+            description={seo.description}
+            headline={seo.title}
+            image={`${url}${getImageUrl(seo.image)}`}
+            mainEntityOfPage={seo.url}
+            name={seo.title}
+            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgName={defaultTitle}
+            orgUrl={defaultUrl}
+            url={seo.url}
           />
         )
       default:
         return (
           <WebPage
+            // dateCreated={props.dateCreated}
+            // dateModified={props.dateModified}
+            // datePublished={props.datePublished}
+            description={seo.description}
+            headline={seo.title}
+            image={`${url}${getImageUrl(seo.image)}`}
+            mainEntityOfPage={seo.url}
+            name={seo.title}
+            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgName={defaultTitle}
+            orgUrl={defaultUrl}
+            url={seo.url}
           />          
         )
     }
@@ -119,7 +191,9 @@ const SEO = (props) => {
         title={seo.title}
       />
 
-      {renderSchemaOrg(props.pageType)}
+      <WebSite name={defaultTitle} url={defaultUrl} />
+      <SiteNavigationElement links={links} url={defaultUrl} />
+      {renderSchemaOrgSwitch(props.pageType)}
     </>
   )
 }
@@ -134,27 +208,9 @@ export default props => (
 )
 
 const query = graphql`
-  query DefaultSEOQuery {
+  query {
     site {
-      siteMetadata {
-        defaultDescription: description
-        defaultImage: image
-        defaultTitle: title
-        defaultUrl: url
-        language
-        social {
-          facebook {
-            language
-            name
-            site
-          }
-          twitter {
-            name
-            site
-          }
-        }
-        url
-      }
+      ...SiteInformation
     }
   }
 `

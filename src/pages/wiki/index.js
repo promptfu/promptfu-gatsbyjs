@@ -2,6 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "components/layout"
+import SEO from "components/seo"
+import { PageType } from "components/seo"
 import PostLinkListGroup from "components/post-link-list-group"
 import { Container, Row, Col } from "react-bootstrap"
 
@@ -26,6 +28,11 @@ class WikiIndexPage extends React.Component {
 
     return (
       <Layout>
+        <SEO
+          pathname={this.props.location.pathname}
+          pageType={PageType.WEBPAGE}
+          title="Wiki"
+        />
         <Container>
           <Row className="my-3">
             <Col lg={6} md={12} sm={12} xs={12}>

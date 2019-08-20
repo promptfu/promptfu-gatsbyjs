@@ -9,8 +9,7 @@ var path = require('path');
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `A wiki where collaboration and shared knowledge meet. Share knowledge,
-    share and discuss questions, answers, wikis, and projects.`,
+    description: `Tech dojo for all`,
     image: `tetris.jpg`,
     language: 'en',
     links: [

@@ -31,6 +31,6 @@ script:
 notifications:
   email:
     recipients:
-      - ci@promptfu.com
+      - builds@promptfu.com
     on_sucess: always
     on_failure: always

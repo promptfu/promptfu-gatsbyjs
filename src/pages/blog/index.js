@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "components/layout"
 import SEO from "components/seo"
+import { PageType } from "components/seo"
 import Pagination from "components/pagination"
 import { Container } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"
@@ -55,7 +56,8 @@ class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <SEO
-          location={this.props.location.pathname}
+          pathname={this.props.location.pathname}
+          pageType={PageType.BLOG}
           title="Blog"
         />
         <Container>
