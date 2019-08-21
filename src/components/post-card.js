@@ -9,7 +9,7 @@ import PostCategories from "components/post-categories"
 import PostCommentCount from "components/post-comment-count"
 import PostTags from "components/post-tags"
 
-const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, timeToRead, title, cardClass, cardBodyClass, cardButtonClass, horizontal }) => {
+const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, timeToRead, title, updated, cardClass, cardBodyClass, cardButtonClass, horizontal }) => {
   const verticalPostCard = (
     <Card className={cardClass}>
       <Link to={slug}>
@@ -24,7 +24,7 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
           <span className="mr-2 d-line-block">
             <FaRegCalendarAlt />
             &nbsp;
-            {created}
+            {updated > created ? updated : created}
           </span>
           <span className="mr-2 d-inline-block">
             <FaRegClock />
@@ -66,7 +66,7 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
               <span className="mr-2 d-line-block">
                 <FaRegCalendarAlt />
                 &nbsp;
-                {created}
+                {updated > created ? updated : created}
               </span>
               <span className="mr-2 d-inline-block">
                 <FaRegClock />

@@ -7,7 +7,6 @@ import JumbotronHeader from "components/jumbotron"
 import { Container, Row, Col } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"
 
-
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
@@ -90,7 +89,7 @@ export default props => (
         }
 
         blogPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___created]},
+          sort: {order: DESC, fields: [frontmatter___updated]},
           filter: {
             fileAbsolutePath: {glob: "**/content/blog/**/*.md"}
             frontmatter: {show: {eq: true}}
@@ -113,7 +112,7 @@ export default props => (
                 show
                 tags
                 title
-                updated
+                updated(formatString: "YYYY-MM-DD")
               }
               parent {
                 ... on File {
@@ -125,7 +124,7 @@ export default props => (
         }
 
         wikiPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___created]},
+          sort: {order: DESC, fields: [frontmatter___updated]},
           filter: {
             fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
             frontmatter: {show: {eq: true}}
@@ -148,7 +147,7 @@ export default props => (
                 show
                 tags
                 title
-                updated
+                updated(formatString: "YYYY-MM-DD")
               }
               parent {
                 ... on File {

@@ -21,10 +21,21 @@ const PostLinkListGroup = ({ items }) => {
   return (
     <ListGroup as='ul' variant="flush">
       {items.map((item, index) => {
-        var categories = item.node.frontmatter.categories
-        var slug = item.node.fields.slug
-        var title = item.node.frontmatter.title
-        var pathPrefix = item.node.parent.sourceInstanceName
+        const {
+          fields: {
+            slug,
+          },
+          frontmatter: {
+            categories,
+            created,
+            title,
+            updated,
+          },
+          parent: {
+            sourceInstanceName,
+          },
+        } = item.node
+        
         return(
           <ListGroup.Item key={`${item}-${index}`} as='li' className="p-0 py-1">
             <Row>
@@ -40,9 +51,12 @@ const PostLinkListGroup = ({ items }) => {
             <Row>
               <Col>
                 <p className="text-muted my-1" style={spanStyle}>
-                  Updated on Jun 25, 2019 in
+                 {updated > created ?
+                    `Updated on ${updated} in` :
+                    `Created on ${created} in`
+                  }
                   <span className="ml-1">
-                    <PostCategories categories={categories} pathPrefix={pathPrefix} />
+                    <PostCategories categories={categories} pathPrefix={sourceInstanceName} />
                   </span>
                   <PostCommentCount slug={slug} title={title} className="float-right" />
                 </p>

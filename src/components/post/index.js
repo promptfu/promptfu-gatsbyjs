@@ -6,21 +6,80 @@ import Comments from "./comments"
 import Content from "./content"
 import Header from "./header"
 import Image from "./image"
+import Meta from "./meta"
 import TableOfContents from "./table-of-contents"
-import Tags from "./tags"
 import { Container, Row, Col } from "react-bootstrap"
 
-const Post = ({ categories, content, imgName, pathPrefix, slug, tags, title, toc }) => {
+const propTypes = {
+  post: PropTypes.shape({
+    fields: PropTypes.shape({
+      slug: PropTypes.string.isRequired,
+    }),
+    frontmatter: PropTypes.shape({
+      author: PropTypes.string,
+      categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+      created: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      title: PropTypes.string.isRequired,
+      updated: PropTypes.string.isRequired,
+    }),
+    html: PropTypes.string.isRequired,
+    parent: PropTypes.shape({
+      sourceInstanceName: PropTypes.string,
+    }),
+    tableOfContents: PropTypes.string.isRequired,
+  }),
+}
+
+const defaultProps = {
+  author: ``,
+}
+
+const Post = ({ post }) => {
+  console.log(post)
+  const {
+    fields: {
+      slug,
+    },
+    frontmatter: {
+      author,
+      created,
+      categories,
+      image,
+      tags,
+      title,
+      updated,
+    },
+    html,
+    parent: {
+      sourceInstanceName
+    },
+    tableOfContents,
+    timeToRead,
+  } = post
   return (
     <Container className="shadow-lg">
       <Row>
         <Col>
           <Header title={title} />
-          <Categories pathPrefix={pathPrefix} categories={categories}/>
-          <Image imgName={imgName} />
-          {(toc === null || toc.length === 0) ? null : <TableOfContents toc={toc} /> }
-          <Content content={content} />
-          <Tags pathPrefix={pathPrefix} tags={tags} />
+          <Meta
+            author={author}
+            created={created}
+            pathPrefix={sourceInstanceName}
+            slug={slug}
+            tags={tags}
+            timeToRead={timeToRead}
+            title={title}
+            updated={updated}
+          />
+          <Image imgName={image} />
+          {(tableOfContents === null || tableOfContents.length === 0) ? null : <TableOfContents tableOfContents={tableOfContents} /> }
+          <Content content={html} />
+          <Categories
+            pathPrefix={sourceInstanceName}
+            categories={categories}
+          />
           <Comments slug={slug} title={title} />
         </Col>
       </Row>
@@ -28,24 +87,6 @@ const Post = ({ categories, content, imgName, pathPrefix, slug, tags, title, toc
   )
 }
 
+Post.propTypes = propTypes
+Post.defaultProps = defaultProps
 export default Post
-
-Post.propTypes = {
-  categories: PropTypes.array,
-  content: PropTypes.string,
-  imgName: PropTypes.string,
-  pathPrefix: PropTypes.string,
-  tags: PropTypes.array,
-  title: PropTypes.string,
-  toc: PropTypes.string,
-}
-
-Post.defaultProps = {
-  categories: [],
-  content: '',
-  imgName: '',
-  pathPrefix: '',
-  tags: [],
-  title: '',
-  toc: '',
-}

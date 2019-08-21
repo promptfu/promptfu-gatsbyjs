@@ -86,7 +86,7 @@ export default props => (
 
         blogPosts: 
           allMarkdownRemark(
-            sort: {order: DESC, fields: [frontmatter___created]},
+            sort: {order: DESC, fields: [frontmatter___updated]},
             filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"},
             frontmatter: {feature: {eq: false}, show: {eq: true}}}
           ) {
@@ -107,7 +107,7 @@ export default props => (
                 show
                 tags
                 title
-                updated
+                updated(formatString: "YYYY-MM-DD")
               }
               parent {
                 ... on File {
@@ -119,7 +119,7 @@ export default props => (
         }
 
         blogPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___created]},
+          sort: {order: DESC, fields: [frontmatter___updated]},
           filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"},
           frontmatter: {feature: {eq: true}, show: {eq: true}}}
           ) {
@@ -139,7 +139,7 @@ export default props => (
                 show
                 tags
                 title
-                updated
+                updated(formatString: "YYYY-MM-DD")
               }
               parent {
                 ... on File {

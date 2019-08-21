@@ -70,6 +70,7 @@ class PostCardDeck extends React.Component {
             text={post.node.excerpt}
             timeToRead={post.node.timeToRead}
             title={post.node.frontmatter.title}
+            updated={post.node.frontmatter.updated}
             cardClass={cardClass}
             cardBodyClass={cardBodyClass}
             cardButtonClass={cardButtonClass}

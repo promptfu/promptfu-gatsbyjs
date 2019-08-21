@@ -10,7 +10,7 @@ const Categories = ({ categories, pathPrefix }) => {
     <Row className="my-2">
       <Col>
         <hr className="m-0" />
-        <p style={pStyle} className="text-right text-muted my-1">
+        <p style={pStyle} className="text-left text-muted my-1">
           <span>
             <FaFolder />
             &nbsp;Categories:&nbsp;

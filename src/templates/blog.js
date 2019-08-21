@@ -33,14 +33,7 @@ class BlogPost extends React.Component {
           title={post.frontmatter.title}
         />
         <Post
-          categories={post.frontmatter.categories}
-          content={post.html}
-          imgName={post.frontmatter.image}
-          pathPrefix={post.parent.sourceInstanceName}
-          slug={post.fields.slug}
-          tags={post.frontmatter.tags}
-          title={post.frontmatter.title}
-          toc={post.tableOfContents}
+          post={post}
         />
       </Layout>
     )
@@ -55,19 +48,20 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       tableOfContents
+      timeToRead
       fields {
         slug
       }
       frontmatter {
         author
         categories
-        created
+        created(formatString: "YYYY-MM-DD")
         feature
         image
         show
         tags
         title
-        updated
+        updated(formatString: "YYYY-MM-DD")
       }
       parent {
         ... on File {

@@ -99,13 +99,13 @@ export default props => (
               excerpt(pruneLength: 125, format: HTML)
               frontmatter {
                 categories
-                created(formatString: "YYYY-MM-DD")
+                created(formatString: "MMM DD, YYYY")
                 feature
                 image
                 show
                 tags
                 title
-                updated
+                updated(formatString: "MMM DD, YYYY")
               }
               parent {
                 ... on File {
@@ -132,12 +132,12 @@ export default props => (
               excerpt(pruneLength: 125, format: HTML)
               frontmatter {
                 categories
-                created(formatString: "YYYY-MM-DD")
+                created(formatString: "MMM DD, YYYY")
                 feature
                 image
                 show
                 title
-                updated
+                updated(formatString: "MMM DD, YYYY")
               }
               parent {
                 ... on File {
