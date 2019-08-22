@@ -9,7 +9,7 @@ var path = require('path');
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `Tech dojo for all`,
+    description: `Tech tips and command line fu found within this dojo for all`,
     image: `tetris.jpg`,
     language: 'en',
     links: [
@@ -103,6 +103,65 @@ module.exports = {
     //   },
     // },
     // `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/*/categories`, `/*/categories/*`, `/*/tags`, `/*/tags/*`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+
+            allMarkdownRemark {
+              edges {
+                node {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    updated
+                  }
+                }
+              }
+            }
+          }
+        `,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) =>
+          allSitePage.edges.map(edge => {
+          const {
+            node: {
+              frontmatter: {
+                updated
+              }
+            }
+          } = allMarkdownRemark.edges.find(element => element.node.fields.slug === edge.node.path) || {node: { frontmatter: { updated: undefined }}}
+
+          if (updated) {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+
+              lastmod: `${updated}`,
+            }
+          } else {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `monthly`,
+            }
+          }
+        })
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
