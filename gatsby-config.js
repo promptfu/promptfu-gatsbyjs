@@ -176,7 +176,6 @@ module.exports = {
         icon: path.join(__dirname, `content`, `assets`, `images`, `favicon.png`),
       },
     },
-    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-twitter`,
@@ -186,7 +185,8 @@ module.exports = {
       options: {
         filter: node => node.internal.type === `DropboxImagesYaml`,
       }
-    }
+    },
+    `gatsby-plugin-offline`,
   ]
 }
 
