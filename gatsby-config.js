@@ -9,7 +9,7 @@ var path = require('path');
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `Tech tips and command line fu found within this dojo for all`,
+    description: `Tech tips and command line fu found within this dojo`,
     image: `tetris.jpg`,
     language: 'en',
     links: [
@@ -96,12 +96,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-146282315-1`,
+      },
+    },
     // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-sitemap`,
