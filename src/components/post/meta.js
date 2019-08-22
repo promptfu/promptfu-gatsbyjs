@@ -33,9 +33,9 @@ const Meta = ({ created, pathPrefix, slug, tags, timeToRead, title, updated }) =
             &nbsp;
             {timeToRead} minute read
           </span>
-
-          <PostCommentCount slug={slug} title={title} className="mr-2 d-inline-block" />
-
+          <span className="mr-2 d-inline-block">
+            <PostCommentCount slug={slug} title={title} />
+          </span>
           <span className="d-inline-block">
             <FaTags />
             &nbsp;Tags:&nbsp;

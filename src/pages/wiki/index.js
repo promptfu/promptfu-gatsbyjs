@@ -45,7 +45,7 @@ class WikiIndexPage extends React.Component {
                   </Row>
                   <Row>
                     <Col>
-                      <PostLinkListGroup items={wikiPostsFeatured} pathPrefix={this.props.path} />
+                      <PostLinkListGroup items={wikiPostsFeatured} />
                     </Col>
                   </Row>
                 </Col>

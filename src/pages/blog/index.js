@@ -62,7 +62,7 @@ class BlogIndexPage extends React.Component {
         />
         <Container>
           {/* Display featured blog posts as cards that can take the full width of the container */}
-          <PostCardDeck items={postsFeatured} cardClass={"my-3 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} />
+          <PostCardDeck items={postsFeatured} cardClass={"my-3 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}  />
 
           {/* Display blog posts as cards in a CardDeck */}
           <PostCardDeck items={posts} columnsSM={1} columnsMD={1} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />

@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Image from "components/post/image"
 import { Card, Row, Col } from "react-bootstrap"
-import { FaRegCalendarAlt, FaRegClock, FaFolder, FaTags } from 'react-icons/fa'
-import PostCategories from "components/post-categories"
+import { FaRegCalendarAlt, FaRegClock, FaTags } from 'react-icons/fa'
+// import PostCategories from "components/post-categories"
 import PostCommentCount from "components/post-comment-count"
 import PostTags from "components/post-tags"
 
@@ -31,23 +31,18 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
             &nbsp;
             {timeToRead} minute read
           </span>
-          <PostCommentCount slug={slug} title={title} className="d-inline-block" />
+          <span className="mr-2 d-inline-block">
+            <PostCommentCount slug={slug} title={title} />
+          </span>
+          <span className="mr-2 d-inline-block">
+            <FaTags />
+            <span>&nbsp;Tags:&nbsp;</span>
+            <PostTags tags={tags} pathPrefix={pathPrefix} />
+          </span>
         </div>
         <Card.Text dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
         {/* <Button variant="dark" as={Link} to={slug} type="null" className={cardButtonClass}>read more</Button> */}
       </Card.Body>
-      <Card.Footer className="text-muted">
-        <span className="mr-2 d-inline-block">
-          <FaFolder />
-          <span>&nbsp;Categories:&nbsp;</span>
-          <PostCategories categories={categories} pathPrefix={pathPrefix} />
-        </span>
-        <span className="mr-2 d-inline-block">
-          <FaTags />
-          <span>&nbsp;Tags:&nbsp;</span>
-          <PostTags tags={tags} pathPrefix={pathPrefix} />
-        </span>
-      </Card.Footer>
     </Card>
   )
   const horizontalPostCard = (
@@ -73,7 +68,9 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
                 &nbsp;
                 {timeToRead} minute read
               </span>
-              <PostCommentCount slug={slug} title={title} className="d-inline-block" />
+              <span className="mr-2 d-inline-block">
+                <PostCommentCount slug={slug} title={title} />
+              </span>
             </div>
             <Card.Text as="div" dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
             {/* <Button variant="dark" as={Link} to={slug} type="null" className={cardButtonClass}>read more</Button> */}

@@ -7,18 +7,16 @@ import { FaRegComments } from "react-icons/fa"
 import { CommentCount } from "disqus-react"
 
 const propTypes = {
-  className: PropTypes.string,
-  slug: PropTypes.string,
-  title: PropTypes.string,
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 const defaultProps = {
-  className: ``,
   slug: ``,
   title: ``,
 }
 
-const PostCommentCount = ({ className, slug, title }) => {
+const PostCommentCount = ({slug, title }) => {
 
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
@@ -26,15 +24,15 @@ const PostCommentCount = ({ className, slug, title }) => {
   }
 
   return (
-    <span className={className}>
+    <>
       <FaRegComments />
       &nbsp;
       <Link to={slug + `#comments`}>
         <CommentCount {...disqusConfig}>
           0 Comments
         </CommentCount>
-       </Link>
-    </span>
+      </Link>
+    </>
   )
 }
 

@@ -58,7 +58,9 @@ const PostLinkListGroup = ({ items }) => {
                   <span className="ml-1">
                     <PostCategories categories={categories} pathPrefix={sourceInstanceName} />
                   </span>
-                  <PostCommentCount slug={slug} title={title} className="float-right" />
+                  <span className="ml-1 float-right">
+                    <PostCommentCount slug={slug} title={title}/>
+                  </span>
                 </p>
               </Col>
             </Row>
