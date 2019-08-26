@@ -17,6 +17,7 @@ const defaultProps = {
 class Comments extends React.Component {
   constructor(props) {
     super(props)
+    console.log("Comments")
 
     this.state = {
     }
@@ -90,26 +91,7 @@ class Comments extends React.Component {
       </Row>
     )
   }
-
 }
-
-// const Comments = ({ slug, title }) => {
-
-//   const disqusConfig = {
-//     shortname: process.env.GATSBY_DISQUS_NAME,
-//     config: { identifier: slug, title}
-//   }
-
-//   console.log(disqusConfig)
-//   return (
-//     <Row>
-//       <Col>
-//         <div id="comments"></div>
-//         <DiscussionEmbed {...disqusConfig} />
-//       </Col>
-//     </Row>
-//   )
-// }
 
 Comments.propTypes = propTypes
 Comments.defaultProps = defaultProps

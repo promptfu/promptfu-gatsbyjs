@@ -5,7 +5,17 @@ import { graphql } from "gatsby"
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { PageType } from "components/seo"
-import Post from "components/post"
+import { Container, Row, Col } from "react-bootstrap"
+
+import {
+  Categories,
+  Comments,
+  Content,
+  Header,
+  Image,
+  Meta,
+  TableOfContents
+} from "components/post"
 
 class WikiPost extends React.Component {
   constructor(props) {
@@ -18,22 +28,91 @@ class WikiPost extends React.Component {
   }
 
   render() {
-    const post = this.props.data.markdownRemark
+
+    const {
+      markdownRemark: {
+        fields: {
+          slug,
+        },
+        frontmatter: {
+          author,
+          categories,
+          created,
+          image,
+          tags,
+          title,
+          updated,
+        },
+        html,
+        parent: {
+          sourceInstanceName
+        },
+        tableOfContents,
+        timeToRead,
+      },
+    } = this.props.data
     
     return (
       <Layout>
         <SEO
-          dateCreated={post.frontmatter.created}
-          dateModified={post.frontmatter.updated}
-          datePublished={post.frontmatter.created}
-          image={post.frontmatter.image}
+          dateCreated={created}
+          dateModified={updated}
+          datePublished={created}
+          image={image}
           pathname={this.props.location.pathname}
           pageType={PageType.ARTICLE}
-          title={post.frontmatter.title}
+          title={title}
         />
-        <Post
-          post={post}
-        />
+        <Container className="shadow-lg">
+          <Row>
+            <Col>
+              <Header title={title} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Meta
+                author={author}
+                created={created}
+                editable={true}
+                pathPrefix={sourceInstanceName}
+                slug={slug}
+                tags={tags}
+                timeToRead={timeToRead}
+                title={title}
+                updated={updated}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Image imgName={image} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              {(tableOfContents === null || tableOfContents.length === 0) ? null : <TableOfContents tableOfContents={tableOfContents} /> }
+              <Content content={html} />
+            </Col>
+          </Row>
+          <Row className="my-5 text-center">
+            <Col>
+              <span>
+                <a href={`https://github.com/promptfu/promptfu-gatsbyjs/edit/master/content${slug}index.md`} className="text-muted">improve this post</a>
+              </span>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Categories pathPrefix={sourceInstanceName} categories={categories} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Comments slug={slug} title={title} />
+            </Col>
+          </Row>
+        </Container>
       </Layout>
      )
   }

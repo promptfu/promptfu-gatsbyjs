@@ -27,7 +27,7 @@ const PostCommentCount = ({slug, title }) => {
     <>
       <FaRegComments />
       &nbsp;
-      <Link to={slug + `#comments`}>
+      <Link to={slug + `#comments`} className="text-muted">
         <CommentCount {...disqusConfig}>
           0 Comments
         </CommentCount>
