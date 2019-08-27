@@ -95,7 +95,10 @@ export default props => (
           sort: { order: DESC, fields: [frontmatter___updated] }
           filter: {
             fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-            frontmatter: { show: { eq: true } }
+            frontmatter: {
+              show: { eq: true }
+              feature: { eq: true }
+            }
           }
           limit: 5
         ) {
@@ -130,7 +133,10 @@ export default props => (
           sort: { order: DESC, fields: [frontmatter___updated] }
           filter: {
             fileAbsolutePath: { glob: "**/content/wiki/**/*.md" }
-            frontmatter: { show: { eq: true } }
+            frontmatter: {
+              show: { eq: true }
+              feature: { eq: true }
+            }
           }
           limit: 5
         ) {

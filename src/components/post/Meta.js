@@ -4,7 +4,8 @@ import PropTypes from "prop-types"
 import { Row, Col } from "react-bootstrap"
 import PostTags from "components/post-tags"
 import PostCommentCount from "components/post-comment-count"
-import { FaEdit, FaRegCalendarAlt, FaRegClock, FaTags } from 'react-icons/fa'
+import { FaRegCalendarAlt, FaRegClock, FaTags } from 'react-icons/fa'
+import Edit from "./Edit"
 
 
 const propTypes = {
@@ -38,9 +39,7 @@ const Meta = ({ created, editable, pathPrefix, slug, tags, timeToRead, title, up
           </span>
           {editable &&
             <span className="mr-3 d-inline-block">
-              <FaEdit />
-              &nbsp;
-              <a href={`https://github.com/promptfu/promptfu-gatsbyjs/edit/master/content${slug}index.md`} className="text-muted">improve this post</a>
+              <Edit />
             </span>
           }
           <span className="mr-3 d-inline-block">

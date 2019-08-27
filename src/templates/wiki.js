@@ -10,6 +10,7 @@ import {
   Categories,
   Comments,
   Content,
+  Edit,
   Header,
   Image,
   Meta,
@@ -92,12 +93,7 @@ class WikiPost extends React.Component {
           <Row className="my-5 text-center">
             <Col>
               <span>
-                <a
-                  href={`https://github.com/promptfu/promptfu-gatsbyjs/edit/master/content${slug}index.md`}
-                  className="text-muted"
-                >
-                  improve this post
-                </a>
+                <Edit />
               </span>
             </Col>
           </Row>

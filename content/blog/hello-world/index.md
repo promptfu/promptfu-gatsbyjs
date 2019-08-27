@@ -1,29 +1,58 @@
 ---
-author: Matthew Hassel
-categories: ["linux"]
-created: 2015-02-27 00:00:00 -0600
+categories: ["web"]
+created: 2019-08-27 12:01:00 -0500
 feature: true
-image: black-and-white-factory-industrial-plant-large.jpg
+image: astronomy-cosmic-cosmos.jpg
 show: true
-tags: ["linux", "command line" ]
+tags: ["web" ]
 title: Hello, World
-updated: 2019-06-25 00:15:00 -0500
+updated: 2019-08-27 12:01:00 -0500
 ---
-
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+This is officially our first post! How exciting! Let us start things off with a quote, because it is sooo true.
+> Technology is a word that describes something that doesn’t work yet.
+>
+> <cite>-- Douglas Adams</cite>
 <!--more-->
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+More interesting posts are coming in the future so be sure to check back with us; also be sure to check out our various wikis that include tech tips and command line fu that we have found useful in our everyday jobs|life|etc. - [Wiki](https://www.promptfu.com/wiki).
 
-![Chinese Salty Egg](./salty_egg.jpg)
+```shell
+# Bash
+$ WORLD='World'
+$ echo "Hello, ${WORLD}"
+Hello, World
+```
+
+```javascript
+// Javascript
+var world = 'World'
+console.log('Hello, ' + world)
+Hello, World
+```
+
+```python
+# Python
+world = 'World'
+print('Hello, ', world)
+Hello, World
+```
+
+```jsx
+{/* React JSX */}
+render() {
+
+  const world = 'world`
+  return (
+    <>
+      <h1>Hello, {world}</h1>
+    </>
+  )
+}
+```
+
+```ruby
+# Ruby
+world = 'World'
+puts 'Hello, ' + world
+Hello, World
+```

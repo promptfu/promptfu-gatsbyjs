@@ -1,13 +1,13 @@
 ---
 author: Matthew Hassel
 categories: ["linux"]
-created: 2015-02-27 00:00:00 -0600
+created: 2019-08-27 12:01:00 -0500
 feature: true
 image: black-and-white-factory-industrial-plant-large.jpg
 show: true
 tags: ["linux", "command line" ]
 title: xargs
-updated: 2019-06-25 00:15:00 -0500
+updated: 2019-08-27 12:01:00 -0500
 ---
 `xargs` is a pretty cool command. Lets say you have a sweet one-liner that returns a list of files you want to do
 something with; for example, like coping files from one directory to another. You can do this with just `cp` by itself, I am sure, but I would
@@ -19,7 +19,7 @@ do just that...
 
 Let me explain the usage example below as it was my first experience using `xargs`. I wanted to put together a kernel
 upgrade package, and I wanted to pull all the kernel files for a specific version into a central location so I could
-work from there and not mess with anything via my repo. The below command was used to `grep` for the files I wanted:
+work from there and not mess with anything in my repo. The below command was used to `grep` for the files I wanted:
 
 ```shell
 $ ls | grep '2.6.32-358.23' | grep -v 'python'
@@ -37,7 +37,7 @@ like, great... I have my list of files, and now I want to copy them somewhere so
 separated from my repo.
 
 `xargs` command can be used to run a command from standard input. To copy the list of files above to the `/tmp`
-directory, the below command was used:
+directory:
 
 ```shell
 $ ls | grep '2.6.32-358.23' | grep -v 'python' | xargs -I -t cp {} /tmp
@@ -68,4 +68,4 @@ kernel-headers-2.6.32-358.23.2.el6.x86_64.rpm
 perf-2.6.32-358.23.2.el6.x86_64.rpm
 ```
 
-_Referenced commands: [cp](/wiki/cp), [grep](/wiki/grep)_
+_Referenced commands:_ `cp`, [`grep`](/wiki/grep)

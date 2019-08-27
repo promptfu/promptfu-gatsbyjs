@@ -86,7 +86,7 @@ export default props => (
           allMarkdownRemark(
             sort: {order: DESC, fields: [frontmatter___created]},
             filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
-            frontmatter: {feature: {eq: false}}}
+            frontmatter: {feature: {eq: false}, show: {eq: true}}}
           ) {
           edges {
             node {
@@ -119,7 +119,7 @@ export default props => (
         wikiPostsFeatured: allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___created]},
           filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
-          frontmatter: {feature: {eq: true}}}
+          frontmatter: {feature: {eq: true}, show: {eq: true}}}
           ) {
           edges {
             node {
