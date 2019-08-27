@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Row, Col } from "react-bootstrap"
-import "./content.module.scss"
+import "./Content.module.scss"
 
 const Content = ({ content }) => {
   return (

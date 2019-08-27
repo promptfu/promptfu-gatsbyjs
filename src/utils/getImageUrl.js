@@ -12,16 +12,16 @@ export function getImageUrl(imgName) {
 }
 
 const allImageSharpQuery = graphql`
-query {
-  allImageSharp {
-    edges {
-      node {
-        fixed(width: 1200, height: 630) {
-          originalName
-          src
+  query {
+    allImageSharp {
+      edges {
+        node {
+          fixed(width: 1200, height: 630) {
+            originalName
+            src
+          }
         }
       }
     }
   }
-}
 `

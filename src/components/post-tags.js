@@ -11,13 +11,16 @@ const PostTags = ({ linkStyle, separator, tags, pathPrefix }) => {
     <React.Fragment>
       {tags.map((tag, index) => {
         const slug = `/${pathPrefix}/tags/${slugify(tag)}`.toLowerCase()
-        if((index + 1) === tags.length) { // Check if item is last in array
+        if (index + 1 === tags.length) {
+          // Check if item is last in array
           separator = ``
         }
         return (
           <span key={`${tag}-${index}`}>
             <Badge variant="info">
-              <Link to={slug} style={linkStyle} className={`text-white`}>#{tag.toLowerCase()}</Link>
+              <Link to={slug} style={linkStyle} className={`text-white`}>
+                #{tag.toLowerCase()}
+              </Link>
             </Badge>
             {separator}
           </span>
@@ -33,12 +36,12 @@ PostTags.propTypes = {
   linkStyle: PropTypes.object,
   separator: PropTypes.string,
   tags: PropTypes.array,
-  pathPrefix: PropTypes.string
+  pathPrefix: PropTypes.string,
 }
 
 PostTags.defaultProps = {
   linkStyle: {},
   separator: ` | `,
   tags: [],
-  pathPrefix: '',
+  pathPrefix: "",
 }

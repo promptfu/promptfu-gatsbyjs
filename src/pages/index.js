@@ -10,17 +10,13 @@ import PostCardDeck from "components/post-card-deck"
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
-    console.log("IndexPage")
-    console.log(this.props)
 
-    this.state = {
-    }
+    this.state = {}
 
     // bind function(s) in constructor instead of render
   }
 
   render() {
-
     const description = this.props.data.site.siteMetadata.description
     const title = this.props.data.site.siteMetadata.title
 
@@ -30,23 +26,25 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO />
-        <JumbotronHeader
-          description={description}
-          title={title}
-        />
+        <JumbotronHeader description={description} title={title} />
         <Container>
           <Row>
             <Col className="text-center">
-            <h2>
-              <span className="font-weight-light">THE </span>
-              <span className="font-weight-bold">LATEST </span>
-              <span className="font-weight-light">FROM THE </span>
-              <span className="font-weight-blod">BLOG</span>
-            </h2>
+              <h2>
+                <span className="font-weight-light">THE </span>
+                <span className="font-weight-bold">LATEST </span>
+                <span className="font-weight-light">FROM THE </span>
+                <span className="font-weight-blod">BLOG</span>
+              </h2>
             </Col>
           </Row>
           {/* Display featured blog posts as cards that can take the full width of the container */}
-          <PostCardDeck items={blogPostsFeatured} cardClass={"my-4 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} horizontal />
+          <PostCardDeck
+            items={blogPostsFeatured}
+            cardClass={"my-4 shadow"}
+            cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}
+            horizontal
+          />
           <Row className="my-3">
             <Col className="text-center">
               <Link to={`/blog`}>more blog posts</Link>
@@ -64,7 +62,12 @@ class IndexPage extends React.Component {
               </h2>
             </Col>
           </Row>
-          <PostCardDeck items={wikiPostsFeatured} cardClass={"my-4 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"} horizontal />
+          <PostCardDeck
+            items={wikiPostsFeatured}
+            cardClass={"my-4 shadow"}
+            cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}
+            horizontal
+          />
           <Row className="my-3">
             <Col className="text-center">
               <Link to={`/wiki`}>more wiki posts</Link>
@@ -89,13 +92,13 @@ export default props => (
         }
 
         blogPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___updated]},
+          sort: { order: DESC, fields: [frontmatter___updated] }
           filter: {
-            fileAbsolutePath: {glob: "**/content/blog/**/*.md"}
-            frontmatter: {show: {eq: true}}
-          },
+            fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
+            frontmatter: { show: { eq: true } }
+          }
           limit: 5
-          ) {
+        ) {
           edges {
             node {
               id
@@ -124,13 +127,13 @@ export default props => (
         }
 
         wikiPostsFeatured: allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___updated]},
+          sort: { order: DESC, fields: [frontmatter___updated] }
           filter: {
-            fileAbsolutePath: {glob: "**/content/wiki/**/*.md"},
-            frontmatter: {show: {eq: true}}
-          },
+            fileAbsolutePath: { glob: "**/content/wiki/**/*.md" }
+            frontmatter: { show: { eq: true } }
+          }
           limit: 5
-          ) {
+        ) {
           edges {
             node {
               id
@@ -159,7 +162,6 @@ export default props => (
         }
       }
     `}
-    render={ data => <IndexPage data={data} {...props} /> }
+    render={data => <IndexPage data={data} {...props} />}
   />
 )
-

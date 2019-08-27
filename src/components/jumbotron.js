@@ -8,13 +8,12 @@ import BackgroundImage from "gatsby-background-image"
 const JumbotronHeader = ({ description, title }) => {
   const data = useStaticQuery(graphql`
     {
-      file(name: {eq: "tetris"}) {
+      file(name: { eq: "tetris" }) {
         childImageSharp {
           fluid(
-            maxWidth: 4160,
-            duotone: { highlight: "#30596e", shadow: "#292b2c", opacity: 50 },
+            maxWidth: 4160
+            duotone: { highlight: "#30596e", shadow: "#292b2c", opacity: 50 }
             toFormat: PNG
-
           ) {
             ...GatsbyImageSharpFluid
           }
@@ -51,4 +50,3 @@ JumbotronHeader.defaultProps = {
 }
 
 export default JumbotronHeader
-

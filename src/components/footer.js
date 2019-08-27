@@ -7,8 +7,8 @@ import {
   FaRegCopyright,
   FaGithub,
   // FaInstagram,
-  FaTwitter
-} from 'react-icons/fa'
+  FaTwitter,
+} from "react-icons/fa"
 import Img from "gatsby-image"
 
 const Footer = ({ description, title }) => {
@@ -36,10 +36,7 @@ const Footer = ({ description, title }) => {
               rel="noopener noreferrer"
               className="xpros-social-icon"
             >
-              <FaGithub
-                size={`2em`}
-                className="text-white mx-2 grow" 
-              />
+              <FaGithub size={`2em`} className="text-white mx-2 grow" />
             </a>
 
             {/* Instagram */}
@@ -62,10 +59,7 @@ const Footer = ({ description, title }) => {
               rel="noopener noreferrer"
               className="xpros-social-icon"
             >
-              <FaTwitter
-                size={`2em`}
-                className="text-white mx-2 grow" 
-              />
+              <FaTwitter size={`2em`} className="text-white mx-2 grow" />
             </a>
           </Col>
         </Row>

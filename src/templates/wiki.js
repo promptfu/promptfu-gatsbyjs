@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { PageType } from "components/seo"
@@ -14,26 +13,20 @@ import {
   Header,
   Image,
   Meta,
-  TableOfContents
+  TableOfContents,
 } from "components/post"
 
 class WikiPost extends React.Component {
   constructor(props) {
     super(props)
-    console.log("WikiPost")
-    console.log(this.props)
 
-    this.state = {
-    }
+    this.state = {}
   }
 
   render() {
-
     const {
       markdownRemark: {
-        fields: {
-          slug,
-        },
+        fields: { slug },
         frontmatter: {
           author,
           categories,
@@ -44,14 +37,12 @@ class WikiPost extends React.Component {
           updated,
         },
         html,
-        parent: {
-          sourceInstanceName
-        },
+        parent: { sourceInstanceName },
         tableOfContents,
         timeToRead,
       },
     } = this.props.data
-    
+
     return (
       <Layout>
         <SEO
@@ -91,20 +82,31 @@ class WikiPost extends React.Component {
           </Row>
           <Row>
             <Col>
-              {(tableOfContents === null || tableOfContents.length === 0) ? null : <TableOfContents tableOfContents={tableOfContents} /> }
+              {tableOfContents === null ||
+              tableOfContents.length === 0 ? null : (
+                <TableOfContents tableOfContents={tableOfContents} />
+              )}
               <Content content={html} />
             </Col>
           </Row>
           <Row className="my-5 text-center">
             <Col>
               <span>
-                <a href={`https://github.com/promptfu/promptfu-gatsbyjs/edit/master/content${slug}index.md`} className="text-muted">improve this post</a>
+                <a
+                  href={`https://github.com/promptfu/promptfu-gatsbyjs/edit/master/content${slug}index.md`}
+                  className="text-muted"
+                >
+                  improve this post
+                </a>
               </span>
             </Col>
           </Row>
           <Row>
             <Col>
-              <Categories pathPrefix={sourceInstanceName} categories={categories} />
+              <Categories
+                pathPrefix={sourceInstanceName}
+                categories={categories}
+              />
             </Col>
           </Row>
           <Row>
@@ -114,7 +116,7 @@ class WikiPost extends React.Component {
           </Row>
         </Container>
       </Layout>
-     )
+    )
   }
 }
 

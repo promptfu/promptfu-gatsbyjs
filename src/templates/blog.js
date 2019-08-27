@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-
 import Layout from "components/layout"
 import SEO from "components/seo"
 import { PageType } from "components/seo"
@@ -10,15 +9,10 @@ import Post from "components/post"
 class BlogPost extends React.Component {
   constructor(props) {
     super(props)
-    console.log("BlogPost")
-    console.log(this.props)
 
-    this.state = {
-    }
-
+    this.state = {}
   }
   render() {
-    
     const post = this.props.data.markdownRemark
 
     return (
@@ -32,14 +26,11 @@ class BlogPost extends React.Component {
           pageType={PageType.BLOGPOST}
           title={post.frontmatter.title}
         />
-        <Post
-          post={post}
-        />
+        <Post post={post} />
       </Layout>
     )
   }
 }
-
 
 export default BlogPost
 

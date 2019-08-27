@@ -18,8 +18,6 @@ const defaultProps = {
 }
 
 const Twitter = (props) => {
-  console.log("Twitter")
-  console.log(props)
   return (
     <Helmet>
       <meta name="twitter:card" content={props.type} />

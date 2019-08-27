@@ -12,8 +12,6 @@ import PostCardDeck from "components/post-card-deck"
 class BlogIndexPage extends React.Component {
   constructor(props) {
     super(props)
-    console.log("BlogIndexPage")
-    console.log(this.props)
 
     var blogPostsFeatured = this.props.data.blogPostsFeatured.edges
     var blogPosts = this.props.data.blogPosts.edges
@@ -32,7 +30,7 @@ class BlogIndexPage extends React.Component {
   componentDidMount() {
     this.setState({ isLoading: false })
   }
-  
+
   onChangePage(pageOfItems) {
     // update state with new page of items
     this.setState({ pageOfItems: pageOfItems })
@@ -84,7 +82,7 @@ export default props => (
           }
         }
 
-        blogPosts: 
+        blogPosts:
           allMarkdownRemark(
             sort: {order: DESC, fields: [frontmatter___updated]},
             filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"},

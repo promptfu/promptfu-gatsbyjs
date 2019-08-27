@@ -30,43 +30,40 @@ const defaultProps = {
 }
 
 const Blog = (props) => {
-  console.log("Blog")
-  console.log(props)
-
   return (
     <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(
-          {
-            "@context": "http://schema.org",
-            "@type": "Blog",
-            "name": `${props.headline}`,
-            "description": `${props.description}`,
-            "image": `${props.image}`,
-            "url": `${props.url}`,
-            "headline": `${props.headline}`,
-            "alternativeHeadline": `${props.alternativeHeadline}`,
-            // "dateCreated": `${props.dateCreated}`,
-            // "datePublished": `${props.datePublished}`,
-            // "dateModified": `${props.dateModified}`,
-            "inLanguage": `${props.language}`,
-            "isFamilyFriendly": `${props.isFamilyFriendly}`,
-            copyrightYear: `${new Date().getFullYear()}`,
-            // copyrightHolder: getSchemaOrgAuthor(props.author),
-            author: getSchemaOrgAuthor(props.author),
-            "publisher": {
-              "@type": "Organization",
-              "name": `${props.orgName}`,
-              "url": `${props.orgUrl}`,
-              "logo": {
-                "@type": "ImageObject",
-                "url": `${props.orgImageUrl}`,
-              }
-            },
-            "mainEntityOfPage": `${props.mainEntityOfPage}`,
-          }
-        )}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              "@context": "http://schema.org",
+              "@type": "Blog",
+              "name": `${props.headline}`,
+              "description": `${props.description}`,
+              "image": `${props.image}`,
+              "url": `${props.url}`,
+              "headline": `${props.headline}`,
+              "alternativeHeadline": `${props.alternativeHeadline}`,
+              // "dateCreated": `${props.dateCreated}`,
+              // "datePublished": `${props.datePublished}`,
+              // "dateModified": `${props.dateModified}`,
+              "inLanguage": `${props.language}`,
+              "isFamilyFriendly": `${props.isFamilyFriendly}`,
+              copyrightYear: `${new Date().getFullYear()}`,
+              // copyrightHolder: getSchemaOrgAuthor(props.author),
+              author: getSchemaOrgAuthor(props.author),
+              "publisher": {
+                "@type": "Organization",
+                "name": `${props.orgName}`,
+                "url": `${props.orgUrl}`,
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": `${props.orgImageUrl}`,
+                }
+              },
+              "mainEntityOfPage": `${props.mainEntityOfPage}`,
+            }
+          )}
         </script>
       </Helmet>
     </>

@@ -19,8 +19,6 @@ const defaultProps = {
 }
 
 const SiteNavigationElement = (props) => {
-  console.log("SiteNavigationElement")
-  console.log(props)
   return (
     <>
     <Helmet>

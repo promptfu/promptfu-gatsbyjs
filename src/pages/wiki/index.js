@@ -11,8 +11,6 @@ import { Container, Row, Col } from "react-bootstrap"
 class WikiIndexPage extends React.Component {
   constructor(props) {
     super(props)
-    console.log("WikiIndexPage")
-    console.log(this.props)
 
     this.state = {
     }

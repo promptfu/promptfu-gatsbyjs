@@ -13,8 +13,6 @@ const defaultProps = {
 }
 
 const WebSite = (props) => {
-  console.log("WebSite")
-  console.log(props)
   return (
     <>
     <Helmet>

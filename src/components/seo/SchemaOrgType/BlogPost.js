@@ -30,65 +30,62 @@ const defaultProps = {
 }
 
 const BlogPost = (props) => {
-  console.log("BlogPost")
-  console.log(props)
-  
   return (
     <>
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(
-          {
-            "@context":"http://schema.org",
-            "@type": "BlogPosting",
-            "name": `${props.name}`,
-            "description": `${props.description}`,
-            "image": `${props.image}`,
-            "url": `${props.url}`,
-            "headline": `${props.headline}`,
-            "alternativeHeadline": `${props.alternativeHeadline}`,
-            "dateCreated": `${props.datePublished}`,
-            "datePublished": `${props.datePublished}`,
-            "dateModified": `${props.dateModified}`,
-            "inLanguage": `${props.language}`,
-            "isFamilyFriendly": `${props.isFamilyFriendly}`,
-            "copyrightYear": `${new Date().getFullYear()}`,
-            // "copyrightHolder": getSchemaOrgAuthor(props.author),
-            // "contentLocation": {
-            //   "@type": "Place",
-            //   "name": "Delray Beach, FL"
-            // },
-            "author": getSchemaOrgAuthor(props.author),
-            "publisher": {
-              "@type": "Organization",
-              "name": `${props.orgName}`,
-              "url": `${props.orgUrl}`,
-              "logo": {
-                "@type": "ImageObject",
-                "url": `${props.orgImageUrl}`,
-              }
-            },
-            // "sponsor": {
-            //   "@type": "Organization",
-            //   "name": "Acme Widgets",
-            //   "url": "https://example.com",
-            //   "logo": {
-            //     "@type": "ImageObject",
-            //     "url": "http://www.example.com/logo.png"
-            //   }
-            // },
-            "mainEntityOfPage": `${props.mainEntityOfPage}`,
-            // "keywords": [
-            //   "keyword1",
-            //   "keyword2",
-            //   "keyword3",
-            //   "keyword4"
-            // ],
-            // "genre":["SEO","JSON-LD"],
-            // "articleSection": "Uncategorized posts",
-            // "articleBody": "Paste the body of your content in here in plaintext"
-          }  
-        )}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              "@context":"http://schema.org",
+              "@type": "BlogPosting",
+              "name": `${props.name}`,
+              "description": `${props.description}`,
+              "image": `${props.image}`,
+              "url": `${props.url}`,
+              "headline": `${props.headline}`,
+              "alternativeHeadline": `${props.alternativeHeadline}`,
+              "dateCreated": `${props.datePublished}`,
+              "datePublished": `${props.datePublished}`,
+              "dateModified": `${props.dateModified}`,
+              "inLanguage": `${props.language}`,
+              "isFamilyFriendly": `${props.isFamilyFriendly}`,
+              "copyrightYear": `${new Date().getFullYear()}`,
+              // "copyrightHolder": getSchemaOrgAuthor(props.author),
+              // "contentLocation": {
+              //   "@type": "Place",
+              //   "name": "Delray Beach, FL"
+              // },
+              "author": getSchemaOrgAuthor(props.author),
+              "publisher": {
+                "@type": "Organization",
+                "name": `${props.orgName}`,
+                "url": `${props.orgUrl}`,
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": `${props.orgImageUrl}`,
+                }
+              },
+              // "sponsor": {
+              //   "@type": "Organization",
+              //   "name": "Acme Widgets",
+              //   "url": "https://example.com",
+              //   "logo": {
+              //     "@type": "ImageObject",
+              //     "url": "http://www.example.com/logo.png"
+              //   }
+              // },
+              "mainEntityOfPage": `${props.mainEntityOfPage}`,
+              // "keywords": [
+              //   "keyword1",
+              //   "keyword2",
+              //   "keyword3",
+              //   "keyword4"
+              // ],
+              // "genre":["SEO","JSON-LD"],
+              // "articleSection": "Uncategorized posts",
+              // "articleBody": "Paste the body of your content in here in plaintext"
+            }  
+          )}
         </script>
       </Helmet>
     </>

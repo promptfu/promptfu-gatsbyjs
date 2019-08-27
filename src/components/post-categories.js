@@ -11,15 +11,20 @@ const PostCategories = ({ categories, pathPrefix }) => {
   return (
     <React.Fragment>
       {categories.map((category, index) => {
-        const slug = `/${pathPrefix}/categories/${slugify(category)}`.toLowerCase()
+        const slug = `/${pathPrefix}/categories/${slugify(
+          category
+        )}`.toLowerCase()
         var separator = ` | `
-        if((index + 1) === categories.length) { // Check if item is last in array
+        if (index + 1 === categories.length) {
+          // Check if item is last in array
           separator = ``
         }
         return (
           <span key={`${category}-${index}`}>
             <Badge variant="info">
-            <Link to={slug} className="text-white">#{category.toLowerCase()}</Link>
+              <Link to={slug} className="text-white">
+                #{category.toLowerCase()}
+              </Link>
             </Badge>
             {separator}
           </span>
@@ -33,10 +38,10 @@ export default PostCategories
 
 PostCategories.propTypes = {
   categories: PropTypes.array,
-  pathPrefix: PropTypes.string
+  pathPrefix: PropTypes.string,
 }
 
 PostCategories.defaultProps = {
   categories: [],
-  pathPrefix: '',
+  pathPrefix: "",
 }

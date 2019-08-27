@@ -16,11 +16,10 @@ const defaultProps = {
   title: ``,
 }
 
-const PostCommentCount = ({slug, title }) => {
-
+const PostCommentCount = ({ slug, title }) => {
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: slug, title}
+    config: { identifier: slug, title },
   }
 
   return (
@@ -28,9 +27,7 @@ const PostCommentCount = ({slug, title }) => {
       <FaRegComments />
       &nbsp;
       <Link to={slug + `#comments`} className="text-muted">
-        <CommentCount {...disqusConfig}>
-          0 Comments
-        </CommentCount>
+        <CommentCount {...disqusConfig}>0 Comments</CommentCount>
       </Link>
     </>
   )

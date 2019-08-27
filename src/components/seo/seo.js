@@ -35,7 +35,7 @@ const propTypes = {
             name: PropTypes.name,
             site: PropTypes.string.isRequired,
           }),
-        }),          
+        }),
         url: PropTypes.string.isRequired,
       }),
     }),
@@ -66,9 +66,7 @@ const defaultProps = {
 }
 
 const SEO = (props) => {
-  console.log("SEO")
-  console.log(props)
-  
+
   const {
     siteMetadata: {
       defaultDescription,
@@ -90,7 +88,6 @@ const SEO = (props) => {
   }
 
   const renderSchemaOrgSwitch = (pageType) => {
-    console.log("MY PAGE TYPE: ", pageType)
     switch(pageType) {
       case PageType.ARTICLE:
         return (

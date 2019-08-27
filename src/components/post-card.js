@@ -2,14 +2,29 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Link } from "gatsby"
-import Image from "components/post/image"
+import Image from "components/post/Image"
 import { Card, Row, Col } from "react-bootstrap"
-import { FaRegCalendarAlt, FaRegClock, FaTags } from 'react-icons/fa'
+import { FaRegCalendarAlt, FaRegClock, FaTags } from "react-icons/fa"
 // import PostCategories from "components/post-categories"
 import PostCommentCount from "components/post-comment-count"
 import PostTags from "components/post-tags"
 
-const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, timeToRead, title, updated, cardClass, cardBodyClass, cardButtonClass, horizontal }) => {
+const PostCard = ({
+  categories,
+  created,
+  imgName,
+  pathPrefix,
+  slug,
+  tags,
+  text,
+  timeToRead,
+  title,
+  updated,
+  cardClass,
+  cardBodyClass,
+  cardButtonClass,
+  horizontal,
+}) => {
   const verticalPostCard = (
     <Card className={cardClass}>
       <Link to={slug}>
@@ -40,7 +55,10 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
             <PostTags tags={tags} pathPrefix={pathPrefix} />
           </span>
         </div>
-        <Card.Text dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
+        <Card.Text
+          dangerouslySetInnerHTML={{ __html: text }}
+          className={"my-3"}
+        ></Card.Text>
         {/* <Button variant="dark" as={Link} to={slug} type="null" className={cardButtonClass}>read more</Button> */}
       </Card.Body>
     </Card>
@@ -50,12 +68,20 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
       <Row>
         <Col lg={6}>
           <Link to={slug}>
-            <Card.Img as={Image} imgName={imgName} className={"m-lg-4 fade-in"} />
+            <Card.Img
+              as={Image}
+              imgName={imgName}
+              className={"m-lg-4 fade-in"}
+            />
           </Link>
         </Col>
         <Col lg={6}>
           <Card.Body className={`m-lg-4 p-lg-0` + cardBodyClass}>
-            <Card.Title><Link to={slug} className="text-dark">{title}</Link></Card.Title>
+            <Card.Title>
+              <Link to={slug} className="text-dark">
+                {title}
+              </Link>
+            </Card.Title>
             {/* <Card.Subtitle>Card Subtitle</Card.Subtitle> */}
             <div style={cardMetaStyle} className="my-1 text-muted">
               <span className="mr-2 d-line-block">
@@ -72,22 +98,33 @@ const PostCard = ({ categories, created, imgName, pathPrefix, slug, tags, text, 
                 <PostCommentCount slug={slug} title={title} />
               </span>
             </div>
-            <Card.Text as="div" dangerouslySetInnerHTML={{ __html: text }} className={"my-3"}></Card.Text>
+            <Card.Text
+              as="div"
+              dangerouslySetInnerHTML={{ __html: text }}
+              className={"my-3"}
+            ></Card.Text>
             {/* <Button variant="dark" as={Link} to={slug} type="null" className={cardButtonClass}>read more</Button> */}
           </Card.Body>
         </Col>
       </Row>
       <Card.Footer className="text-muted bg-white border-0 p-0">
-        <span style={cardTagsStyle} className="mr-3 d-inline-block position-absolute">
-          <PostTags tags={tags} pathPrefix={pathPrefix} separator={` `} linkStyle={{fontSize:`1rem`}} />
+        <span
+          style={cardTagsStyle}
+          className="mr-3 d-inline-block position-absolute"
+        >
+          <PostTags
+            tags={tags}
+            pathPrefix={pathPrefix}
+            separator={` `}
+            linkStyle={{ fontSize: `1rem` }}
+          />
         </span>
       </Card.Footer>
     </Card>
   )
   return (
     <React.Fragment>
-      {(horizontal) ? horizontalPostCard : verticalPostCard }
-
+      {horizontal ? horizontalPostCard : verticalPostCard}
     </React.Fragment>
   )
 }
@@ -105,20 +142,20 @@ PostCard.propTypes = {
 }
 
 PostCard.defaultProps = {
-  data: '',
-  imgName: '',
-  slug: '',
-  text: '',
-  title: '',
-  cardBodyClass: '',
-  cardButtonClass: '',
+  data: "",
+  imgName: "",
+  slug: "",
+  text: "",
+  title: "",
+  cardBodyClass: "",
+  cardButtonClass: "",
 }
 
 const cardMetaStyle = {
-  fontSize: `.8rem`
+  fontSize: `.8rem`,
 }
 
 const cardTagsStyle = {
   right: `0`,
-  bottom: `-0.8rem`
+  bottom: `-0.8rem`,
 }

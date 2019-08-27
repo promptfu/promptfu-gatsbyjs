@@ -30,10 +30,8 @@ const defaultProps = {
 }
 
 const Article = (props) => {
-  console.log("Article")
-  console.log(props)
   return (
-      <>
+    <>
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(

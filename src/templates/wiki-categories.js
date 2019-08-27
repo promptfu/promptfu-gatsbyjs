@@ -15,23 +15,19 @@ const propTypes = {
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
-         PropTypes.shape({
-           node: PropTypes.shape({
-             excerpt: PropTypes.string,
-             frontmatter: PropTypes.shape({
-               categories: PropTypes.arrayOf(
-                 PropTypes.string,
-               ),
-               created: PropTypes.string,
-               feature: PropTypes.bool,
-               image: PropTypes.string,
-               show: PropTypes.bool,
-               tags: PropTypes.arrayOf(
-                 PropTypes.string,
-               ),
-               title: PropTypes.string.isRequired,
-               updated: PropTypes.string,
-              }),
+        PropTypes.shape({
+          node: PropTypes.shape({
+            excerpt: PropTypes.string,
+            frontmatter: PropTypes.shape({
+              categories: PropTypes.arrayOf(PropTypes.string),
+              created: PropTypes.string,
+              feature: PropTypes.bool,
+              image: PropTypes.string,
+              show: PropTypes.bool,
+              tags: PropTypes.arrayOf(PropTypes.string),
+              title: PropTypes.string.isRequired,
+              updated: PropTypes.string,
+            }),
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
             }),
@@ -45,19 +41,15 @@ const propTypes = {
   }),
 }
 
-const defaultProps = {
-
-}
+const defaultProps = {}
 
 class Categories extends React.Component {
   constructor(props) {
     super(props)
-    console.log("Categories")
-    console.log(this.props)
 
     this.state = {
       paginateItems: this.props.data.allMarkdownRemark.edges,
-      pageOfItems: []
+      pageOfItems: [],
     }
 
     // bind function(s) in constructor instead of render
@@ -70,12 +62,12 @@ class Categories extends React.Component {
   }
 
   render() {
-    console.log("pageOfItems: ", this.state.pageOfItems)
-    
+
     const { category } = this.props.pageContext
     const { totalCount } = this.props.data.allMarkdownRemark
     const categoryHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"} categorized with "${category}"`
+      totalCount === 1 ? "" : "s"
+    } categorized with "${category}"`
 
     return (
       <Layout>
@@ -85,10 +77,23 @@ class Categories extends React.Component {
               <h1>{categoryHeader}</h1>
             </Col>
           </Row>
-          <PostCardDeck items={this.state.pageOfItems} columnsSM={1} columnsMD={2} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />
+          <PostCardDeck
+            items={this.state.pageOfItems}
+            columnsSM={1}
+            columnsMD={2}
+            columnsLG={2}
+            columnsXL={2}
+            cardClass={"my-3 shadow"}
+            cardBodyClass={"d-flex flex-column"}
+            cardButtonClass={"mt-auto"}
+            fillCols
+          />
           <Row>
             <Col>
-              <Pagination items={this.state.paginateItems} onChangePage={this.onChangePage} />
+              <Pagination
+                items={this.state.paginateItems}
+                onChangePage={this.onChangePage}
+              />
             </Col>
           </Row>
           <Row className="my-3">
@@ -102,7 +107,6 @@ class Categories extends React.Component {
   }
 }
 
-
 Categories.propTypes = propTypes
 Categories.defaultProps = defaultProps
 export default props => (
@@ -112,7 +116,10 @@ export default props => (
         allMarkdownRemark(
           limit: 2000
           sort: { fields: [frontmatter___created], order: DESC }
-          filter: { fileAbsolutePath: {glob: "**/content/wiki/**/*.md"}, frontmatter: { categories: { in: [$category] } } }
+          filter: {
+            fileAbsolutePath: { glob: "**/content/wiki/**/*.md" }
+            frontmatter: { categories: { in: [$category] } }
+          }
         ) {
           totalCount
           edges {
@@ -143,6 +150,6 @@ export default props => (
         }
       }
     `}
-    render={ data => <Categories data={data} {...props} /> }
+    render={data => <Categories data={data} {...props} />}
   />
 )

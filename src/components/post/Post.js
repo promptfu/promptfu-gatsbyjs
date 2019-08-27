@@ -37,7 +37,6 @@ const defaultProps = {
 }
 
 const Post = ({ post }) => {
-  console.log(post)
   const {
     fields: {
       slug,

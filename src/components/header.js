@@ -20,7 +20,13 @@ const Header = ({ links, title }) => {
 
   return (
     <header>
-      <Navbar id="header-nav" collapseOnSelect expand="md" bg="gradient-dark" variant="dark">
+      <Navbar
+        id="header-nav"
+        collapseOnSelect
+        expand="md"
+        bg="gradient-dark"
+        variant="dark"
+      >
         <Container>
           <Navbar.Brand as={Link} to="/">
             <Img

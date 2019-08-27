@@ -18,9 +18,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-  cardBodyClass: '',
-  cardButtonClass: '',
-  cardClass: '',
+  cardBodyClass: "",
+  cardButtonClass: "",
+  cardClass: "",
   columnsSM: 1,
   columnsMD: 1,
   columnsLG: 1,
@@ -32,8 +32,6 @@ const defaultProps = {
 class PostCardDeck extends React.Component {
   constructor(props) {
     super(props)
-    console.log("PostCardDeck")
-    console.log(this.props)
 
     this.state = {}
 
@@ -46,17 +44,17 @@ class PostCardDeck extends React.Component {
     var cardButtonClass = this.props.cardButtonClass
     var cardClass = this.props.cardClass
     var posts = this.props.items
-    var loopMax = this.props.fillCols ? Math.ceil(posts.length / 10) * 10 : posts.length
+    var loopMax = this.props.fillCols
+      ? Math.ceil(posts.length / 10) * 10
+      : posts.length
     var horizontal = this.props.horizontal
 
     var elements = []
-    for (var i = 1; i <= loopMax; i++ ) {
-      var post = posts[i-1]
+    for (var i = 1; i <= loopMax; i++) {
+      var post = posts[i - 1]
 
-      if(typeof(post) === 'undefined') {
-        elements.push(
-          <Card key={i} style={{border: 'none'}}></Card>
-        )
+      if (typeof post === "undefined") {
+        elements.push(<Card key={i} style={{ border: "none" }}></Card>)
       } else {
         elements.push(
           <PostCard
@@ -80,28 +78,46 @@ class PostCardDeck extends React.Component {
       }
 
       if (i % this.props.columnsSM === 0) {
-        elements.push(<div key={`col-sm-every-` + i} className="w-100 d-none d-sm-block d-md-none"></div>) // <!-- wrap every 2 on sm-->
+        elements.push(
+          <div
+            key={`col-sm-every-` + i}
+            className="w-100 d-none d-sm-block d-md-none"
+          ></div>
+        ) // <!-- wrap every 2 on sm-->
       }
       if (i % this.props.columnsMD === 0) {
-        elements.push(<div key={`col-md-every-` + i} className="w-100 d-none d-md-block d-lg-none"></div>) // <!-- wrap every 3 on md-->
+        elements.push(
+          <div
+            key={`col-md-every-` + i}
+            className="w-100 d-none d-md-block d-lg-none"
+          ></div>
+        ) // <!-- wrap every 3 on md-->
       }
       if (i % this.props.columnsLG === 0) {
-        elements.push(<div key={`col-lg-every-` + i} className="w-100 d-none d-lg-block d-xl-none"></div>) // <!-- wrap every 4 on lg-->
+        elements.push(
+          <div
+            key={`col-lg-every-` + i}
+            className="w-100 d-none d-lg-block d-xl-none"
+          ></div>
+        ) // <!-- wrap every 4 on lg-->
       }
       if (i % this.props.columnsXL === 0) {
-        elements.push(<div key={`col-xl-every-` + i} className="w-100 d-none d-xl-block"></div>) // <!-- wrap every 5 on xl-->
+        elements.push(
+          <div
+            key={`col-xl-every-` + i}
+            className="w-100 d-none d-xl-block"
+          ></div>
+        ) // <!-- wrap every 5 on xl-->
       }
     }
     return elements
   }
 
   render() {
-    return(
+    return (
       <Row>
         <Col>
-          <CardDeck>
-            {this.renderPostCards()}
-          </CardDeck>
+          <CardDeck>{this.renderPostCards()}</CardDeck>
         </Col>
       </Row>
     )

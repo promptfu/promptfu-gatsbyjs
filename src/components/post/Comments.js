@@ -17,7 +17,6 @@ const defaultProps = {
 class Comments extends React.Component {
   constructor(props) {
     super(props)
-    console.log("Comments")
 
     this.state = {
     }
@@ -43,9 +42,6 @@ class Comments extends React.Component {
       retries += 1
       const currentScrollY = window.scrollY
 
-      // console.log("lastScrollY: ", lastScrollY)
-      // console.log("currentScrollY: ", currentScrollY)
- 
       // return if scrolls up before scrollintoview is complete
       if (lastScrollY > currentScrollY) return
 
@@ -53,11 +49,10 @@ class Comments extends React.Component {
       // If we are not currently scrolling, attempt to scrollIntoView
       const isScrolling = (lastScrollY < currentScrollY)
 
-      // console.log(isScrolling)
       if (!isScrolling) {
         ref.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"})
       }
-      
+
       // Make sure to set lastScorllY to currentScrollY for next iteration
       lastScrollY = currentScrollY
       setTimeout(scroll, 100)
@@ -72,7 +67,7 @@ class Comments extends React.Component {
     return isVisible
 
   }
-  
+
   render() {
     const slug = this.props.slug
     const title = this.props.title
