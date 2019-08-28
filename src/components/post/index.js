@@ -7,6 +7,7 @@ import Edit from "./Edit"
 import Header from "./Header"
 import Image from "./Image"
 import Meta from "./Meta"
+import PrevNext from "./PrevNext"
 import TableOfContents from "./TableOfContents"
 
 export {
@@ -17,6 +18,7 @@ export {
   Header,
   Image,
   Meta,
+  PrevNext,
   TableOfContents,
 }
 

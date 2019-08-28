@@ -8,7 +8,7 @@ tags: ["web" ]
 title: Hello, World
 updated: 2019-08-27 12:01:00 -0500
 ---
-This is officially our first post! How exciting! Let us start things off with a quote, because it is sooo true.
+`This` is officially our first post! How exciting! Let us start things off with a quote.
 > Technology is a word that describes something that doesn’t work yet.
 >
 > <cite>-- Douglas Adams</cite>

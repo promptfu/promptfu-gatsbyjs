@@ -8,7 +8,7 @@ const Content = ({ content }) => {
   return (
     <Row className="my-2">
       <Col>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div dangerouslySetInnerHTML={{ __html: content }} className="text-justify" />
       </Col>
     </Row>
   )

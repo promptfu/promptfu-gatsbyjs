@@ -36,7 +36,9 @@ const defaultProps = {
   author: ``,
 }
 
-const Post = ({ post }) => {
+const Post = (props) => {
+  console.log("Post")
+  console.log(props)
   const {
     fields: {
       slug,
@@ -56,7 +58,7 @@ const Post = ({ post }) => {
     },
     tableOfContents,
     timeToRead,
-  } = post
+  } = props.post
   return (
     <Container className="shadow-lg">
       <Row>

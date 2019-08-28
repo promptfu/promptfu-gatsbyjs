@@ -32,7 +32,6 @@ const Image = ({ className, imgName }) => (
           fluid={image.node.fluid}
           className={`rounded` + className}
           style={imgStyle}
-
         />
       )
     }}

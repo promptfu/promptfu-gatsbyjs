@@ -39,7 +39,7 @@ const Meta = ({ created, editable, pathPrefix, slug, tags, timeToRead, title, up
           </span>
           {editable &&
             <span className="mr-3 d-inline-block">
-              <Edit />
+              <Edit slug={slug} />
             </span>
           }
           <span className="mr-3 d-inline-block">

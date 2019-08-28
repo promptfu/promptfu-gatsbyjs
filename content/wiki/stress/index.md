@@ -5,7 +5,7 @@ created: 2019-08-27 12:01:00 -0500
 feature: false
 image: stress-large.jpg
 show: true
-tags: ["linux"]
+tags: ["linux", "command line"]
 title: stress
 updated: 2019-08-27 12:01:00 -0500
 ---
