@@ -96,7 +96,6 @@ export default props => (
               fields {
                 slug
               }
-              excerpt(pruneLength: 125, format: HTML)
               frontmatter {
                 categories
                 created(formatString: "YYYY-MM-DD")

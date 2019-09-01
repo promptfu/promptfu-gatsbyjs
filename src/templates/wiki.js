@@ -32,6 +32,7 @@ class WikiPost extends React.Component {
           author,
           categories,
           created,
+          description,
           image,
           tags,
           title,
@@ -50,6 +51,7 @@ class WikiPost extends React.Component {
           dateCreated={created}
           dateModified={updated}
           datePublished={created}
+          description={description}
           image={image}
           pathname={this.props.location.pathname}
           pageType={PageType.ARTICLE}
@@ -93,7 +95,7 @@ class WikiPost extends React.Component {
           <Row className="my-5 text-center">
             <Col>
               <span>
-                <Edit />
+                <Edit slug={slug} />
               </span>
             </Col>
           </Row>
@@ -131,6 +133,7 @@ export const pageQuery = graphql`
         author
         categories
         created(formatString: "YYYY-MM-DD")
+        description
         feature
         image
         show

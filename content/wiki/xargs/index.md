@@ -2,6 +2,7 @@
 author: Matthew Hassel
 categories: ["linux"]
 created: 2019-08-27 12:01:00 -0500
+description: xargs is a pretty cool command.
 feature: true
 image: black-and-white-factory-industrial-plant-large.jpg
 show: true

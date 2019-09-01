@@ -24,7 +24,7 @@ const Meta = ({ created, editable, pathPrefix, slug, tags, timeToRead, title, up
       <Col>
         <hr className="m-0" />
         <div className="text-center text-muted my-1">
-        <span className="mr-3 d-line-block">
+          <span className="mr-3 d-line-block">
             <FaRegCalendarAlt />
             &nbsp;
             {updated > created ? updated : created}

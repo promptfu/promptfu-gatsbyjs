@@ -9,7 +9,6 @@ import {
   Categories,
   Comments,
   Content,
-  Edit,
   Header,
   Image,
   Meta,
@@ -33,6 +32,7 @@ class BlogPost extends React.Component {
           author,
           categories,
           created,
+          description,
           image,
           tags,
           title,
@@ -56,6 +56,7 @@ class BlogPost extends React.Component {
           dateCreated={created}
           dateModified={updated}
           datePublished={created}
+          description={description}
           image={image}
           pathname={this.props.location.pathname}
           pageType={PageType.ARTICLE}
@@ -72,7 +73,7 @@ class BlogPost extends React.Component {
               <Meta
                 author={author}
                 created={created}
-                editable={true}
+                editable={false}
                 pathPrefix={sourceInstanceName}
                 slug={slug}
                 tags={tags}
@@ -102,13 +103,6 @@ class BlogPost extends React.Component {
                 pathPrefix={sourceInstanceName}
                 categories={categories}
               />
-            </Col>
-          </Row>
-          <Row className="my-5 text-center">
-            <Col>
-              <span>
-                <Edit slug={slug} />
-              </span>
             </Col>
           </Row>
           <Row>
@@ -142,6 +136,7 @@ export const pageQuery = graphql`
         author
         categories
         created(formatString: "YYYY-MM-DD")
+        description
         feature
         image
         show
