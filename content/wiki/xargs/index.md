@@ -6,7 +6,7 @@ description: xargs is a pretty cool command.
 feature: true
 image: black-and-white-factory-industrial-plant-large.jpg
 show: true
-tags: ["linux", "command line" ]
+tags: ["command line", "linux"]
 title: xargs
 updated: 2019-08-27 12:01:00 -0500
 ---
@@ -16,7 +16,7 @@ rather be safe and pipe to my hearts desires until I get exactly what I want. In
 do just that...
 <!--more-->
 
-#  Usage
+# Usage
 
 Let me explain the usage example below as it was my first experience using `xargs`. I wanted to put together a kernel
 upgrade package, and I wanted to pull all the kernel files for a specific version into a central location so I could

@@ -8,7 +8,7 @@ import {
   FaRegArrowAltCircleRight
 } from 'react-icons/fa'
 import Img from "gatsby-image"
-import { getImageSharpFluid } from "../../utils/getImageSharpFluid";
+import { GetImageSharpFluid } from "../../utils/GetImageSharpFluid";
 
 const defaultProps = {
 }
@@ -55,7 +55,7 @@ const PrevNext = ({ heading, prev, next }) => {
             <Row>
               <Col>
                 <Card as={Link} to={prev.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={getImageSharpFluid(prev.frontmatter.image)} />
+                  <Card.Img as={Img} fluid={GetImageSharpFluid(prev.frontmatter.image)} />
                   <Card.ImgOverlay>
                     <Card.Title>{prev.frontmatter.title}</Card.Title>
                     <Card.Text
@@ -84,7 +84,7 @@ const PrevNext = ({ heading, prev, next }) => {
             <Row>
               <Col>
                 <Card as={Link} to={next.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={getImageSharpFluid(next.frontmatter.image)} />
+                  <Card.Img as={Img} fluid={GetImageSharpFluid(next.frontmatter.image)} />
                   <Card.ImgOverlay>
                     <Card.Title>{next.frontmatter.title}</Card.Title>
                     <Card.Text

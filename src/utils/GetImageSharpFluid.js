@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export function getImageSharpFluid(imgName) {
+export function GetImageSharpFluid(imgName) {
   const data = useStaticQuery(allImageSharpQuery)
   const image = data.allImageSharp.edges.find(
     edge => edge.node.fluid.originalName === imgName

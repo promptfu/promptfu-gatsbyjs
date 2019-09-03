@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { getSchemaOrgAuthor } from "utils/getSchemaOrgAuthor"
+import { GetSchemaOrgAuthor } from "utils/GetSchemaOrgAuthor"
 
 const propTypes = {
   alternativeHeadline: PropTypes.string,
@@ -50,12 +50,12 @@ const BlogPost = (props) => {
               "inLanguage": `${props.language}`,
               "isFamilyFriendly": `${props.isFamilyFriendly}`,
               "copyrightYear": `${new Date().getFullYear()}`,
-              // "copyrightHolder": getSchemaOrgAuthor(props.author),
+              // "copyrightHolder": GetSchemaOrgAuthor(props.author),
               // "contentLocation": {
               //   "@type": "Place",
               //   "name": "Delray Beach, FL"
               // },
-              "author": getSchemaOrgAuthor(props.author),
+              "author": GetSchemaOrgAuthor(props.author),
               "publisher": {
                 "@type": "Organization",
                 "name": `${props.orgName}`,

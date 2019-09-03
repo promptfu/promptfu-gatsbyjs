@@ -5,28 +5,34 @@
   credit: Matthew Hassel
 
 # Sourced from https://www.pexels.com/
-- url: https://dl.dropboxusercontent.com/s/vn0ukskfl8ypgho/stress-large.jpg?dl=0
-  name: stress
-  alt: all the stress
-  title: stress
+- url: https://dl.dropboxusercontent.com/s/6bpen3gcpvjaq07/astronomy-cosmic-cosmos.jpg?dl=0
+  name: astronomy-cosmic-cosmos
+  alt: earth and all its beauty
+  title: astronomy-cosmic-cosmos
   credit: https://www.pexels.com/
-- url: https://dl.dropboxusercontent.com/s/pm92mc9grot6hzc/black-and-white-factory-industrial-plant-large.jpg?dl=0
-  name: black-and-white-factory-industrial-plant
-  alt: all the pipes
-  title: black-and-white-factory-industrial-plant
-  credit: https://www.pexels.com/
-- url: https://dl.dropboxusercontent.com/s/ejggn8hvpd0izfk/binoculars-black-equipment-large.jpg?dl=0
-  name: binoculars-black-equipment
+- url: https://dl.dropboxusercontent.com/s/kvdovooykqtkswg/bike-chain-forming-1-and-0-large.jpg?dl=0
+  name: bike-chain-forming-1-and-0-large
   alt: looking for...
   title: binoculars-black-equipment
+  credit: https://www.pexels.com/
+- url: https://dl.dropboxusercontent.com/s/ejggn8hvpd0izfk/binoculars-black-equipment-large.jpg?dl=0
+  name: binoculars-black-equipment-large
+  alt: looking for...
+  title: binoculars-black-equipment
+  credit: https://www.pexels.com/
+- url: https://dl.dropboxusercontent.com/s/pm92mc9grot6hzc/black-and-white-factory-industrial-plant-large.jpg?dl=0
+  name: black-and-white-factory-industrial-plant-large
+  alt: all the pipes
+  title: black-and-white-factory-industrial-plant
   credit: https://www.pexels.com/
 - url: https://dl.dropboxusercontent.com/s/2uripk5n76j09nw/earth-lights-world.jpg?dl=0
   name: earth-lights-world
   alt: earth lights below
   title: earth-lights-world
   credit: https://www.pexels.com/
-- url: https://dl.dropboxusercontent.com/s/6bpen3gcpvjaq07/astronomy-cosmic-cosmos.jpg?dl=0
-  name: astronomy-cosmic-cosmos
-  alt: earth and all its beauty
-  title: astronomy-cosmic-cosmos
+- url: https://dl.dropboxusercontent.com/s/vn0ukskfl8ypgho/stress-large.jpg?dl=0
+  name: stress-large
+  alt: all the stress
+  title: stress
   credit: https://www.pexels.com/
+

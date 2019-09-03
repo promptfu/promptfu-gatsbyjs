@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
-import { getImageUrl } from "utils/getImageUrl"
+import { GetImageUrl } from "utils/GetImageUrl"
 
-export function getSchemaOrgAuthor(author) {
+export function GetSchemaOrgAuthor(author) {
   const data = useStaticQuery(siteInformation)
 
   const {
@@ -21,7 +21,7 @@ export function getSchemaOrgAuthor(author) {
       url: `${defaultUrl}`,
       logo: {
         "@type": "ImageObject",
-        url: `${defaultUrl}${getImageUrl(defaultImage)}`,
+        url: `${defaultUrl}${GetImageUrl(defaultImage)}`,
       },
     }
   }

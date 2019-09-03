@@ -5,7 +5,7 @@ description: Let us start things off by describing the idea behind the creation 
 feature: true
 image: astronomy-cosmic-cosmos.jpg
 show: true
-tags: ["web" ]
+tags: ["promptfu", "web"]
 title: Hello, World
 updated: 2019-08-22 13:00:00 -0500
 ---

@@ -5,7 +5,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Facebook from "./Facebook"
 import Twitter from "./Twitter"
 import { PageType } from "./PageType"
-import { getImageUrl } from "utils/getImageUrl"
+import { GetImageUrl } from "utils/GetImageUrl"
 import {
   Article,
   Blog,
@@ -97,10 +97,10 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${getImageUrl(seo.image)}`}
+            image={`${url}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -114,10 +114,10 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${getImageUrl(seo.image)}`}
+            image={`${url}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -131,10 +131,10 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${getImageUrl(seo.image)}`}
+            image={`${url}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -148,10 +148,10 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${getImageUrl(seo.image)}`}
+            image={`${url}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${getImageUrl(defaultImage)}`}
+            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -167,13 +167,13 @@ const SEO = (props) => {
         <title>{seo.title}</title>
         <html lang={language} />
         <meta name="description" content={seo.description} />
-        <meta name="image" content={`${url}${getImageUrl(seo.image)}`} />
+        <meta name="image" content={`${url}${GetImageUrl(seo.image)}`} />
         {props.keywords.length > 0 ? <meta name="keywords" content={props.keywords.join(`, `)} /> : ''}
       </Helmet>
 
       <Facebook
         description={seo.description}
-        image={`${url}${getImageUrl(seo.image)}`}
+        image={`${url}${GetImageUrl(seo.image)}`}
         locale={social.facebook.language}
         site={social.facebook.name}
         title={seo.title}
@@ -183,7 +183,7 @@ const SEO = (props) => {
 
       <Twitter
         description={seo.description}
-        image={`${url}${getImageUrl(seo.image)}`}
+        image={`${url}${GetImageUrl(seo.image)}`}
         site={social.twitter.site}
         title={seo.title}
       />

@@ -5,7 +5,7 @@ created: 2019-08-27 12:01:00 -0500
 feature: false
 image: binoculars-black-equipment-large.jpg
 show: true
-tags: ["linux", "command line"]
+tags: ["command line", "linux"]
 title: grep
 updated: 2019-08-27 12:01:00 -0500
 ---
