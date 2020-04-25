@@ -18,22 +18,33 @@ Hello, World
 <br />
 <p class="text-center"><code class="language-text">This</code> is officially the first post! How <b>exciting</b>!</p>
 
-Let us start things off by describing the idea behind the creation of Prompt Fu.
+<p class="text-center">Let me start things off by describing the idea behind the creation of Prompt Fu.</p>
+
 <!--more-->
 
-We all have spent a vast number of minutes|hours|years|etc. researching various topics in search of a solution to whatever problem we had come across at any given time. The output from this time may take the form of a note.
+We all have spent a vast number of minutes, hours, years, etc. researching various topics in search of a solution to
+whatever problem we had come across at any given time.
 
-Often, notes may end up in a wiki system, such as Confluence, a notepad, or what have you; and in many cases, it would not be accessible for others.
+We may find a solution and complete the project, and update its documentation; other times, we may jot down a note and
+store it some place safe (where did I place my notepad again...), or we may simply forget it and move onto whatever
+else needing attention. I am guilty of the latter, the latter latter, and on occation, the latter latter latter.
 
-Given that open source has been such a huge catalyst, driving change, in the world of technology; we would like to offer our notes|blogs|wikis|etc. as a contribution as we continually develop throughout our careers and lives.
+Prompt Fu provides a simple interface, the Markdown lanugage, to share my thoughts and work, and it is OPEN.
 
-As we, and hopefully others, share, the opportunity for you to contribute and share your thoughts is available and encouraged! Each blog and wiki should have a comments section found at the bottom of the page. Please, feel free to comment suggesting edits, start discussions, or to let us know the post helped you in your search.
+Given that open source has been such a huge catalyst in the world of technology and vastly helpul thorughout my career;
+Prompt Fu offers, for starters, my notes, blogs, wikis, projects, etc. as I continually develop throughout my career and life.
 
-Additionally, wiki posts have an *improve this post* link which will take you directly to GitHub so you can fork, edit, and pull request to contribute.
+As I, and maybe someday others, share, the opportunity for you to contribute and share your thoughts is available and
+encouraged! Each blog and wiki should have a comments section found at the bottom of the page. Please, feel free to
+comment suggesting edits, start discussions, or to let me know the post helped you in your search.
 
-With that said, more interesting posts are coming so be sure to check back with us; also be sure to check out our various wikis that include tech tips and command line fu that we have found useful in our everyday(s) - [Wiki](https://www.promptfu.com/wiki).
+Additionally, wiki posts have an "*improve this post*" link which will take you directly to GitHub so you can fork, edit,
+and pull request to contribute.
 
-In an attempt to leave you inpired, here are 10 quotes about technology that we thought had a certain *je ne sais quoi*.
+With that said, more interesting posts are coming so be sure to check back soon; also be sure to check out the various
+wikis that include tech tips and command line fu that I have found useful in my everyday - [Wiki](https://www.promptfu.com/wiki).
+
+In an attempt to leave you inpired, here are 10 quotes about technology that I thought had a certain *je ne sais quoi*.
 
 > Technology is a word that describes something that doesn’t work yet.
 > <cite>-- Douglas Adams</cite>
