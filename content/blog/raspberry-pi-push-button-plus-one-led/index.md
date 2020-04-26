@@ -1,9 +1,9 @@
 ---
 categories: ["raspberry pi"]
-created: 2013-10-20 12:00:00 -0500
+created: 2013-08-02 22:09:00 -0500
 description:
 feature: false
-image: push-button-plus-one-led-original.jpg
+image: raspberry-pi-push-button-plus-one-led-original.jpg
 show: true
 tags: ["raspberry pi"]
 title: "Raspberry Pi: Push-button + One(1) LED"
@@ -57,7 +57,7 @@ while (run != 0):
 GPIO.cleanup()
 print 'EXITED!'
 ```
-Also available here, [raspi-push-button](https://github.com/xpros/raspberrypi-examples/blob/master/raspi-push-button/raspi-push-button.py).
+Also available here, [raspi-push-button](https://github.com/xpros/raspberry-pi-examples/blob/master/raspi-push-button/raspi-push-button.py).
 
 `youtube: https://youtu.be/VQKLXp-1IQU`
 

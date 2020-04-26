@@ -11,8 +11,8 @@ updated:
 The following packages need to be installed:
 
 ```shell
-sudo apt-get install python-smbus
-sudo apt-get install i2c-tools
+$ sudo apt-get install python-smbus
+$ sudo apt-get install i2c-tools
 ```
 
 Make sure i2c-dev and i2c-bcm2708 are added to /etc/modules file; check `lsmod` for these modules.

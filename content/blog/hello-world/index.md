@@ -16,11 +16,12 @@ $ echo "Hello, ${WORLD}"
 Hello, World
 ```
 <br />
-<p class="text-center"><code class="language-text">This</code> is officially the first post! How <b>exciting</b>!</p>
+<center><code class="language-text">This</code> is officially the first post! How <b>exciting</b>!</center>
 
-<p class="text-center">Let me start things off by describing the idea behind the creation of Prompt Fu.</p>
+<center>Let me start things off by describing the idea behind the creation of Prompt Fu.</center>
 
 <!--more-->
+<br />
 
 We all have spent a vast number of minutes, hours, years, etc. researching various topics in search of a solution to
 whatever problem we had come across at any given time.
