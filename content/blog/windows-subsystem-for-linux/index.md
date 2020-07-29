@@ -34,7 +34,7 @@ there is some saving grace after all.
 Thus, my journey begun... and here within this blog, I will detail my findings in hopes that it may bring another
 hope in a similar time of need.
 
-# Enabling Windows Subsystem for Linuix
+# Enabling Windows Subsystem for Linux
 
 ## Install the Windows Subsystem for Linux
 
