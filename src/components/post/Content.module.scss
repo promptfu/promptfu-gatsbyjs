@@ -1,4 +1,4 @@
-blockquote{
+blockquote {
 	font-size: 1.4em;
 	width: 80%;
 	margin: 30px auto;
@@ -11,8 +11,8 @@ blockquote{
 	position: relative;
 	background: #EDEDED;
 }
-  
-blockquote::before{
+
+blockquote::before {
 	font-family: Arial;
 	content: "\201C";
 	color: #343a40;
@@ -21,15 +21,19 @@ blockquote::before{
 	left: 10px;
 	top: -10px;
 }
-  
-blockquote::after{
+
+blockquote::after {
 	content: '';
 }
-  
-blockquote cite{
+
+blockquote cite {
 	display:block;
 	color:#333333;
 	font-style: normal;
 	font-weight: bold;
 	margin-top:1em;
+}
+
+p {
+	text-align: justify;
 }

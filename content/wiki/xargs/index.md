@@ -5,7 +5,7 @@ created: 2019-08-27 12:01:00 -0500
 description: xargs is a pretty cool command.
 feature: false
 image: black-and-white-factory-industrial-plant-large.jpg
-show: true
+show: false
 tags: ["command line", "linux"]
 title: xargs
 updated: 2019-08-27 12:01:00 -0500

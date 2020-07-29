@@ -94,6 +94,10 @@ class BlogPost extends React.Component {
               tableOfContents.length === 0 ? null : (
                 <TableOfContents tableOfContents={tableOfContents} />
               )}
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <Content content={html} />
             </Col>
           </Row>
