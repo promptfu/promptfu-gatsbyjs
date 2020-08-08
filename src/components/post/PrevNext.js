@@ -55,11 +55,12 @@ const PrevNext = ({ heading, prev, next }) => {
             <Row>
               <Col>
                 <Card as={Link} to={prev.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={GetImageSharpFluid(prev.frontmatter.image)} />
+                  <Card.Img as={Img} fluid={GetImageSharpFluid(prev.frontmatter.image)} style={imgStyle} />
                   <Card.ImgOverlay>
-                    <Card.Title>{prev.frontmatter.title}</Card.Title>
+                    <Card.Title style={cardTitleStyle}>{prev.frontmatter.title}</Card.Title>
                     <Card.Text
                       dangerouslySetInnerHTML={{ __html: prev.excerpt }}
+                      style={cardTextStyle}
                     />
                   </Card.ImgOverlay>
                 </Card>
@@ -84,11 +85,12 @@ const PrevNext = ({ heading, prev, next }) => {
             <Row>
               <Col>
                 <Card as={Link} to={next.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={GetImageSharpFluid(next.frontmatter.image)} />
+                  <Card.Img as={Img} fluid={GetImageSharpFluid(next.frontmatter.image)} style={imgStyle} />
                   <Card.ImgOverlay>
-                    <Card.Title>{next.frontmatter.title}</Card.Title>
+                    <Card.Title style={cardTitleStyle}>{next.frontmatter.title}</Card.Title>
                     <Card.Text
                       dangerouslySetInnerHTML={{ __html: next.excerpt }}
+                      style={cardTextStyle}
                     />
                   </Card.ImgOverlay>
                 </Card>
@@ -115,6 +117,20 @@ const PrevNext = ({ heading, prev, next }) => {
 
 const cardStyle={
   maxHeight: `20vh`,
+}
+
+const cardTitleStyle={
+  fontSize: `3vw`,
+  marginBottom: `.25rem`,
+
+}
+
+const cardTextStyle={
+  fontSize: `2vw`,
+}
+
+const imgStyle={
+  position: `static`,
 }
 
 PrevNext.propTypes = propTypes
