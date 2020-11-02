@@ -6,8 +6,8 @@ cache:
     - node_modules
 
 # Optional: disable email notifications about the outcome of your builds
-notifications:
-  email: false
+#notifications:
+#  email: false
 
 deploy:
   provider: pages
