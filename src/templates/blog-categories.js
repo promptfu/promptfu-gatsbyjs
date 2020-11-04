@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "components/layout"
 import PostCardDeck from "components/post-card-deck"
@@ -43,9 +43,11 @@ const propTypes = {
 
 const defaultProps = {}
 
-class Categories extends React.Component {
+class BlogCategories extends React.Component {
   constructor(props) {
     super(props)
+
+    console.log(props)
 
     this.state = {
       paginateItems: this.props.data.allMarkdownRemark.edges,
@@ -107,49 +109,38 @@ class Categories extends React.Component {
   }
 }
 
-Categories.propTypes = propTypes
-Categories.defaultProps = defaultProps
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query($category: String) {
-        allMarkdownRemark(
-          limit: 2000
-          sort: { fields: [frontmatter___created], order: DESC }
-          filter: {
-            fileAbsolutePath: { glob: "**/content/blog/**/*.md" }
-            frontmatter: { categories: { in: [$category] } }
+BlogCategories.propTypes = propTypes
+BlogCategories.defaultProps = defaultProps
+export default BlogCategories
+export const query = graphql`
+  query BlogCategoriesQuery($category: String) {
+    allMarkdownRemark(limit: 2000, sort: {fields: [frontmatter___created], order: DESC}, filter: {fileAbsolutePath: {glob: "**/content/blog/**/*.md"}, frontmatter: {categories: {in: [$category]}}}) {
+      totalCount
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 125, format: HTML)
+          timeToRead
+          fields {
+            slug
           }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              excerpt(pruneLength: 125, format: HTML)
-              timeToRead
-              fields {
-                slug
-              }
-              frontmatter {
-                categories
-                created(formatString: "YYYY-MM-DD")
-                feature
-                image
-                show
-                tags
-                title
-                updated
-              }
-              parent {
-                ... on File {
-                  sourceInstanceName
-                }
-              }
+          frontmatter {
+            categories
+            created(formatString: "YYYY-MM-DD")
+            feature
+            image
+            show
+            tags
+            title
+            updated
+          }
+          parent {
+            ... on File {
+              sourceInstanceName
             }
           }
         }
       }
-    `}
-    render={data => <Categories data={data} {...props} />}
-  />
-)
+    }
+  }
+`

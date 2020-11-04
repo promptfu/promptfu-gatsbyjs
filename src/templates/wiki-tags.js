@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "components/layout"
 import PostCardDeck from "components/post-card-deck"
@@ -43,7 +43,7 @@ const propTypes = {
 
 const defaultProps = {}
 
-class Tags extends React.Component {
+class WikiTags extends React.Component {
   constructor(props) {
     super(props)
 
@@ -107,49 +107,38 @@ class Tags extends React.Component {
   }
 }
 
-Tags.propTypes = propTypes
-Tags.defaultProps = defaultProps
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query($tag: String) {
-        allMarkdownRemark(
-          limit: 2000
-          sort: { fields: [frontmatter___created], order: DESC }
-          filter: {
-            fileAbsolutePath: { glob: "**/content/wiki/**/*.md" }
-            frontmatter: { tags: { in: [$tag] } }
+WikiTags.propTypes = propTypes
+WikiTags.defaultProps = defaultProps
+export default WikiTags
+export const query = graphql`
+  query WikiTagsQuery ($tag: String) {
+    allMarkdownRemark(limit: 2000, sort: {fields: [frontmatter___created], order: DESC}, filter: {fileAbsolutePath: {glob: "**/content/wiki/**/*.md"}, frontmatter: {tags: {in: [$tag]}}}) {
+      totalCount
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 125, format: HTML)
+          timeToRead
+          fields {
+            slug
           }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              excerpt(pruneLength: 125, format: HTML)
-              timeToRead
-              fields {
-                slug
-              }
-              frontmatter {
-                categories
-                created(formatString: "YYYY-MM-DD")
-                feature
-                image
-                show
-                tags
-                title
-                updated
-              }
-              parent {
-                ... on File {
-                  sourceInstanceName
-                }
-              }
+          frontmatter {
+            categories
+            created(formatString: "YYYY-MM-DD")
+            feature
+            image
+            show
+            tags
+            title
+            updated
+          }
+          parent {
+            ... on File {
+              sourceInstanceName
             }
           }
         }
       }
-    `}
-    render={data => <Tags data={data} {...props} />}
-  />
-)
+    }
+  }
+`
