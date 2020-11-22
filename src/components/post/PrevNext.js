@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa'
 import Img from "gatsby-image"
 import { GetImageSharpFluid } from "../../utils/GetImageSharpFluid";
+import styles from "./PrevNext.module.scss";
 
 const defaultProps = {
 }
@@ -51,60 +52,42 @@ const PrevNext = ({ heading, prev, next }) => {
       }
       <Row className="text-center">
         {prev ?
-          <Col>
-            <Row>
-              <Col>
-                <Card as={Link} to={prev.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={GetImageSharpFluid(prev.frontmatter.image)} style={imgStyle} />
-                  <Card.ImgOverlay>
-                    <Card.Title style={cardTitleStyle}>{prev.frontmatter.title}</Card.Title>
-                    <Card.Text
-                      dangerouslySetInnerHTML={{ __html: prev.excerpt }}
-                      style={cardTextStyle}
-                    />
-                  </Card.ImgOverlay>
-                </Card>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
+          <Col className="col-12 col-md-6 col-lg-6 col-xl-6 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
+            <Card className="border-0 text-white d-flex flex-column h-100">
+              <Card.Img as={Img} fluid={GetImageSharpFluid(prev.frontmatter.image)} className="flex-grow-1" />
+              <Card.ImgOverlay className="card-body">
+                <Card.Title>{prev.frontmatter.title}</Card.Title>
+                <Card.Text dangerouslySetInnerHTML={{ __html: prev.excerpt }} />
+              </Card.ImgOverlay>
+              <Card.Footer className="bg-transparent border-0 p-0 mt-auto position-relative">
                 <Button variant="info" as={Link} to={prev.fields.slug} type="null" className="my-2" size="lg" block>
                   <FaRegArrowAltCircleLeft size={`2em`} />
                   {/* &nbsp; */}
-                  {/* NEXT */}
+                  {/* PREV */}
                 </Button>
-              </Col>
-            </Row>
+              </Card.Footer>
+            </Card>
           </Col>
           :
           <Col>
           </Col>
         }
         {next ?
-          <Col>
-            <Row>
-              <Col>
-                <Card as={Link} to={next.fields.slug} className="text-white overflow-hidden" style={cardStyle}>
-                  <Card.Img as={Img} fluid={GetImageSharpFluid(next.frontmatter.image)} style={imgStyle} />
-                  <Card.ImgOverlay>
-                    <Card.Title style={cardTitleStyle}>{next.frontmatter.title}</Card.Title>
-                    <Card.Text
-                      dangerouslySetInnerHTML={{ __html: next.excerpt }}
-                      style={cardTextStyle}
-                    />
-                  </Card.ImgOverlay>
-                </Card>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
+          <Col className="col-12 col-md-6 col-lg-6 col-xl-6 order-1 order-sm-1 order-md-2 order-lg-2 order-lx-2">
+            <Card className="border-0 text-white h-100">
+              <Card.Img as={Img} fluid={GetImageSharpFluid(next.frontmatter.image)} className="flex-grow-1" />
+              <Card.ImgOverlay>
+                <Card.Title>{next.frontmatter.title}</Card.Title>
+                <Card.Text dangerouslySetInnerHTML={{ __html: next.excerpt }} />
+              </Card.ImgOverlay>
+              <Card.Footer className="p-0 position-relative">
                 <Button variant="info" as={Link} to={next.fields.slug} type="null" className="my-2" size="lg" block>
                   <FaRegArrowAltCircleRight size={`2em`} />
                   {/* &nbsp; */}
                   {/* NEXT */}
                 </Button>
-              </Col>
-            </Row>
+              </Card.Footer>
+            </Card>
           </Col>
           :
           <Col>
@@ -113,24 +96,6 @@ const PrevNext = ({ heading, prev, next }) => {
       </Row>
     </>
   )
-}
-
-const cardStyle={
-  maxHeight: `20vh`,
-}
-
-const cardTitleStyle={
-  fontSize: `3vw`,
-  marginBottom: `.25rem`,
-
-}
-
-const cardTextStyle={
-  fontSize: `2vw`,
-}
-
-const imgStyle={
-  position: `static`,
 }
 
 PrevNext.propTypes = propTypes
