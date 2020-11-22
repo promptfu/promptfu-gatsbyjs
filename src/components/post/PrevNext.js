@@ -69,7 +69,7 @@ const PrevNext = ({ heading, prev, next }) => {
             </Card>
           </Col>
           :
-          <Col>
+          <Col className="order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
           </Col>
         }
         {next ?
@@ -90,7 +90,7 @@ const PrevNext = ({ heading, prev, next }) => {
             </Card>
           </Col>
           :
-          <Col>
+          <Col className="order-1 order-sm-1 order-md-2 order-lg-2 order-lx-2">
           </Col>
         }
       </Row>
