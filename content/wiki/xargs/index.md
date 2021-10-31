@@ -1,14 +1,14 @@
 ---
-author: Matthew Hassel
+author: mhassel
 categories: ["linux"]
-created: 2019-08-27 12:01:00 -0500
+created: 2019-08-27 12:01:00 -0600
 description: xargs is a pretty cool command.
 feature: false
 image: black-and-white-factory-industrial-plant-large.jpg
 show: false
 tags: ["command line", "linux"]
 title: xargs
-updated: 2019-08-27 12:01:00 -0500
+updated: 2019-08-27 12:01:00 -0600
 ---
 `xargs` is a pretty cool command. Lets say you have a sweet one-liner that returns a list of files you want to do
 something with; for example, like coping files from one directory to another. You can do this with just `cp` by itself, I am sure, but I would
