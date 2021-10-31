@@ -1,7 +1,7 @@
 ---
 author: mhassel
 categories: ["raspberrypi"]
-created: 2020-04-25 13:31:00 -0500
+created: 2020-04-25 13:31:00 -0600
 feature: false
 show: true
 tags: ["raspberrypi", "i2c"]
