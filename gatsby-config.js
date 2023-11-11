@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-var path = require('path');
-
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
@@ -29,7 +27,7 @@ module.exports = {
         link: '/wiki',
       }
     ],
-    url: `https://promptfu.com`,
+    siteUrl: `https://promptfu.com`,
     social: {
       facebook: {
         language: 'en_US',
@@ -48,21 +46,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: path.join(__dirname, `content`, `blog`),
+        path: `${__dirname}/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `wiki`,
-        path: path.join(__dirname, `content`, `wiki`),
+        path: `${__dirname}/content/wiki`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `content`, `assets`, `images`),
+        path: `${__dirname}/content/assets/images`,
       },
     },
     {
@@ -70,6 +68,13 @@ module.exports = {
       options: {
         excerpt_separator: `<!--more-->`,
         plugins: [
+          {
+            resolve: 'gatsby-remark-emoji',
+            options: {
+              emojiConversion: 'shortnameToUnicode',
+              ascii: false,
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -95,7 +100,13 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               showLineNumbers: false,
-            }
+              noInlineHighlight: true,
+              prompt: {
+                user: `user`,
+                host: `promptfu.com`,
+                global: true,
+              },
+            },
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -111,10 +122,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: `UA-146282315-1`,
-      },
+        trackingIds: [
+          "G-F96Q6LQHNC"
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-feed`,
@@ -125,8 +138,7 @@ module.exports = {
               siteMetadata {
                 title
                 description
-                siteUrl: url
-                site_url: url
+                siteUrl
               }
             }
           }
@@ -134,30 +146,29 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.updated,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+              return allMarkdownRemark.nodes.map(node => {
+                return {
+                  title: node.frontmatter.title,
+                  description: node.excerpt,
+                  date: node.frontmatter.updated,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                };
+              });
             },
             query: `
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___updated] },
                 ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        updated
-                      }
+                  nodes {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      updated
                     }
                   }
                 }
@@ -165,85 +176,22 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Prompt Fu's RSS Feed",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/*/categories`, `/*/categories/*`, `/*/tags`, `/*/tags/*`],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl: url
-              }
-            }
-
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-
-            allMarkdownRemark {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    updated
-                  }
-                }
-              }
-            }
-          }
-        `,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) =>
-          allSitePage.edges.map(edge => {
-          const {
-            node: {
-              frontmatter: {
-                updated
-              }
-            }
-          } = allMarkdownRemark.edges.find(element => element.node.fields.slug === edge.node.path) || {node: { frontmatter: { updated: undefined }}}
-
-          if (updated) {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-
-              lastmod: `${updated}`,
-            }
-          } else {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `monthly`,
-            }
-          }
-        })
-      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Prompt Fu`,
         short_name: `PromptFu`,
-        description: `A wiki where collaboration and shared knowledge meet. Share knowledge, share and discuss     questions, answers, wiki, and projects.`,
+        description: `A wiki where collaboration and shared knowledge meet. Share knowledge, share and discuss questions, answers, wiki, and projects.`,
         lang: `en`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: path.join(__dirname, `content`, `assets`, `images`, `favicon.png`),
+        icon: `${__dirname}/content/assets/images/favicon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -254,9 +202,72 @@ module.exports = {
       resolve: `gatsby-source-remote-images`,
       options: {
         filter: node => node.internal.type === `DropboxImagesYaml`,
-      }
+      },
     },
     `gatsby-plugin-offline`,
-  ]
-}
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/*/categories`, `/*/categories/*`, `/*/tags`, `/*/tags/*`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+            allMarkdownRemark {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  created
+                  updated
+                }
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMarkdownRemark: { nodes: allPosts },
+        }) => {
+          const pathToDateMap = {};
 
+          allPosts.map(post => {
+            pathToDateMap[post.fields.slug] = { date: post.frontmatter.updated || post.frontmatter.created };
+          });
+
+          const pages = allPages.map(page => {
+            return { ...page, ...pathToDateMap [page.path] }
+          })
+
+          return pages;
+        },
+        serialize: ({ path, date }) => {
+          let entry = {
+            url: path,
+            changefreq: 'monthly',
+            priority: 0.5,
+          };
+
+          if (date) {
+            delete entry.changefreq;
+            delete entry.priority;
+            entry.lastmod = date;
+          }
+
+          return entry;
+
+        },
+      },
+    },
+  ],
+};

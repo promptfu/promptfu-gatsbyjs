@@ -83,4 +83,3 @@ _Other references:_
  - [`Building Binary RPM Packages from Source RPMs mini-HOWTO`](https://www.redhat.com/archives/rpm-list/2002-February/msg00030.html)
 
 _Referenced commands:_ [`rpm`](/wiki/rpm)
-
