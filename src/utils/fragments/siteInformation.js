@@ -6,7 +6,7 @@ export const query = graphql`
       defaultDescription: description
       defaultImage: image
       defaultTitle: title
-      defaultUrl: url
+      siteUrl  # Change defaultUrl to siteUrl
       language
       links {
         link
@@ -24,10 +24,6 @@ export const query = graphql`
           site
         }
       }
-      url
     }
   }
 `
-
-
-
