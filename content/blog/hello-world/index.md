@@ -9,10 +9,10 @@ tags: ["promptfu", "web"]
 title: Hello, World
 updated: 2019-08-22 13:00:00 -0500
 ---
-```shell
+```shell{outputLines: 4}
 # Bash
-$ WORLD='World'
-$ echo "Hello, ${WORLD}"
+WORLD='World'
+echo "Hello, ${WORLD}"
 Hello, World
 ```
 <br />

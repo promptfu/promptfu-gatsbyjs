@@ -16,7 +16,7 @@ while I aimlessly troubleshot, but ultimately I found myself on Apple's support 
 My initial thought after setting up my appointment:
 >Que sera sera! I get a little vacation from technology, wonderful!
 
-It was soon after that thought that another had occured to me; <span>&#x1F601;</span> which came as quite a surprise <span>&#x1F601;</span>.
+<center><span>&#x1F601;&#x1F601;&#x1F601;</span></br >It was soon after that thought that another had occured to me; which came as quite a surprise.</br ><span>&#x1F601;&#x1F601;&#x1F601;</span></center>
 
 >What if I come up with an amazing, life altering, idea that required the use of my most familiar working
 >enivironment - a terminal (iterm2) and my precious dotfiles (nothing too crazy), git, vim, and maybe a few others.
@@ -39,7 +39,7 @@ hope in a similar time of need.
 ## Install the Windows Subsystem for Linux
 
 Open PowerShell as an Administrator and run:
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 Restart your computer when prompted.
@@ -66,7 +66,7 @@ Once the install completed, the option to "Launch" was available and I did what 
 
 A seemingly familiar black backgrounded terminal appeared on my screen:
 
-```Shell
+```none
 Installing, this may take a few minutes...
 Please create a default UNIX user account. The username does not need to match your Windows username.
 For more information visit: https://aka.ms/wslusers
@@ -77,9 +77,10 @@ passwd: password updated successfully
 Installation successful!
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
+```
 
-mhassel@DESKTOP-AZU893B:~$
-mhassel@DESKTOP-AZU893B:~$ lsb_release -a
+```shell{outputLines: 2-6}
+lsb_release -a
 No LSB modules are available.
 Distributor ID: Ubuntu
 Description:    Ubuntu 18.04.2 LTS
@@ -91,8 +92,8 @@ Ah'mazing! Ubuntu running on Windows 10! BTW... the Ubuntu terminal window has o
 
 After making sure I was on the latest and greatest:
 
-```Shell
-$ sudo apt update && sudo apt upgrade
+```shell
+sudo apt update && sudo apt upgrade
 ```
 <br />
 <center><strong>I was back!</strong></center>

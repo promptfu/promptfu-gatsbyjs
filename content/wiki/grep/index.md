@@ -7,7 +7,6 @@ image: binoculars-black-equipment-large.jpg
 show: true
 tags: ["command line", "linux"]
 title: grep
-updated: 2019-08-27 12:01:00 -0600
 ---
 The `grep` command searches the given file for lines containing a match to the given strings or words. As an example, search ‘./package.json‘ for ‘gatsby-plugin-twitter‘:
 

@@ -1,11 +1,13 @@
-//@import "~prismjs/themes/prism-coy";
-//@import "~prismjs/themes/prism-dark";
-//@import "~prismjs/themes/prism-funky";
-//@import "~prismjs/themes/prism-okaidia";
-//@import "~prismjs/themes/prism-solarizedlight";
+// @import "~prismjs/themes/prism-coy";
+// @import "~prismjs/themes/prism-dark";
+// @import "~prismjs/themes/prism-funky";
+// @import "~prismjs/themes/prism-okaidia";
+// @import "~prismjs/themes/prism-solarizedlight";
 @import "~prismjs/themes/prism-tomorrow";
-@import "./prismjs-tomorrow-override.scss";
-//@import "~prismjs/themes/prism-twilight";
-//@import "~prismjs/themes/prism";
+// @import "./prismjs-tomorrow-override.scss";
+// @import "~prismjs/themes/prism-twilight";
+// @import "~prismjs/themes/prism";
 
-//@import "~prismjs/plugins/line-numbers/prism-line-numbers";
+@import "~prismjs/plugins/command-line/prism-command-line";
+
+// @import "~prismjs/plugins/line-numbers/prism-line-numbers";
