@@ -2,6 +2,7 @@
 author: mhassel
 categories: ["linux"]
 created: 2015-10-30 00:00:00 -0600
+description: sed
 feature: true
 image: binoculars-black-equipment-large.jpg
 show: true
@@ -22,14 +23,14 @@ filter text in a pipeline which particularly distinguishes it from other types o
 ## Delete a line from file
 
 ```shell
-$ sed -e '/<pattern>/d' -i <input file>"
+sed -e '/<pattern>/d' -i <input file>"
 ```
 
 ## Commenting or uncommenting a pattern matched line
 
 ```shell
-$ sed -e '/<pattern>/s/^/#/g' -i <input file> # (to comment out)
-$ sed -e '/<pattern>/s/^#//g' -i <input file> # (to uncomment)
+sed -e '/<pattern>/s/^/#/g' -i <input file> # (to comment out)
+sed -e '/<pattern>/s/^#//g' -i <input file> # (to uncomment)
 ```
 
 # Examples
@@ -41,13 +42,13 @@ be removed from the file. This file is very important and may require a rollback
 the rollback process, an extra option, `-i<SUFFIX>`, will be utilized. The extra option allows editing the file in
 place, and creates a backup file in case a rollback is required.
 
-```shell
-$ ls
+```shell{outputLines: 2}
+ls
 test
 ```
 
-```shell
-$ cat test
+```shell{outputLines: 2-5}
+cat test
 This is my first line
 This is my second line
 This is my third line - delete me
@@ -55,28 +56,28 @@ This is my last line
 ```
 
 ```shell
-$ sed -e '/delete me/d' -i.backup test
+sed -e '/delete me/d' -i.backup test
 ```
 
 Below is an `ls` of the test file's directory and its file content after the line has been removed, and a `diff` of the
 edited and backup file.
 
-```shell
-$ ls
+```shell{outputLines: 2}
+ls
 test  test.backup
 ```
 
-```shell
-$ cat test
+```shell{outputLines: 2-4}
+cat test
 This is my first line
 This is my second line
 This is my last line
 ```
 
-```shell
-$ diff test test.backup
+```shell{outputLines: 2-3}
+diff test test.backup
 2a3
 > This is my third line - delete me
 ```
 
-_Referenced commands:_ `cat`, `diff`, `ed`, `ls`
+_Referenced commands:_ [`cat`](/wiki/cat), [`diff`](/wiki/diff), [`ed`](/wiki/ed), [`ls`](/wiki/ls)

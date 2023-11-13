@@ -26,12 +26,12 @@ reduce the latency between the CPU and PCIe.
 ## Find out how a process is affined
 
 ```shell
-$ taskset -s -p <pid>
+taskset -s -p <pid>
 ```
 
 As an added bonus, here is how to find out a process's affinity is set using `ps`:
 
 ```shell
-$ ps -o pid,psr,comm -p <pid>
+ps -o pid,psr,comm -p <pid>
 ```
 
