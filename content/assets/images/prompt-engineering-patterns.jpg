@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f1419"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2d1b4e;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#ffffff" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  
+  <!-- Main content area -->
+  <rect x="80" y="80" width="1040" height="470" rx="15" fill="#1a1f2e" stroke="#2a3f5f" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Pattern boxes -->
+  <g id="pattern-grid">
+    <!-- Row 1 -->
+    <g transform="translate(120, 120)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#61dafb" text-anchor="middle" font-weight="bold">Specification-</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#61dafb" text-anchor="middle" font-weight="bold">First</text>
+    </g>
+    
+    <g transform="translate(370, 120)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#ff6b6b" text-anchor="middle" font-weight="bold">Chain-of-</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#ff6b6b" text-anchor="middle" font-weight="bold">Thought</text>
+    </g>
+    
+    <g transform="translate(620, 120)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#00ff88" text-anchor="middle" font-weight="bold">Few-Shot</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#00ff88" text-anchor="middle" font-weight="bold">Learning</text>
+    </g>
+    
+    <g transform="translate(870, 120)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#ffd93d" text-anchor="middle" font-weight="bold">Role-Based</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#ffd93d" text-anchor="middle" font-weight="bold">Prompting</text>
+    </g>
+    
+    <!-- Row 2 -->
+    <g transform="translate(120, 240)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#a78bfa" text-anchor="middle" font-weight="bold">Context</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#a78bfa" text-anchor="middle" font-weight="bold">Stacking</text>
+    </g>
+    
+    <g transform="translate(370, 240)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#fb923c" text-anchor="middle" font-weight="bold">Iterative</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#fb923c" text-anchor="middle" font-weight="bold">Refinement</text>
+    </g>
+    
+    <g transform="translate(620, 240)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#34d399" text-anchor="middle" font-weight="bold">Comparative</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#34d399" text-anchor="middle" font-weight="bold">Analysis</text>
+    </g>
+    
+    <g transform="translate(870, 240)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#f472b6" text-anchor="middle" font-weight="bold">Debug</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#f472b6" text-anchor="middle" font-weight="bold">Detective</text>
+    </g>
+    
+    <!-- Row 3 -->
+    <g transform="translate(245, 360)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="bold">Template</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="bold">Library</text>
+    </g>
+    
+    <g transform="translate(495, 360)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#f59e0b" text-anchor="middle" font-weight="bold">Constraint</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#f59e0b" text-anchor="middle" font-weight="bold">Setting</text>
+    </g>
+    
+    <g transform="translate(745, 360)">
+      <rect width="220" height="90" rx="8" fill="#2d4263" stroke="#3d5273" stroke-width="2"/>
+      <text x="110" y="35" font-family="Arial, sans-serif" font-size="18" fill="#ec4899" text-anchor="middle" font-weight="bold">Output</text>
+      <text x="110" y="55" font-family="Arial, sans-serif" font-size="18" fill="#ec4899" text-anchor="middle" font-weight="bold">Formatting</text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="44" fill="#ffffff" font-weight="bold" text-anchor="middle">
+    Essential Prompt Engineering Patterns
+  </text>
+</svg>
