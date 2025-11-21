@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1d23"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a2d33" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Terminal window -->
+  <rect x="100" y="120" width="1000" height="400" rx="10" fill="#2d3139" stroke="#3d4149" stroke-width="2"/>
+  
+  <!-- Terminal header -->
+  <rect x="100" y="120" width="1000" height="40" rx="10" fill="#23262d"/>
+  <circle cx="130" cy="140" r="6" fill="#ff5f56"/>
+  <circle cx="150" cy="140" r="6" fill="#ffbd2e"/>
+  <circle cx="170" cy="140" r="6" fill="#27c93f"/>
+  
+  <!-- Terminal content -->
+  <text x="130" y="200" font-family="'Courier New', monospace" font-size="32" fill="#00ff88" font-weight="bold">
+    $ AI CLI Tools
+  </text>
+  
+  <!-- Tool icons and names -->
+  <g transform="translate(130, 240)">
+    <text font-family="'Courier New', monospace" font-size="24" fill="#61dafb">
+      <tspan x="0" y="0">→ GitHub Copilot CLI</tspan>
+      <tspan x="0" y="40">→ ShellGPT</tspan>
+      <tspan x="0" y="80">→ Warp Terminal</tspan>
+      <tspan x="0" y="120">→ Aider</tspan>
+    </text>
+    
+    <text font-family="'Courier New', monospace" font-size="24" fill="#888">
+      <tspan x="500" y="0">→ k8sgpt</tspan>
+      <tspan x="500" y="40">→ Mods</tspan>
+      <tspan x="500" y="80">→ Amazon Q</tspan>
+      <tspan x="500" y="120">→ AI Terminal</tspan>
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <rect x="120" y="460" width="200" height="4" fill="#00ff88" rx="2"/>
+  <rect x="340" y="460" width="120" height="4" fill="#61dafb" rx="2"/>
+  <rect x="480" y="460" width="160" height="4" fill="#ff6b6b" rx="2"/>
+  
+  <!-- Title -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" font-weight="bold" text-anchor="middle">
+    Quick Reference Cheat Sheet
+  </text>
+</svg>
