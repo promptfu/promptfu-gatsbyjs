@@ -27,9 +27,11 @@ const PostCard = ({
 }) => {
   const verticalPostCard = (
     <Card className={cardClass}>
-      <Link to={slug}>
-        <Card.Img as={Image} imgName={imgName} className={`fade-in`} />
-      </Link>
+      {imgName && (
+        <Link to={slug}>
+          <Card.Img as={Image} imgName={imgName} className={`fade-in`} />
+        </Link>
+      )}
       <Card.Body className={cardBodyClass}>
         <Link to={slug} className="text-dark">
           <Card.Title>{title}</Card.Title>
@@ -66,16 +68,18 @@ const PostCard = ({
   const horizontalPostCard = (
     <Card className={cardClass}>
       <Row>
-        <Col lg={6}>
-          <Link to={slug}>
-            <Card.Img
-              as={Image}
-              imgName={imgName}
-              className={"m-lg-4 fade-in"}
-            />
-          </Link>
-        </Col>
-        <Col lg={6}>
+        {imgName && (
+          <Col lg={6}>
+            <Link to={slug}>
+              <Card.Img
+                as={Image}
+                imgName={imgName}
+                className={"m-lg-4 fade-in"}
+              />
+            </Link>
+          </Col>
+        )}
+        <Col lg={imgName ? 6 : 12}>
           <Card.Body className={`m-lg-4 p-lg-0` + cardBodyClass}>
             <Card.Title>
               <Link to={slug} className="text-dark">
