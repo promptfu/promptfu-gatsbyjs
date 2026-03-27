@@ -96,17 +96,14 @@ class BlogPost extends React.Component {
             </Row>
           )}
           <Row>
-            <Col>
-              {tableOfContents === null ||
-              tableOfContents.length === 0 ? null : (
-                <TableOfContents tableOfContents={tableOfContents} />
-              )}
-            </Col>
-          </Row>
-          <Row>
-            <Col>
+            <Col lg={tableOfContents && tableOfContents.length > 0 ? 9 : 12}>
               <Content content={html} />
             </Col>
+            {tableOfContents && tableOfContents.length > 0 && (
+              <Col lg={3} className="d-none d-lg-block">
+                <TableOfContents tableOfContents={tableOfContents} />
+              </Col>
+            )}
           </Row>
           <Row>
             <Col>
