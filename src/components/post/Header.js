@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 const Header = ({ title }) => {
   return (
     <>
-      <h1 className="text-center">{title}</h1>
+      <h1 className="post-page-title text-center">{title}</h1>
     </>
   )
 }
