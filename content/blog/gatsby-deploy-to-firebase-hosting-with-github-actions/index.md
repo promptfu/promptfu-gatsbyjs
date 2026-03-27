@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["web"]
 created: 2023-11-15 19:35:00 -0600
 description: "Deploy your Gatsby website to Firebase automatically with GitHub Actions."

@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["web"]
 created: 2019-08-22 13:00:00 -0500
 description: Let us start things off by describing the idea behind the creation of Prompt Fu.
@@ -7,7 +8,7 @@ image: astronomy-cosmic-cosmos.jpg
 show: true
 tags: ["promptfu", "web"]
 title: Hello, World
-updated: 2019-08-22 13:00:00 -0500
+updated: 2026-03-26 00:00:00 -0500
 ---
 ```shell{outputLines: 4}
 # Bash

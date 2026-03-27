@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["ai", "industry news", "promptfoo", "openai"]
 created: 2026-03-26 09:00:00 -0500
 description: OpenAI acquired promptfoo.dev on March 9, 2026. What does this mean for AI developers, the promptfoo brand, and the future of prompt testing? We break down the acquisition, what changes, and what stays the same.

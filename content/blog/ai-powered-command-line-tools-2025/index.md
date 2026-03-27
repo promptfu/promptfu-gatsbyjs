@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["ai", "command line", "developer tools"]
 created: 2025-10-15 09:00:00 -0500
 description: Discover the most powerful AI-powered command line tools that are revolutionizing how developers work in 2025. From intelligent code completion to natural language shell commands, learn how to supercharge your terminal workflow with AI.

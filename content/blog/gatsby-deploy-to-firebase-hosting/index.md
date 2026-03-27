@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["web"]
 created: 2023-11-10 19:27:00 -0600
 description: "Discover how to host your Gatsby website on Firebase (by Google) with this step-by-step guide. This tutorial covers everything from site creation and building to Firebase setup and deployment, ensuring a seamless hosting process."

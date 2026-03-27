@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["ai", "github copilot", "developer tools"]
 created: 2025-11-21 12:00:00 -0600
 description: Master GitHub Copilot CLI to automate your command line workflow. Learn advanced techniques, real-world examples, and productivity hacks that will transform how you work in the terminal.

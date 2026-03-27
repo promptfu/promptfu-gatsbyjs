@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `PromptFu — AI prompt testing guides, LLM evaluation tools, prompt engineering tutorials, and command-line fu for developers. Independent resource for promptfoo-lery, prompt evaluation, and LLM testing.`,
+    description: `AI prompts, command-line cheat sheets & developer tips — prompt engineering guides, LLM evaluation tools, and AI tools for developers building with modern language models.`,
     image: `tetris.jpg`,
     language: 'en',
     links: [
@@ -31,15 +31,15 @@ module.exports = {
     social: {
       facebook: {
         language: 'en_US',
-        name: `Prompt Fu`,
+        name: `PromptFu`,
         site: ``,
       },
       twitter: {
-        name: `Prompt Fu`,
+        name: `PromptFu`,
         site: `promptfu`,
       },
     },
-    title: `Prompt Fu`,
+    title: `PromptFu`,
   },
   plugins: [
     {
@@ -175,7 +175,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Prompt Fu's RSS Feed",
+            title: "PromptFu's RSS Feed",
           },
         ],
       },
@@ -183,9 +183,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Prompt Fu`,
+        name: `PromptFu`,
         short_name: `PromptFu`,
-        description: `Independent community hub for promptfoo, AI prompt testing, LLM evaluation, and prompt engineering. Tutorials, cheat sheets, and guides for developers building AI applications.`,
+        description: `AI prompts, command-line cheat sheets & developer tips — prompt engineering guides, LLM evaluation tools, and AI tools for developers.`,
         lang: `en`,
         start_url: `/`,
         background_color: `#ffffff`,
