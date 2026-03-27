@@ -32,7 +32,8 @@ const Image = ({ alt, className, imgName }) => (
           fluid={image.node.fluid}
           alt={alt}
           className={`rounded ${className || ''}`}
-          style={imgStyle}
+          style={imgWrapperStyle}
+          imgStyle={imgInnerStyle}
         />
       )
     }}
@@ -50,6 +51,11 @@ Image.defaultProps = {
   imgName: '',
 }
 
-const imgStyle = {
-  maxHeight: `360px`
+const imgWrapperStyle = {
+  height: `200px`,
+}
+
+const imgInnerStyle = {
+  objectFit: `cover`,
+  objectPosition: `center top`,
 }
