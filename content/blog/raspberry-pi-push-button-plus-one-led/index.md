@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["raspberry pi"]
 created: 2013-08-02 22:09:00 -0500
 description:
@@ -7,7 +8,7 @@ image: raspberry-pi-push-button-plus-one-led-original.jpg
 show: true
 tags: ["raspberry pi"]
 title: "Raspberry Pi: Push-button + One(1) LED"
-updated: 2020-04-26 13:16:00 -0500
+updated: 2026-03-26 00:00:00 -0500
 ---
 This was my first attempt at getting a push-button to turn on an LED light with my Raspberry Pi w/Pi Cobbler setup.
 

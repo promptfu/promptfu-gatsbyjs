@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["windows"]
 created: 2019-08-22 14:00:00 -0500
 description: How to make Windows useful someone may ask. The answer? Enable Windows Subsystem for Linux.
@@ -7,7 +8,7 @@ image: bike-chain-forming-1-and-0-large.jpg
 show: true
 tags: ["linux", "windows"]
 title: "How Windows is Useful: Enabling Windows Subsystem for Linux"
-updated: 2019-08-22 14:00:00 -0500
+updated: 2026-03-26 00:00:00 -0500
 ---
 It 'twas the morning of July 18, 2019 as I was working on this site; just polishing up a few tidbits,
 when my 2012 Macbook Pro became quite warm and decided to poweroff, never to return again. About 30 minutes had past

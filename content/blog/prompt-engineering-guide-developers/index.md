@@ -1,4 +1,5 @@
 ---
+author: Matthew Hassel
 categories: ["ai", "prompt engineering", "developer tools"]
 created: 2025-10-29 10:00:00 -0500
 description: Learn prompt engineering from a developer's perspective. Master the art of crafting effective prompts for ChatGPT, Claude, GitHub Copilot, and other AI tools to boost your productivity and code quality.
