@@ -6,7 +6,7 @@ export const query = graphql`
       defaultDescription: description
       defaultImage: image
       defaultTitle: title
-      siteUrl  # Change defaultUrl to siteUrl
+      defaultUrl: siteUrl
       language
       links {
         link
