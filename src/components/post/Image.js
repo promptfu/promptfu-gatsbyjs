@@ -11,7 +11,7 @@ const Image = ({ alt, className, imgName }) => (
         allImageSharp {
           edges {
             node {
-              fluid {
+              fluid(quality: 90) {
                 ...GatsbyImageSharpFluid
                 originalName
               }
@@ -31,7 +31,7 @@ const Image = ({ alt, className, imgName }) => (
         <Img
           fluid={image.node.fluid}
           alt={alt}
-          className={`rounded` + className}
+          className={`rounded ${className || ''}`}
           style={imgStyle}
         />
       )
