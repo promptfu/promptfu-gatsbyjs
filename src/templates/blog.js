@@ -88,11 +88,13 @@ class BlogPost extends React.Component {
               />
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <Image imgName={image} />
-            </Col>
-          </Row>
+          {image && (
+            <Row>
+              <Col>
+                <Image imgName={image} />
+              </Col>
+            </Row>
+          )}
           <Row>
             <Col>
               {tableOfContents === null ||
