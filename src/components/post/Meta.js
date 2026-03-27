@@ -5,20 +5,16 @@ import { Row, Col } from "react-bootstrap"
 import PostTags from "components/post-tags"
 import PostCommentCount from "components/post-comment-count"
 import { FaRegCalendarAlt, FaRegClock, FaTags } from 'react-icons/fa'
-import Edit from "./Edit"
-
 
 const propTypes = {
-  editable: PropTypes.bool,
   pathPrefix: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string)
 }
 
 const defaultProps = {
-  editable: false,
 }
 
-const Meta = ({ created, editable, pathPrefix, slug, tags, timeToRead, title, updated }) => {
+const Meta = ({ created, pathPrefix, slug, tags, timeToRead, title, updated }) => {
   return (
     <Row className="my-2">
       <Col>
@@ -37,11 +33,6 @@ const Meta = ({ created, editable, pathPrefix, slug, tags, timeToRead, title, up
           <span className="mr-3 d-inline-block">
             <PostCommentCount slug={slug} title={title} />
           </span>
-          {editable &&
-            <span className="mr-3 d-inline-block">
-              <Edit slug={slug} />
-            </span>
-          }
           <span className="mr-3 d-inline-block">
             <FaTags />
             &nbsp;

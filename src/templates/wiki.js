@@ -10,7 +10,6 @@ import {
   Categories,
   Comments,
   Content,
-  Edit,
   Header,
   Image,
   Meta,
@@ -73,7 +72,6 @@ class WikiPost extends React.Component {
               <Meta
                 author={author}
                 created={created}
-                editable={true}
                 pathPrefix={sourceInstanceName}
                 slug={slug}
                 tags={tags}
@@ -97,13 +95,6 @@ class WikiPost extends React.Component {
                 <TableOfContents tableOfContents={tableOfContents} />
               </Col>
             )}
-          </Row>
-          <Row className="my-5 text-center">
-            <Col>
-              <span>
-                <Edit slug={slug} />
-              </span>
-            </Col>
           </Row>
           <Row>
             <Col>
