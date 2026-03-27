@@ -640,4 +640,12 @@ Think through this step by step [chain-of-thought]:
 
 ---
 
+## See Also
+
+- [AI CLI Tools Cheat Sheet](/wiki/ai-cli-tools-cheat-sheet) — apply these patterns directly with GitHub Copilot CLI, ShellGPT, and more
+- [Promptfoo Cheat Sheet](/wiki/promptfoo-cheat-sheet) — evaluate your prompt patterns systematically against multiple LLMs
+- [Prompt Engineering Guide for Developers](/blog/prompt-engineering-guide-developers) — deeper exploration of prompt engineering concepts
+
+---
+
 *Last updated: November 21, 2025*

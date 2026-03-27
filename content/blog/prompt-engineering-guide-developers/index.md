@@ -680,6 +680,11 @@ Welcome to PromptFu. Let's master this art together. 🥋
 - [GitHub Copilot Best Practices](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/)
 - [Prompt Engineering for Developers (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
 
+### Related on PromptFu
+
+- [Prompt Engineering Patterns](/wiki/prompt-engineering-patterns) — quick-reference cheat sheet of the patterns covered in this guide
+- [Promptfoo Cheat Sheet](/wiki/promptfoo-cheat-sheet) — test your prompts systematically with the promptfoo evaluation framework
+
 ---
 
 *Share your best prompts in the comments! What techniques have worked for you? Any patterns I missed?*

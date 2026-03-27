@@ -34,3 +34,10 @@ root@raspberrypi:~# i2cdetect -y 1
 
 **NOTE: If the above output is not observed, try `modprobe i2c-dev` to make sure the module is enabled.
 
+---
+
+## See Also
+
+- [Raspberry Pi: Push-button + One LED](/blog/raspberry-pi-push-button-plus-one-led) — GPIO basics with Python and the RPi.GPIO library
+- [Raspberry Pi: Push-button + Two LEDs Toggle](/blog/raspberry-pi-push-button-plus-two-leds-toggle) — extend GPIO projects with event detection and LED toggling
+

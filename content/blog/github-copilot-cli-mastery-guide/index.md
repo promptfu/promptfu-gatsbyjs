@@ -710,6 +710,11 @@ That's the real magic of Copilot CLI: it makes you better while making you faste
 - [GitHub CLI Documentation](https://cli.github.com/manual/)
 - [Copilot CLI GitHub Repository](https://github.com/github/gh-copilot)
 
+### Related on PromptFu
+
+- [AI CLI Tools Cheat Sheet](/wiki/ai-cli-tools-cheat-sheet) — side-by-side comparison of Copilot CLI and other AI terminal tools
+- [Prompt Engineering Patterns](/wiki/prompt-engineering-patterns) — write better natural language queries for Copilot CLI
+
 ---
 
 ## What's Next?

@@ -46,3 +46,12 @@ INCLUDES_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$INCLUDES_DIR" ]]; then INCLUDES_DIR="$PWD"; fi
 . "$INCLUDES_DIR/bash_plugin_helpers"
 ```
+
+---
+
+## See Also
+
+- [grep](/wiki/grep) — search files and output using patterns
+- [sed](/wiki/sed) — stream editor for text transformations
+- [xargs](/wiki/xargs) — build and execute commands from standard input
+- [Vim Tips and Tricks](/wiki/vim-tips-and-tricks) — terminal text editor tips for the command line

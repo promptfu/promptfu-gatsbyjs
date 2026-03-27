@@ -95,3 +95,11 @@ wanted after using :set ignorecase to make searches case insensitive:
 
 _Ref:[ https://www.cs.oberlin.edu/~kuperman/help/vim/home.html ](https://www.cs.oberlin.edu/~kuperman/help/vim/home.html)_
 
+---
+
+## See Also
+
+- [Bash Tips and Tricks](/wiki/bash-tips-and-tricks) — shell scripting patterns and useful Bash snippets
+- [sed](/wiki/sed) — stream editor, pairs well with Vim's `:s` command for batch text changes
+- [grep](/wiki/grep) — search tool often used alongside Vim for finding patterns in files
+
