@@ -34,3 +34,17 @@ footer.bg-gradient-dark {
   letter-spacing: 0.02em;
 }
 
+// ─── Post page title ──────────────────────────────────────────────────────────
+// The h1 rendered by Header.js on wiki and blog post pages.
+// Overrides Bootstrap defaults with a bolder, brand-aware treatment.
+h1.post-page-title {
+  font-weight: 800;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  color: #0d1b2a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  padding: 1.5rem 0 0.75rem;
+  margin-bottom: 0;
+  border-bottom: 3px solid #17718e;
+}
+
