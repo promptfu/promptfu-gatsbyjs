@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `The home of promptfoo — AI prompt testing guides, LLM evaluation tools, prompt engineering tutorials, and command-line fu for developers. Independent community resource for promptfoo, prompt evaluation, and LLM testing.`,
+    description: `PromptFu — AI prompt testing guides, LLM evaluation tools, prompt engineering tutorials, and command-line fu for developers. Independent resource for promptfoo-lery, prompt evaluation, and LLM testing.`,
     image: `tetris.jpg`,
     language: 'en',
     links: [
@@ -27,7 +27,7 @@ module.exports = {
         link: '/wiki',
       }
     ],
-    siteUrl: `https://promptfu.com`,
+    siteUrl: `https://www.promptfu.com`,
     social: {
       facebook: {
         language: 'en_US',
@@ -207,7 +207,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://promptfu.com`,
+        siteUrl: `https://www.promptfu.com`,
       },
     },
     `gatsby-plugin-offline`,
