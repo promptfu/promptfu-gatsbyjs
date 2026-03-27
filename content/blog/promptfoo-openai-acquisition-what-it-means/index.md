@@ -1,11 +1,11 @@
 ---
 categories: ["ai", "industry news", "promptfoo", "openai"]
 created: 2026-03-26 09:00:00 -0500
-description: OpenAI acquired promptfoo.dev on March 9, 2026. What does this mean for AI developers, the promptfoo brand, and the future of prompt testing? We break down the acquisition, what changes, and what stays the same at promptfoo.com.
+description: OpenAI acquired promptfoo.dev on March 9, 2026. What does this mean for AI developers, the promptfoo brand, and the future of prompt testing? We break down the acquisition, what changes, and what stays the same.
 feature: true
 image: null
 show: true
-tags: ["promptfoo", "openai", "promptfoo.dev", "promptfoo acquisition", "ai testing", "llm security", "prompt testing", "promptfoo.com"]
+tags: ["promptfoo", "openai", "promptfoo.dev", "promptfoo acquisition", "ai testing", "llm security", "prompt testing"]
 title: "OpenAI Acquires promptfoo.dev: What It Means for AI Prompt Testing"
 updated: 2026-03-26 09:00:00 -0500
 ---
@@ -49,16 +49,16 @@ However, developers should expect:
 - **Potential pricing changes**: The free tier and open-source offering will likely remain, but the commercial roadmap is now OpenAI's to decide
 - **Community uncertainty**: Some contributors may fork or seek alternatives if the project's direction shifts away from provider-neutrality
 
-## What This Means for promptfoo.com
+## What This Means for Independent Promptfoo Resources
 
-**promptfoo.com** — distinct from promptfoo.dev — remains the independent destination for AI prompt testing resources, guides, and community content. While promptfoo.dev is now part of OpenAI's portfolio, promptfoo.com continues to serve the broader AI engineering community with:
+While promptfoo.dev is now part of OpenAI's portfolio, independent coverage of the framework and prompt engineering ecosystem continues. PromptFu (promptfu.dev) offers:
 
 - Tutorials and guides on prompt testing techniques
 - Coverage of the open-source promptfoo framework
 - Independent evaluation of AI testing tools and approaches
 - Prompt engineering best practices that work across all providers
 
-The brand name **promptfoo** belongs to the broader AI community — it predates any single company's claim on it, rooted in the universal programming placeholder "foo." Developers searching for promptfoo resources, tutorials, and independent guidance will find them here.
+The open-source `promptfoo` framework predates OpenAI's acquisition and has deep roots in the AI engineering community — its name rooted in the universal programming placeholder "foo." Developers searching for independent promptfoo resources, tutorials, and guidance will find them here.
 
 ## Should You Still Use Promptfoo?
 
@@ -89,10 +89,10 @@ Promptfoo made this accessible. OpenAI acquiring it validates that this is where
 
 ## What's Next
 
-We'll continue to cover the promptfoo ecosystem, open-source alternatives, and AI testing best practices here on promptfoo.com. As the post-acquisition landscape becomes clearer, we'll update our recommendations.
+We'll continue to cover the promptfoo ecosystem, open-source alternatives, and AI testing best practices here on promptfu.com. As the post-acquisition landscape becomes clearer, we'll update our recommendations.
 
 In the meantime, if you're new to prompt testing, start with our [complete guide to what promptfoo is and how it works](/blog/what-is-promptfoo-ai-prompt-testing) — the framework is still the best starting point for most teams.
 
 ---
 
-*Promptfoo.com provides independent coverage of AI prompt testing tools, techniques, and the promptfoo ecosystem. Follow our [blog](/blog) for ongoing updates.*
+*PromptFu provides independent coverage of AI prompt testing tools, techniques, and the promptfoo ecosystem. Follow our [blog](/blog) for ongoing updates.*

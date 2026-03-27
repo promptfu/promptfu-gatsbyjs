@@ -1,11 +1,12 @@
 ---
+author: Matthew Hassel
 categories: ["ai", "prompt engineering", "promptfoo", "brand"]
 created: 2026-03-27 08:00:00 -0500
-description: PromptFu vs promptfoo — what's the difference? This guide explains the distinction between the promptfoo open-source framework (now acquired by OpenAI) and PromptFu, the independent community hub at promptfu.com and promptfoo.com.
+description: PromptFu vs promptfoo — what's the difference? This guide explains the distinction between the promptfoo open-source framework (now acquired by OpenAI) and PromptFu, an independent knowledge hub for prompt engineering at promptfu.com.
 feature: true
 image: null
 show: true
-tags: ["promptfoo", "promptfu", "prompt foo", "promptfoo vs promptfu", "ai prompt testing", "llm evaluation", "promptfoo.com", "promptfu.com", "openai acquisition"]
+tags: ["promptfoo", "promptfu", "prompt foo", "promptfoo vs promptfu", "ai prompt testing", "llm evaluation", "openai acquisition"]
 title: "PromptFu vs promptfoo — What Is the Difference?"
 updated: 2026-03-27 08:00:00 -0500
 ---
@@ -19,7 +20,7 @@ If you searched for "promptfoo" and landed here, you might be wondering: is this
 | | **promptfoo** | **PromptFu** |
 |---|---|---|
 | **What it is** | Open-source CLI framework | Independent knowledge hub |
-| **Domain** | promptfoo.dev (acquired by OpenAI) | promptfu.com + promptfoo.com |
+| **Domain** | promptfoo.dev (acquired by OpenAI) | promptfu.dev |
 | **Purpose** | Run automated LLM prompt tests | Tutorials, guides, community resources |
 | **Status** | Now part of OpenAI (March 2026) | Independent, vendor-neutral |
 | **Affiliation** | OpenAI (post-acquisition) | Community-run, no vendor affiliation |
@@ -50,7 +51,7 @@ The open-source repository continues to exist, but active community development 
 
 ## What Is PromptFu (this site)?
 
-**PromptFu** (this site, at `promptfu.com`) is an **independent community publication** covering:
+**PromptFu** (this site, at `promptfu.dev`) is an **independent publication** covering:
 
 - Prompt engineering techniques and best practices
 - LLM evaluation strategies across providers
@@ -58,23 +59,18 @@ The open-source repository continues to exist, but active community development 
 - Cheat sheets and reference guides
 - Framework comparisons (promptfoo, Braintrust, RAGAS, etc.)
 
-We are **not affiliated with OpenAI** or the original promptfoo team. Our goal is to be a vendor-neutral, community-driven resource that remains useful regardless of how the commercial tools evolve.
-
-We also operate **promptfoo.com** as a community landing page — a reference destination for people searching for the promptfoo ecosystem who want independent, non-vendor-controlled resources.
+We are **not affiliated with OpenAI** or the original promptfoo team. Our goal is to be a vendor-neutral resource that remains useful regardless of how the commercial tools evolve.
 
 ---
 
-## Why Do Two Domains Exist?
+## Why Does PromptFu Exist?
 
-When the promptfoo.dev acquisition was announced, many in the community wanted an independent destination — a place not controlled by OpenAI or any single company — where promptfoo knowledge and best practices would live on.
+When the promptfoo.dev acquisition was announced, many in the community wanted an independent destination — a place not controlled by OpenAI or any single company — where prompt engineering knowledge and best practices would live on.
 
 PromptFu fills that role:
 
 - **promptfoo.dev** → The official OpenAI-owned tool and documentation
-- **promptfoo.com** → Community landing page operated by PromptFu
-- **promptfu.com** → The PromptFu knowledge hub (this site)
-
-Think of it like the relationship between Python.org (community) and various commercial Python products — the community destination and the vendor destination serve different needs.
+- **promptfu.dev** → The PromptFu knowledge hub (this site) — independent, vendor-neutral
 
 ---
 
@@ -100,7 +96,6 @@ PromptFu covers the full ecosystem, not just one tool. Our take on prompt evalua
 
 - **promptfoo** (lowercase) = the testing framework, now owned by OpenAI
 - **PromptFu** = this site, an independent resource for the prompt engineering community
-- **promptfoo.com** = the community domain, operated by PromptFu
-- **promptfu.com** = where PromptFu lives
+- **promptfu.dev** = where PromptFu lives
 
 Both are valuable depending on what you need: the tool or the knowledge.
