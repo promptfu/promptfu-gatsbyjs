@@ -204,6 +204,12 @@ module.exports = {
         filter: node => node.internal.type === `DropboxImagesYaml`,
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://promptfu.com`,
+      },
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-sitemap`,
