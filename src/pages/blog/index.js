@@ -84,10 +84,6 @@ class BlogIndexPage extends React.Component {
               <p style={sectionHeadingStyle}>Featured</p>
               <PostCardDeck
                 items={postsFeatured.slice(0, 2)}
-                columnsSM={1}
-                columnsMD={2}
-                columnsLG={2}
-                columnsXL={2}
                 cardClass={"my-3 shadow"}
                 cardBodyClass={"d-flex flex-column"}
                 cardButtonClass={"mt-auto"}
@@ -100,14 +96,9 @@ class BlogIndexPage extends React.Component {
               <p style={{ ...sectionHeadingStyle, marginTop: "1.5rem" }}>More posts</p>
               <PostCardDeck
                 items={[...postsFeatured.slice(2), ...posts]}
-                columnsSM={1}
-                columnsMD={2}
-                columnsLG={3}
-                columnsXL={3}
                 cardClass={"my-3 shadow"}
                 cardBodyClass={"d-flex flex-column"}
                 cardButtonClass={"mt-auto"}
-                fillCols
               />
             </>
           )}
