@@ -191,7 +191,7 @@ class PromptfooLandingPage extends React.Component {
             <Col>
               <h3>About This Site</h3>
               <p>
-                <strong>PromptFu</strong> (promptfu.dev) is an independent publication covering AI prompt engineering,
+                <strong>PromptFu</strong> (promptfu.com) is an independent publication covering AI prompt engineering,
                 LLM evaluation, and developer tools for the AI era. We are not affiliated with OpenAI or the promptfoo
                 project maintainers. Our content is vendor-neutral.
               </p>
