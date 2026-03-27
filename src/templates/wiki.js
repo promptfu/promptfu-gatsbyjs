@@ -56,6 +56,11 @@ class WikiPost extends React.Component {
           pathname={this.props.location.pathname}
           pageType={PageType.ARTICLE}
           title={title}
+          breadcrumbs={[
+            { name: "Home", path: "/" },
+            { name: "Wiki", path: "/wiki" },
+            { name: title, path: this.props.location.pathname },
+          ]}
         />
         <Container className="shadow-lg">
           <Row>

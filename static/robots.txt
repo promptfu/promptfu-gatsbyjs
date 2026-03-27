@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /404
+Disallow: /404.html
+Disallow: /dev-404-page/
+Disallow: /offline-plugin-app-shell-fallback/
 
 Sitemap: https://promptfu.com/sitemap/sitemap-index.xml

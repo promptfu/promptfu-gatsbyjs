@@ -19,7 +19,7 @@ const WebSite = (props) => {
       <script type="application/ld+json">
         {JSON.stringify(
           {
-            "@context": "http://schema.org",
+            "@context": "https://schema.org",
             "@type": "WebSite",
             "name": `${props.name}`,
             "url": `${props.url}`,
