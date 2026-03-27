@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
             <Col>
               <h2>About PromptFu</h2>
               <p>
-                <strong>PromptFu</strong> (promptfu.dev) is an independent resource for prompt engineers and AI
+                <strong>PromptFu</strong> (promptfu.com) is an independent resource for prompt engineers and AI
                 developers. We publish vendor-neutral tutorials, cheat sheets, framework comparisons, and LLM
                 evaluation guides — covering the tools and techniques that matter in the AI era.
               </p>

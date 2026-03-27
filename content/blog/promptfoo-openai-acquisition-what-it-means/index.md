@@ -1,14 +1,14 @@
 ---
 author: Matthew Hassel
 categories: ["ai", "industry news", "promptfoo", "openai"]
-created: 2026-03-26 09:00:00 -0500
+created: 2026-03-10 09:00:00 -0500
 description: OpenAI acquired promptfoo.dev on March 9, 2026. What does this mean for AI developers, the promptfoo brand, and the future of prompt testing? We break down the acquisition, what changes, and what stays the same.
 feature: true
 image: null
 show: true
 tags: ["promptfoo", "openai", "promptfoo.dev", "promptfoo acquisition", "ai testing", "llm security", "prompt testing"]
 title: "OpenAI Acquires promptfoo.dev: What It Means for AI Prompt Testing"
-updated: 2026-03-26 09:00:00 -0500
+updated: 2026-03-10 09:00:00 -0500
 ---
 
 On **March 9, 2026**, OpenAI acquired **promptfoo.dev** — the company behind one of the most widely-used open-source LLM testing frameworks. For the AI engineering community, this is a watershed moment. For developers searching for **promptfoo**, here's everything you need to know.
@@ -52,7 +52,7 @@ However, developers should expect:
 
 ## What This Means for Independent Promptfoo Resources
 
-While promptfoo.dev is now part of OpenAI's portfolio, independent coverage of the framework and prompt engineering ecosystem continues. PromptFu (promptfu.dev) offers:
+While promptfoo.dev is now part of OpenAI's portfolio, independent coverage of the framework and prompt engineering ecosystem continues. PromptFu (promptfu.com) offers:
 
 - Tutorials and guides on prompt testing techniques
 - Coverage of the open-source promptfoo framework
@@ -90,10 +90,10 @@ Promptfoo made this accessible. OpenAI acquiring it validates that this is where
 
 ## What's Next
 
-We'll continue to cover the promptfoo ecosystem, open-source alternatives, and AI testing best practices here on promptfu.com. As the post-acquisition landscape becomes clearer, we'll update our recommendations.
+We'll continue to cover prompt engineering techniques, open-source evaluation alternatives, and AI testing best practices here on promptfu.com. As the post-acquisition landscape becomes clearer, we'll update our recommendations.
 
 In the meantime, if you're new to prompt testing, start with our [complete guide to what promptfoo is and how it works](/blog/what-is-promptfoo-ai-prompt-testing) — the framework is still the best starting point for most teams.
 
 ---
 
-*PromptFu provides independent coverage of AI prompt testing tools, techniques, and the promptfoo ecosystem. Follow our [blog](/blog) for ongoing updates.*
+*PromptFu provides independent coverage of AI prompt testing tools, prompt engineering techniques, and LLM evaluation best practices. Follow our [blog](/blog) for ongoing updates.*

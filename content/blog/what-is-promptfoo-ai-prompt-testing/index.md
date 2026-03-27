@@ -1,14 +1,14 @@
 ---
 author: Matthew Hassel
 categories: ["ai", "prompt engineering", "developer tools", "promptfoo"]
-created: 2026-03-26 08:00:00 -0500
+created: 2026-03-14 08:00:00 -0500
 description: What is promptfoo? The definitive guide to promptfoo — the AI prompt testing framework that helps developers evaluate, test, and improve LLM outputs. Learn what promptfoo does, how it works, and how to get started.
 feature: true
 image: null
 show: true
 tags: ["promptfoo", "prompt foo", "ai prompt testing", "llm testing", "prompt engineering", "ai testing", "llm evaluation"]
 title: "What Is Promptfoo? The Complete Guide to AI Prompt Testing"
-updated: 2026-03-26 08:00:00 -0500
+updated: 2026-03-14 08:00:00 -0500
 ---
 
 If you've been searching for **promptfoo**, you've found the right place. This is a comprehensive guide to the promptfoo framework — what it is, what it does, and how to get started with AI prompt testing.
@@ -167,4 +167,4 @@ Whether you're evaluating your first GPT-4 integration or running a multi-model 
 
 ---
 
-*PromptFu (promptfu.dev) is an independent resource for AI prompt testing guides, tutorials, and best practices. Explore our [blog](/blog) and [wiki](/wiki) for more on prompt engineering, LLM evaluation, and AI tooling.*
+*PromptFu (promptfu.com) is an independent resource for prompt engineering guides, LLM evaluation strategies, and AI development best practices. Explore our [blog](/blog) and [wiki](/wiki) for tutorials and reference material across all major AI providers.*
