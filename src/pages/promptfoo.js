@@ -23,13 +23,13 @@ class PromptfooLandingPage extends React.Component {
       <Layout>
         <SEO
           title="Promptfoo Resources — Independent Guides & Tutorials | PromptFu"
-          description="Looking for promptfoo resources? PromptFu is an independent prompt engineering site with tutorials, cheat sheets, LLM evaluation guides, and vendor-neutral coverage of the promptfoo framework."
+          description="Prompt engineering tutorials, cheat sheets, and LLM evaluation guides. PromptFu covers testing frameworks, evaluation strategies, and developer tools across all AI providers — vendor-neutral."
           keywords={keywords}
           pathname="/promptfoo"
         />
         <JumbotronHeader
           title="Promptfoo Resources"
-          description="An independent resource for AI prompt testing knowledge — tutorials, guides, and everything promptfoo."
+          description="Prompt engineering tutorials, evaluation guides, and developer resources for the AI era."
         />
 
         <Container className="my-5">
@@ -39,8 +39,9 @@ class PromptfooLandingPage extends React.Component {
               <p className="lead">
                 <strong>Promptfoo</strong> (also written <em>prompt foo</em> or <em>prompt-foo</em>) is the
                 open-source framework for AI prompt testing and LLM evaluation.
-                This site — <strong>PromptFu</strong> at <code>promptfu.com</code> — is an independent resource
-                covering promptfoo and the broader prompt engineering ecosystem.
+                This site — <strong>PromptFu</strong> at <code>promptfu.com</code> — is a prompt engineering
+                knowledge hub: vendor-neutral, covering testing frameworks, evaluation strategies, and tools that work
+                across all AI providers.
               </p>
               <p>
                 Following OpenAI's acquisition of <strong>promptfoo.dev</strong> in March 2026, many developers look
