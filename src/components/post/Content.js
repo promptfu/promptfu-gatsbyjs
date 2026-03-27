@@ -3,10 +3,15 @@ import PropTypes from "prop-types"
 
 import "./Content.module.scss"
 
+const wrapTables = (html) =>
+  html
+    .replace(/<table/g, '<div class="table-responsive"><table')
+    .replace(/<\/table>/g, "</table></div>")
+
 const Content = ({ content }) => {
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: content }}/>
+      <div dangerouslySetInnerHTML={{ __html: wrapTables(content) }} />
     </>
   )
 }
