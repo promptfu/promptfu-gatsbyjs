@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `The home of promptfoo — AI prompt testing guides, LLM evaluation tools, and command-line fu for developers`,
+    description: `The home of promptfoo — AI prompt testing guides, LLM evaluation tools, prompt engineering tutorials, and command-line fu for developers. Independent community resource for promptfoo, prompt evaluation, and LLM testing.`,
     image: `tetris.jpg`,
     language: 'en',
     links: [
@@ -185,7 +185,7 @@ module.exports = {
       options: {
         name: `Prompt Fu`,
         short_name: `PromptFu`,
-        description: `A wiki where collaboration and shared knowledge meet. Share knowledge, share and discuss questions, answers, wiki, and projects.`,
+        description: `Independent community hub for promptfoo, AI prompt testing, LLM evaluation, and prompt engineering. Tutorials, cheat sheets, and guides for developers building AI applications.`,
         lang: `en`,
         start_url: `/`,
         background_color: `#ffffff`,
