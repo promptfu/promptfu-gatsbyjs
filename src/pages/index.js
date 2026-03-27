@@ -77,21 +77,19 @@ class IndexPage extends React.Component {
         <Container className="my-5 py-4 border-top">
           <Row>
             <Col>
-              <h2>About Promptfoo</h2>
+              <h2>About PromptFu</h2>
               <p>
-                <strong>Promptfoo</strong> (also written as <em>prompt foo</em> or <em>promptfoo.com</em>) is the leading
-                framework for AI prompt testing and LLM evaluation. As AI applications move into production, systematic
-                prompt testing has become essential — and this site is your independent resource for everything promptfoo.
+                <strong>PromptFu</strong> (promptfu.dev) is an independent resource for prompt engineers and AI
+                developers. We publish vendor-neutral tutorials, cheat sheets, framework comparisons, and LLM
+                evaluation guides — covering the tools and techniques that matter in the AI era.
               </p>
               <p>
-                Following the <strong>OpenAI acquisition of promptfoo.dev</strong> in March 2026, promptfoo.com remains
-                the canonical, independent destination for the promptfoo community: tutorials, cheat sheets, framework
-                comparisons, and prompt engineering guides that work across all LLM providers.
+                Our coverage spans the full prompt engineering ecosystem: testing frameworks, CLI tools, evaluation
+                strategies, and prompt patterns that work across OpenAI, Anthropic, Google, and open-source models.
               </p>
               <ul>
                 <li><Link to="/blog/what-is-promptfoo-ai-prompt-testing">What is Promptfoo? Complete Guide to AI Prompt Testing</Link></li>
                 <li><Link to="/blog/promptfoo-openai-acquisition-what-it-means">OpenAI Acquires Promptfoo.dev — What It Means</Link></li>
-                <li><Link to="/blog/promptfoo-com-brand-history-and-why-it-matters">Promptfoo.com Brand History</Link></li>
                 <li><Link to="/wiki/promptfoo-cheat-sheet">Promptfoo CLI Cheat Sheet</Link></li>
               </ul>
             </Col>

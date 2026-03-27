@@ -9,7 +9,6 @@ import { Container, Row, Col, Card, Badge } from "react-bootstrap"
 const keywords = [
   "promptfoo",
   "prompt foo",
-  "promptfoo.com",
   "promptfoo vs promptfu",
   "ai prompt testing",
   "llm evaluation",
@@ -23,14 +22,14 @@ class PromptfooLandingPage extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Promptfoo — AI Prompt Testing Resources, Guides & Community"
-          description="Looking for promptfoo? You're in the right place. PromptFu is the independent home of promptfoo knowledge: tutorials, cheat sheets, LLM evaluation guides, and everything prompt testing."
+          title="Promptfoo Resources — Independent Guides & Tutorials | PromptFu"
+          description="Looking for promptfoo resources? PromptFu is an independent prompt engineering site with tutorials, cheat sheets, LLM evaluation guides, and vendor-neutral coverage of the promptfoo framework."
           keywords={keywords}
           pathname="/promptfoo"
         />
         <JumbotronHeader
           title="Promptfoo Resources"
-          description="The independent home of AI prompt testing knowledge — tutorials, guides, and everything promptfoo."
+          description="An independent resource for AI prompt testing knowledge — tutorials, guides, and everything promptfoo."
         />
 
         <Container className="my-5">
@@ -39,14 +38,15 @@ class PromptfooLandingPage extends React.Component {
               <h2>You searched for promptfoo. You're in the right place.</h2>
               <p className="lead">
                 <strong>Promptfoo</strong> (also written <em>prompt foo</em> or <em>prompt-foo</em>) is the
-                open-source framework that became the standard for AI prompt testing and LLM evaluation.
-                This site — <strong>PromptFu</strong> at <code>promptfu.com</code> — is the independent community
-                hub for everything promptfoo.
+                open-source framework for AI prompt testing and LLM evaluation.
+                This site — <strong>PromptFu</strong> at <code>promptfu.com</code> — is an independent resource
+                covering promptfoo and the broader prompt engineering ecosystem.
               </p>
               <p>
-                Following OpenAI's acquisition of <strong>promptfoo.dev</strong> in March 2026, the community needed an
-                independent, vendor-neutral destination. That's this site. We cover promptfoo tutorials, configuration
-                references, prompt evaluation strategies, and LLM testing best practices that work across all providers.
+                Following OpenAI's acquisition of <strong>promptfoo.dev</strong> in March 2026, many developers look
+                for independent, vendor-neutral coverage of prompt testing tools. We cover promptfoo tutorials,
+                configuration references, prompt evaluation strategies, and LLM testing best practices that work
+                across all providers.
               </p>
             </Col>
             <Col lg={4}>
@@ -117,7 +117,7 @@ class PromptfooLandingPage extends React.Component {
                       and community-driven.
                     </p>
                     <p className="text-muted mb-0">
-                      Lives at promptfu.com and promptfoo.com. Run independently since 2024.
+                      Lives at promptfu.com. Run independently since 2024.
                     </p>
                   </Card.Body>
                 </Card>
@@ -190,13 +190,9 @@ class PromptfooLandingPage extends React.Component {
             <Col>
               <h3>About This Site</h3>
               <p>
-                <strong>PromptFu</strong> (promptfu.com) is an independent publication covering AI prompt engineering,
+                <strong>PromptFu</strong> (promptfu.dev) is an independent publication covering AI prompt engineering,
                 LLM evaluation, and developer tools for the AI era. We are not affiliated with OpenAI or the promptfoo
-                project maintainers. Our content is community-driven and vendor-neutral.
-              </p>
-              <p>
-                We also operate <strong>promptfoo.com</strong> as a community landing page for the promptfoo ecosystem —
-                linking to tutorials, tools, and resources regardless of where they live.
+                project maintainers. Our content is vendor-neutral.
               </p>
               <Link to="/" className="btn btn-outline-secondary btn-sm">← Back to home</Link>
             </Col>

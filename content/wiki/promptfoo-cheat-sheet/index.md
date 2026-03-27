@@ -5,7 +5,7 @@ created: 2026-03-26 10:30:00 -0500
 feature: true
 image: null
 show: true
-tags: ["promptfoo", "prompt foo", "promptfoo.com", "ai testing", "llm evaluation", "cheat sheet", "cli", "prompt engineering"]
+tags: ["promptfoo", "prompt foo", "ai testing", "llm evaluation", "cheat sheet", "cli", "prompt engineering"]
 title: "Promptfoo Cheat Sheet: CLI Commands, Config, and Assertions Reference"
 updated: 2026-03-26 10:30:00 -0500
 ---

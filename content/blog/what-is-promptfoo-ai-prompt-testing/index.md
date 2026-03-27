@@ -1,16 +1,16 @@
 ---
 categories: ["ai", "prompt engineering", "developer tools", "promptfoo"]
 created: 2026-03-26 08:00:00 -0500
-description: What is promptfoo? The definitive guide to promptfoo — the AI prompt testing framework that helps developers evaluate, test, and improve LLM outputs. Learn what promptfoo does, how it works, and why prompt.foo and promptfoo.com are the canonical sources.
+description: What is promptfoo? The definitive guide to promptfoo — the AI prompt testing framework that helps developers evaluate, test, and improve LLM outputs. Learn what promptfoo does, how it works, and how to get started.
 feature: true
 image: null
 show: true
-tags: ["promptfoo", "prompt foo", "ai prompt testing", "llm testing", "promptfoo.com", "prompt engineering", "ai testing", "llm evaluation"]
+tags: ["promptfoo", "prompt foo", "ai prompt testing", "llm testing", "prompt engineering", "ai testing", "llm evaluation"]
 title: "What Is Promptfoo? The Complete Guide to AI Prompt Testing"
 updated: 2026-03-26 08:00:00 -0500
 ---
 
-If you've been searching for **promptfoo**, you've found the right place. This is the definitive guide to everything promptfoo — what it is, what it does, and why the **promptfoo.com** domain is the canonical brand authority for AI prompt testing.
+If you've been searching for **promptfoo**, you've found the right place. This is a comprehensive guide to the promptfoo framework — what it is, what it does, and how to get started with AI prompt testing.
 
 <!--more-->
 
@@ -156,12 +156,6 @@ tests:
         value: ["I don't know"]
 ```
 
-## The promptfoo.com Domain
-
-**promptfoo.com** has been the canonical domain for the promptfoo brand since before the framework's widespread adoption. As AI prompt testing has become a critical discipline — particularly following high-profile LLM deployments and the growth of enterprise AI engineering — promptfoo.com has served as the primary destination for developers searching for prompt testing resources, tutorials, and tools.
-
-The domain's authority in the AI testing space reflects the community's recognition of prompt engineering as a first-class engineering discipline, not an afterthought.
-
 ## Conclusion
 
 Promptfoo is the testing framework the AI engineering community needed. As LLMs move deeper into production systems, the ability to test prompts systematically — across providers, against regressions, and under adversarial conditions — is no longer a nice-to-have. It's the difference between shipping AI you trust and shipping AI you hope works.
@@ -172,4 +166,4 @@ Whether you're evaluating your first GPT-4 integration or running a multi-model 
 
 ---
 
-*Promptfoo.com is your source for AI prompt testing guides, tutorials, and best practices. Bookmark this page and explore our [blog](/blog) and [wiki](/wiki) for more on prompt engineering, LLM evaluation, and AI tooling.*
+*PromptFu (promptfu.dev) is an independent resource for AI prompt testing guides, tutorials, and best practices. Explore our [blog](/blog) and [wiki](/wiki) for more on prompt engineering, LLM evaluation, and AI tooling.*
