@@ -23,3 +23,11 @@ $ export GREP_COLOR='1;37;41'
 $ grep -r --color='auto' 'gatsby-plugin-twitter' /tmp
 /tmp/package.json:    "gatsby-plugin-twitter": "^2.1.2",
 ```
+
+---
+
+## See Also
+
+- [Bash Tips and Tricks](/wiki/bash-tips-and-tricks) — shell scripting patterns to build on your grep one-liners
+- [sed](/wiki/sed) — stream editor for transforming the lines that grep finds
+- [xargs](/wiki/xargs) — pipe grep results into other commands for batch processing

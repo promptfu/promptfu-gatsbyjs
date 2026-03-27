@@ -436,6 +436,11 @@ Whether you're a terminal veteran or just getting started, AI tools aren't repla
 - [Aider Documentation](https://aider.chat/docs/)
 - [k8sgpt Project](https://k8sgpt.ai/)
 
+### Related on PromptFu
+
+- [AI CLI Tools Cheat Sheet](/wiki/ai-cli-tools-cheat-sheet) — quick-reference commands for all the tools covered in this guide
+- [Prompt Engineering Patterns](/wiki/prompt-engineering-patterns) — proven patterns to get better results from every AI tool
+
 ---
 
 *Want more AI + DevOps content? Follow PromptFu for weekly tutorials on mastering modern development tools. Next up: "Building AI-Powered Automation Scripts" and "Prompt Engineering for DevOps: Best Practices".*

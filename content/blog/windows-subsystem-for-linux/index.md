@@ -108,3 +108,83 @@ would come to me.
 <br />
 
 <small>_Reference: [ Windows Subsystem for Linux Installation Guide for Windows 10 ](https://docs.microsoft.com/en-us/windows/wsl/install-win10)_</small>
+
+---
+
+## 2026 Update: WSL2 and Windows 11
+
+The steps above describe WSL1, which was state-of-the-art when I wrote this in 2019. Since then, Microsoft has released **WSL2** — a significant architectural improvement — and made it the default on Windows 10 (version 2004 and later) and Windows 11.
+
+### What Changed: WSL1 vs WSL2
+
+| Feature | WSL1 | WSL2 |
+|---|---|---|
+| Architecture | Translation layer | Full Linux kernel (VM) |
+| File system performance | Fast for Windows FS | Fast for Linux FS |
+| System call compatibility | Partial | Full |
+| Docker support | Limited | Native |
+| GPU support | No | Yes (with WSL2 GPU) |
+| Startup time | Instant | ~1-2 seconds |
+
+The headline improvement: WSL2 runs a **real Linux kernel** inside a lightweight VM, which means it is fully compatible with software like Docker, systemd, and complex build tools that WSL1 struggled with.
+
+### Installing WSL2 Today (Windows 10/11)
+
+Microsoft has simplified installation dramatically. Open PowerShell as Administrator and run:
+
+```powershell
+wsl --install
+```
+
+This single command installs WSL2, downloads the default distribution (Ubuntu), and enables the Virtual Machine Platform feature. Restart when prompted.
+
+To install a specific distribution:
+
+```powershell
+wsl --install -d Ubuntu-22.04
+```
+
+List available distributions:
+
+```powershell
+wsl --list --online
+```
+
+### Setting WSL2 as Default
+
+If you have an existing WSL1 installation, you can upgrade it:
+
+```powershell
+# Set WSL2 as default version for new installs
+wsl --set-default-version 2
+
+# Upgrade an existing distro to WSL2
+wsl --set-version Ubuntu 2
+```
+
+### Accessing the Linux File System
+
+One important practical note: WSL2's Linux file system lives inside the VM's virtual disk, not natively on your Windows drive. Accessing Windows files from Linux is fast via `/mnt/c/` (e.g., `/mnt/c/Users/mhassel/`), but for best performance — especially with `git`, `npm`, and build tools — **keep your project files on the Linux file system**, not on `/mnt/c/`.
+
+In Windows Explorer, you can access your Linux home directory directly via the network path `\\wsl$\Ubuntu\home\mhassel\`, or just type `\\wsl$` in the Explorer address bar to browse all running WSL distributions.
+
+### Docker on WSL2
+
+One of the most compelling reasons to upgrade to WSL2 is seamless Docker support. Install **Docker Desktop for Windows** and enable the WSL2 backend in Docker Desktop settings. From that point, running Docker commands in your Ubuntu terminal "just works" — no separate Linux VM required.
+
+```shell
+docker run hello-world
+```
+
+### Conclusion
+
+Going from a dead Macbook to a working Linux development environment on a Windows machine was a satisfying journey. What started as a stopgap became a legitimate workflow. With WSL2 in 2026, the experience has improved further: better performance, full Docker support, GPU passthrough for ML workloads, and systemd support (on Ubuntu 22.04+).
+
+If you are a developer on Windows who has not tried WSL2 yet, it is worth an afternoon. The command line tools you know from Linux and macOS work exactly the same way.
+
+---
+
+## See Also
+
+- [Bash Tips and Tricks](/wiki/bash-tips-and-tricks) — shell scripting patterns to use inside your WSL environment
+- [Vim Tips and Tricks](/wiki/vim-tips-and-tricks) — terminal text editor tips relevant to your new Linux environment

@@ -65,3 +65,10 @@ to:
     result: "{{ a_list | product([suffix]) | map('join') | list }}"
 ```
 
+---
+
+## See Also
+
+- [Bash Tips and Tricks](/wiki/bash-tips-and-tricks) — shell scripting patterns useful for Ansible task automation
+- [rsync](/wiki/rsync) — file synchronization tool often used alongside Ansible for deployments
+

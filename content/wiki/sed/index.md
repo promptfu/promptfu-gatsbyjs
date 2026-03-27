@@ -81,3 +81,11 @@ diff test test.backup
 ```
 
 _Referenced commands:_ [`cat`](/wiki/cat), [`diff`](/wiki/diff), [`ed`](/wiki/ed), [`ls`](/wiki/ls)
+
+---
+
+## See Also
+
+- [grep](/wiki/grep) — find lines matching a pattern before piping them to sed
+- [xargs](/wiki/xargs) — apply sed transformations across many files at once
+- [Bash Tips and Tricks](/wiki/bash-tips-and-tricks) — shell scripting patterns that complement sed one-liners

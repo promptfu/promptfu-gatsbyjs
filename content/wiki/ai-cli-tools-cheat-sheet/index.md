@@ -494,4 +494,12 @@ pip install --upgrade shell-gpt
 
 ---
 
+## See Also
+
+- [Prompt Engineering Patterns](/wiki/prompt-engineering-patterns) — get better results from every AI CLI tool with proven prompt patterns
+- [Promptfoo Cheat Sheet](/wiki/promptfoo-cheat-sheet) — test and evaluate your prompts systematically before committing them
+- [AI-Powered Command Line Tools Every Developer Should Know](/blog/ai-powered-command-line-tools-2025) — in-depth guide to the tools listed above
+
+---
+
 *Last updated: November 21, 2025*
