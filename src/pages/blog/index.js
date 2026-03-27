@@ -87,7 +87,6 @@ class BlogIndexPage extends React.Component {
                 cardClass={"my-3 shadow"}
                 cardBodyClass={"d-flex flex-column"}
                 cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}
-                horizontal
               />
             </>
           )}

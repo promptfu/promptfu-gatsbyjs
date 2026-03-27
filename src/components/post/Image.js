@@ -51,5 +51,5 @@ Image.defaultProps = {
 }
 
 const imgStyle = {
-  maxHeight: `360px`,
+  maxHeight: `500px`,
 }
