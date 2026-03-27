@@ -1,8 +1,8 @@
 import { default as SEO } from "./seo"
 
-import Facebook from "./Twitter"
+import Facebook from "./Facebook"
 import { PageType } from "./PageType"
-import Twitter from "./Facebook"
+import Twitter from "./Twitter"
 
 export {
   Facebook,

@@ -26,20 +26,13 @@ const SiteNavigationElement = (props) => {
         {JSON.stringify(
           {
             "@context": "https://schema.org",
-            "@graph": 
-            [
-              props.links.map((link, index) => {
-                return (
-                  {
-                    "@context": "https://schema.org",
-                    "@type":"SiteNavigationElement",
-                    "@id":`${props.url}#header-nav`,
-                    "name": `${link.name}`,
-                    "url": `${props.url}${link.link}`
-                  }
-                )
-              })
-            ]
+            "@graph": props.links.map((link) => ({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              "@id": `${props.url}#header-nav`,
+              "name": `${link.name}`,
+              "url": `${props.url}${link.link}`
+            }))
           }
         )}
       </script>

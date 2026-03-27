@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
 
-const Image = ({ className, imgName }) => (
+const Image = ({ alt, className, imgName }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,6 +30,7 @@ const Image = ({ className, imgName }) => (
       return (
         <Img
           fluid={image.node.fluid}
+          alt={alt}
           className={`rounded` + className}
           style={imgStyle}
         />
@@ -40,10 +41,12 @@ const Image = ({ className, imgName }) => (
 export default Image
 
 Image.propTypes = {
+  alt: PropTypes.string,
   imgName: PropTypes.string,
 }
 
 Image.defaultProps = {
+  alt: '',
   imgName: '',
 }
 
