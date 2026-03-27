@@ -5,18 +5,36 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import { PageType } from "components/seo"
 import Pagination from "components/pagination"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"
 
-const sectionHeadingStyle = {
-  fontSize: "0.7rem",
+const pageIntroStyle = {
+  borderLeft: "4px solid #17718e",
+  paddingLeft: "1rem",
+  marginBottom: "2rem",
+  marginTop: "1.5rem",
+}
+
+const dividerStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "0.75rem",
+  margin: "1.5rem 0 1rem",
+}
+
+const dividerLabelStyle = {
+  fontSize: "0.65rem",
   fontWeight: 700,
   textTransform: "uppercase",
-  letterSpacing: "0.08em",
+  letterSpacing: "0.12em",
   color: "#17718e",
-  borderBottom: "2px solid #17718e",
-  paddingBottom: "0.4rem",
-  marginBottom: "1rem",
+  whiteSpace: "nowrap",
+}
+
+const dividerLineStyle = {
+  flexGrow: 1,
+  height: "1px",
+  background: "linear-gradient(to right, #17718e44, transparent)",
 }
 
 
@@ -70,35 +88,50 @@ class BlogIndexPage extends React.Component {
           title="Blog"
         />
         <Container>
-          <Row className="mt-4 mb-2">
-            <Col>
-              <h1 style={{ color: "#0d1b2a", fontWeight: 700 }}>Blog</h1>
-              <p className="text-muted" style={{ fontSize: "0.95rem" }}>
-                Articles, guides, and deep dives on AI testing and prompt engineering.
-              </p>
-            </Col>
-          </Row>
+          <div style={pageIntroStyle}>
+            <h1 style={{ color: "#0d1b2a", fontWeight: 700, marginBottom: "0.25rem" }}>Blog</h1>
+            <p className="text-muted mb-0" style={{ fontSize: "0.95rem" }}>
+              Articles, guides, and deep dives on AI testing and prompt engineering.
+            </p>
+          </div>
 
           {postsFeatured.length > 0 && (
             <>
-              <p style={sectionHeadingStyle}>Featured</p>
+              <div style={dividerStyle}>
+                <span style={dividerLabelStyle}>Featured</span>
+                <span style={dividerLineStyle} />
+              </div>
               <PostCardDeck
                 items={postsFeatured}
                 columnsSM={1}
-                columnsMD={1}
+                columnsMD={2}
                 columnsLG={2}
                 columnsXL={2}
-                horizontal={true}
                 cardClass={"my-3 shadow"}
+                cardBodyClass={"d-flex flex-column"}
                 cardButtonClass={"mt-auto"}
+                fillCols
               />
             </>
           )}
 
           {posts.length > 0 && (
             <>
-              <p style={{ ...sectionHeadingStyle, marginTop: "1.5rem" }}>All posts</p>
-              <PostCardDeck items={posts} columnsSM={1} columnsMD={1} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />
+              <div style={{ ...dividerStyle, marginTop: "2rem" }}>
+                <span style={dividerLabelStyle}>All posts</span>
+                <span style={dividerLineStyle} />
+              </div>
+              <PostCardDeck
+                items={posts}
+                columnsSM={1}
+                columnsMD={2}
+                columnsLG={3}
+                columnsXL={3}
+                cardClass={"my-3 shadow"}
+                cardBodyClass={"d-flex flex-column"}
+                cardButtonClass={"mt-auto"}
+                fillCols
+              />
             </>
           )}
 
