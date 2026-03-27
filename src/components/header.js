@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 import { Container, Nav, Navbar } from "react-bootstrap"
+import { FiSearch } from "react-icons/fi"
 import Img from "gatsby-image"
 
 const Header = ({ links, title }) => {
@@ -52,6 +53,11 @@ const Header = ({ links, title }) => {
                   {link.name}
                 </Nav.Link>
               ))}
+            </Nav>
+            <Nav>
+              <Nav.Link as={Link} to="/search" title="Search" aria-label="Search">
+                <FiSearch size={18} />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
