@@ -12,7 +12,7 @@ const JumbotronHeader = ({ description, title }) => {
         childImageSharp {
           fluid(
             maxWidth: 4160
-            duotone: { highlight: "#30596e", shadow: "#292b2c", opacity: 50 }
+            duotone: { highlight: "#17718e", shadow: "#0d1b2a", opacity: 60 }
             toFormat: PNG
           ) {
             ...GatsbyImageSharpFluid

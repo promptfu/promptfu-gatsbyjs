@@ -2,3 +2,35 @@
 @import "./prismjs.scss";
 @import "./grow.scss";
 @import "./fade.scss";
+
+// ─── Brand polish ────────────────────────────────────────────────────────────
+
+// Navbar: teal left-border accent on active nav link
+#header-nav .nav-link.active {
+  border-bottom: 2px solid #17718e;
+  color: #fff !important;
+}
+
+// Navbar brand name: slightly bolder weight for legibility on dark bg
+#header-nav .navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+// Hero jumbotron: ensure heading has good weight and spacing
+.jumbotron h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+// Footer: subtle top border in brand teal to anchor the page
+footer.bg-gradient-dark {
+  border-top: 3px solid #17718e;
+}
+
+// Prompt-foo / Prompt-fu comparison cards: reinforce header color legibility
+.card-header.bg-primary,
+.card-header.bg-success {
+  letter-spacing: 0.02em;
+}
+
