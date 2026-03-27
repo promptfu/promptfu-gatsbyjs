@@ -5,7 +5,7 @@ export function GetSchemaOrgAuthor(author) {
   const data = useStaticQuery(siteInformation)
 
   const {
-    siteMetadata: { defaultImage, defaultTitle, defaultUrl },
+    siteMetadata: { defaultImage, defaultTitle, siteUrl },
   } = data.site
 
   if (author) {
@@ -18,10 +18,10 @@ export function GetSchemaOrgAuthor(author) {
     return {
       "@type": "Organization",
       name: `${defaultTitle}`,
-      url: `${defaultUrl}`,
+      url: `${siteUrl}`,
       logo: {
         "@type": "ImageObject",
-        url: `${defaultUrl}${GetImageUrl(defaultImage)}`,
+        url: `${siteUrl}${GetImageUrl(defaultImage)}`,
       },
     }
   }

@@ -214,7 +214,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [`/*/categories`, `/*/categories/*`, `/*/tags`, `/*/tags/*`],
+        excludes: [],
         query: `
           {
             site {

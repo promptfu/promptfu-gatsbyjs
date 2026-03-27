@@ -36,7 +36,7 @@ const BlogPost = (props) => {
         <script type="application/ld+json">
           {JSON.stringify(
             {
-              "@context":"http://schema.org",
+              "@context": "https://schema.org",
               "@type": "BlogPosting",
               "name": `${props.name}`,
               "description": `${props.description}`,

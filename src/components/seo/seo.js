@@ -10,6 +10,7 @@ import {
   Article,
   Blog,
   BlogPost,
+  BreadcrumbList,
   SiteNavigationElement,
   WebPage,
   WebSite
@@ -23,7 +24,7 @@ const propTypes = {
         defaultDescription: PropTypes.string.isRequired,
         defaultImage: PropTypes.string.isRequired,
         defaultTitle: PropTypes.string.isRequired,
-        defaultUrl: PropTypes.string.isRequired,
+        siteUrl: PropTypes.string.isRequired,
         language: PropTypes.string.isRequired,
         social: PropTypes.shape({
           facebook: PropTypes.shape({
@@ -50,6 +51,12 @@ const propTypes = {
   pageType: PropTypes.string,
   title: PropTypes.string,
   article: PropTypes.bool,
+  breadcrumbs: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+    })
+  ),
 }
 
 const defaultProps = {
@@ -62,6 +69,7 @@ const defaultProps = {
   pageType: PageType.WEBPAGE,
   title: ``,
   article: false,
+  breadcrumbs: [],
 }
 
 const SEO = (props) => {
@@ -71,7 +79,7 @@ const SEO = (props) => {
       defaultDescription,
       defaultImage,
       defaultTitle,
-      defaultUrl,
+      siteUrl,
       language,
       links,
       social,
@@ -82,7 +90,7 @@ const SEO = (props) => {
     description: props.description || defaultDescription,
     image: props.image || defaultImage, // node image or props.image or (lastly) defaultImage 
     title: props.title ? `${props.title} | ${defaultTitle}` : `${defaultTitle} | ${defaultDescription}`,
-    url: `${defaultUrl}${props.pathname || ''}`
+    url: `${siteUrl}${props.pathname || ''}`
   }
 
   const renderSchemaOrgSwitch = (pageType) => {
@@ -95,12 +103,12 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+            image={`${siteUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${siteUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
-            orgUrl={defaultUrl}
+            orgUrl={siteUrl}
             url={seo.url}
           />
         )
@@ -112,12 +120,12 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+            image={`${siteUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${siteUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
-            orgUrl={defaultUrl}
+            orgUrl={siteUrl}
             url={seo.url}
           />
         )
@@ -129,12 +137,12 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+            image={`${siteUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${siteUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
-            orgUrl={defaultUrl}
+            orgUrl={siteUrl}
             url={seo.url}
           />
         )
@@ -146,12 +154,12 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+            image={`${siteUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${siteUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
-            orgUrl={defaultUrl}
+            orgUrl={siteUrl}
             url={seo.url}
           />          
         )
@@ -165,14 +173,14 @@ const SEO = (props) => {
         <title>{seo.title}</title>
         <html lang={language} />
         <meta name="description" content={seo.description} />
-        <meta name="image" content={`${defaultUrl}${GetImageUrl(seo.image)}`} />
+        <meta name="image" content={`${siteUrl}${GetImageUrl(seo.image)}`} />
         {props.keywords.length > 0 ? <meta name="keywords" content={props.keywords.join(`, `)} /> : ''}
         <link rel="canonical" href={seo.url} />
       </Helmet>
 
       <Facebook
         description={seo.description}
-        image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+        image={`${siteUrl}${GetImageUrl(seo.image)}`}
         locale={social.facebook.language}
         site={social.facebook.name}
         title={seo.title}
@@ -182,13 +190,22 @@ const SEO = (props) => {
 
       <Twitter
         description={seo.description}
-        image={`${defaultUrl}${GetImageUrl(seo.image)}`}
+        image={`${siteUrl}${GetImageUrl(seo.image)}`}
         site={social.twitter.site}
         title={seo.title}
+        username={props.author || ``}
       />
 
-      <WebSite name={defaultTitle} url={defaultUrl} />
-      <SiteNavigationElement links={links} url={defaultUrl} />
+      <WebSite name={defaultTitle} url={siteUrl} />
+      <SiteNavigationElement links={links} url={siteUrl} />
+      {props.breadcrumbs && props.breadcrumbs.length > 0 && (
+        <BreadcrumbList
+          items={props.breadcrumbs.map(crumb => ({
+            name: crumb.name,
+            url: `${siteUrl}${crumb.path}`,
+          }))}
+        />
+      )}
       {renderSchemaOrgSwitch(props.pageType)}
     </>
   )
