@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     author: `Matthew Hassel`,
-    description: `Tech tips and command line fu found within this dojo`,
+    description: `The home of promptfoo — AI prompt testing guides, LLM evaluation tools, and command-line fu for developers`,
     image: `tetris.jpg`,
     language: 'en',
     links: [

@@ -74,6 +74,29 @@ class IndexPage extends React.Component {
             </Col>
           </Row>
         </Container>
+        <Container className="my-5 py-4 border-top">
+          <Row>
+            <Col>
+              <h2>About Promptfoo</h2>
+              <p>
+                <strong>Promptfoo</strong> (also written as <em>prompt foo</em> or <em>promptfoo.com</em>) is the leading
+                framework for AI prompt testing and LLM evaluation. As AI applications move into production, systematic
+                prompt testing has become essential — and this site is your independent resource for everything promptfoo.
+              </p>
+              <p>
+                Following the <strong>OpenAI acquisition of promptfoo.dev</strong> in March 2026, promptfoo.com remains
+                the canonical, independent destination for the promptfoo community: tutorials, cheat sheets, framework
+                comparisons, and prompt engineering guides that work across all LLM providers.
+              </p>
+              <ul>
+                <li><Link to="/blog/what-is-promptfoo-ai-prompt-testing">What is Promptfoo? Complete Guide to AI Prompt Testing</Link></li>
+                <li><Link to="/blog/promptfoo-openai-acquisition-what-it-means">OpenAI Acquires Promptfoo.dev — What It Means</Link></li>
+                <li><Link to="/blog/promptfoo-com-brand-history-and-why-it-matters">Promptfoo.com Brand History</Link></li>
+                <li><Link to="/wiki/promptfoo-cheat-sheet">Promptfoo CLI Cheat Sheet</Link></li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
       </Layout>
     )
   }
