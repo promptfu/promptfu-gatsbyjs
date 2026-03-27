@@ -5,8 +5,19 @@ import Layout from "components/layout"
 import SEO from "components/seo"
 import { PageType } from "components/seo"
 import Pagination from "components/pagination"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import PostCardDeck from "components/post-card-deck"
+
+const sectionHeadingStyle = {
+  fontSize: "0.7rem",
+  fontWeight: 700,
+  textTransform: "uppercase",
+  letterSpacing: "0.08em",
+  color: "#17718e",
+  borderBottom: "2px solid #17718e",
+  paddingBottom: "0.4rem",
+  marginBottom: "1rem",
+}
 
 
 class BlogIndexPage extends React.Component {
@@ -59,11 +70,37 @@ class BlogIndexPage extends React.Component {
           title="Blog"
         />
         <Container>
-          {/* Display featured blog posts as cards that can take the full width of the container */}
-          <PostCardDeck items={postsFeatured} cardClass={"my-3 shadow"} cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}  />
+          <Row className="mt-4 mb-2">
+            <Col>
+              <h1 style={{ color: "#0d1b2a", fontWeight: 700 }}>Blog</h1>
+              <p className="text-muted" style={{ fontSize: "0.95rem" }}>
+                Articles, guides, and deep dives on AI testing and prompt engineering.
+              </p>
+            </Col>
+          </Row>
 
-          {/* Display blog posts as cards in a CardDeck */}
-          <PostCardDeck items={posts} columnsSM={1} columnsMD={1} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />
+          {postsFeatured.length > 0 && (
+            <>
+              <p style={sectionHeadingStyle}>Featured</p>
+              <PostCardDeck
+                items={postsFeatured}
+                columnsSM={1}
+                columnsMD={1}
+                columnsLG={2}
+                columnsXL={2}
+                horizontal={true}
+                cardClass={"my-3 shadow"}
+                cardButtonClass={"mt-auto"}
+              />
+            </>
+          )}
+
+          {posts.length > 0 && (
+            <>
+              <p style={{ ...sectionHeadingStyle, marginTop: "1.5rem" }}>All posts</p>
+              <PostCardDeck items={posts} columnsSM={1} columnsMD={1} columnsLG={2} columnsXL={2} cardClass={"my-3 shadow"} cardBodyClass={"d-flex flex-column"} cardButtonClass={"mt-auto"} fillCols />
+            </>
+          )}
 
           {(this.state.isLoading) ? <div /> : <Pagination items={this.state.paginateItems} onChangePage={this.onChangePage} /> }
         </Container>
