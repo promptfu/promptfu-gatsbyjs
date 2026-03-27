@@ -86,7 +86,8 @@ class BlogIndexPage extends React.Component {
                 items={postsFeatured.slice(0, 2)}
                 cardClass={"my-3 shadow"}
                 cardBodyClass={"d-flex flex-column"}
-                cardButtonClass={"mt-auto"}
+                cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}
+                horizontal
               />
             </>
           )}
@@ -98,7 +99,8 @@ class BlogIndexPage extends React.Component {
                 items={[...postsFeatured.slice(2), ...posts]}
                 cardClass={"my-3 shadow"}
                 cardBodyClass={"d-flex flex-column"}
-                cardButtonClass={"mt-auto"}
+                cardButtonClass={"mt-auto btn-xs-block btn-sm-block btn-md-block"}
+                horizontal
               />
             </>
           )}
