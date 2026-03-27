@@ -36,7 +36,6 @@ const propTypes = {
             site: PropTypes.string.isRequired,
           }),
         }),
-        url: PropTypes.string.isRequired,
       }),
     }),
   }),
@@ -76,7 +75,6 @@ const SEO = (props) => {
       language,
       links,
       social,
-      url,
     },
   } = props.data.site
 
@@ -84,7 +82,7 @@ const SEO = (props) => {
     description: props.description || defaultDescription,
     image: props.image || defaultImage, // node image or props.image or (lastly) defaultImage 
     title: props.title ? `${props.title} | ${defaultTitle}` : `${defaultTitle} | ${defaultDescription}`,
-    url: `${url}${props.pathname || ''}`
+    url: `${defaultUrl}${props.pathname || ''}`
   }
 
   const renderSchemaOrgSwitch = (pageType) => {
@@ -97,10 +95,10 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${GetImageUrl(seo.image)}`}
+            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -114,10 +112,10 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${GetImageUrl(seo.image)}`}
+            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -131,10 +129,10 @@ const SEO = (props) => {
             datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${GetImageUrl(seo.image)}`}
+            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -148,10 +146,10 @@ const SEO = (props) => {
             // datePublished={props.datePublished}
             description={seo.description}
             headline={seo.title}
-            image={`${url}${GetImageUrl(seo.image)}`}
+            image={`${defaultUrl}${GetImageUrl(seo.image)}`}
             mainEntityOfPage={seo.url}
             name={seo.title}
-            orgImageUrl={`${url}${GetImageUrl(defaultImage)}`}
+            orgImageUrl={`${defaultUrl}${GetImageUrl(defaultImage)}`}
             orgName={defaultTitle}
             orgUrl={defaultUrl}
             url={seo.url}
@@ -167,13 +165,14 @@ const SEO = (props) => {
         <title>{seo.title}</title>
         <html lang={language} />
         <meta name="description" content={seo.description} />
-        <meta name="image" content={`${url}${GetImageUrl(seo.image)}`} />
+        <meta name="image" content={`${defaultUrl}${GetImageUrl(seo.image)}`} />
         {props.keywords.length > 0 ? <meta name="keywords" content={props.keywords.join(`, `)} /> : ''}
+        <link rel="canonical" href={seo.url} />
       </Helmet>
 
       <Facebook
         description={seo.description}
-        image={`${url}${GetImageUrl(seo.image)}`}
+        image={`${defaultUrl}${GetImageUrl(seo.image)}`}
         locale={social.facebook.language}
         site={social.facebook.name}
         title={seo.title}
@@ -183,7 +182,7 @@ const SEO = (props) => {
 
       <Twitter
         description={seo.description}
-        image={`${url}${GetImageUrl(seo.image)}`}
+        image={`${defaultUrl}${GetImageUrl(seo.image)}`}
         site={social.twitter.site}
         title={seo.title}
       />
