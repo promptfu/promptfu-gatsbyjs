@@ -88,9 +88,10 @@ class IndexPage extends React.Component {
                 strategies, and prompt patterns that work across OpenAI, Anthropic, Google, and open-source models.
               </p>
               <ul>
-                <li><Link to="/blog/what-is-promptfoo-ai-prompt-testing">What is Promptfoo? Complete Guide to AI Prompt Testing</Link></li>
-                <li><Link to="/blog/promptfoo-openai-acquisition-what-it-means">OpenAI Acquires Promptfoo.dev — What It Means</Link></li>
-                <li><Link to="/wiki/promptfoo-cheat-sheet">Promptfoo CLI Cheat Sheet</Link></li>
+                <li><Link to="/blog/ai-powered-command-line-tools-2025">AI-Powered CLI Tools Every Developer Should Know</Link></li>
+                <li><Link to="/blog/prompt-engineering-guide-developers">Prompt Engineering Guide for Developers</Link></li>
+                <li><Link to="/wiki/prompt-engineering-patterns">Prompt Engineering Patterns Reference</Link></li>
+                <li><Link to="/wiki/ai-cli-tools-cheat-sheet">AI CLI Tools Cheat Sheet</Link></li>
               </ul>
             </Col>
           </Row>

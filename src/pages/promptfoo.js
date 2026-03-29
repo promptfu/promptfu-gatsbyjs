@@ -35,19 +35,17 @@ class PromptfooLandingPage extends React.Component {
         <Container className="my-5">
           <Row>
             <Col lg={8}>
-              <h2>You searched for promptfoo. You're in the right place.</h2>
+              <h2>Looking for promptfoo? Here's what you need to know.</h2>
               <p className="lead">
-                <strong>Promptfoo</strong> (also written <em>prompt foo</em> or <em>prompt-foo</em>) is the
-                open-source framework for AI prompt testing and LLM evaluation.
-                This site — <strong>PromptFu</strong> at <code>promptfu.com</code> — is a prompt engineering
-                knowledge hub: vendor-neutral, covering testing frameworks, evaluation strategies, and tools that work
-                across all AI providers.
+                <strong>Promptfoo</strong> (also written <em>prompt foo</em> or <em>prompt-foo</em>) is an
+                open-source framework for AI prompt testing and LLM evaluation — not affiliated with this site.
+                <strong>PromptFu</strong> (promptfu.dev) is an independent prompt engineering resource covering
+                testing frameworks, evaluation strategies, CLI tools, and best practices across all AI providers.
               </p>
               <p>
-                Following OpenAI's acquisition of <strong>promptfoo.dev</strong> in March 2026, many developers look
-                for independent, vendor-neutral coverage of prompt testing tools. We cover promptfoo tutorials,
-                configuration references, prompt evaluation strategies, and LLM testing best practices that work
-                across all providers.
+                Following OpenAI's acquisition of <strong>promptfoo.dev</strong> in March 2026, we've published
+                several articles covering the framework and what the acquisition means for the prompt engineering
+                community. Browse our coverage below, alongside our broader library of prompt engineering resources.
               </p>
             </Col>
             <Col lg={4}>
