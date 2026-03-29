@@ -50,16 +50,11 @@ However, developers should expect:
 - **Potential pricing changes**: The free tier and open-source offering will likely remain, but the commercial roadmap is now OpenAI's to decide
 - **Community uncertainty**: Some contributors may fork or seek alternatives if the project's direction shifts away from provider-neutrality
 
-## What This Means for Independent Promptfoo Resources
+## What This Means for the Prompt Engineering Ecosystem
 
-While promptfoo.dev is now part of OpenAI's portfolio, independent coverage of the framework and prompt engineering ecosystem continues. PromptFu (promptfu.com) offers:
+The acquisition raises a question the broader AI tooling community has been grappling with: who controls the evaluation layer? When the dominant prompt testing framework is owned by one of the major LLM providers, vendor-neutral evaluation becomes harder to take for granted.
 
-- Tutorials and guides on prompt testing techniques
-- Coverage of the open-source promptfoo framework
-- Independent evaluation of AI testing tools and approaches
-- Prompt engineering best practices that work across all providers
-
-The open-source `promptfoo` framework predates OpenAI's acquisition and has deep roots in the AI engineering community — its name rooted in the universal programming placeholder "foo." Developers searching for independent promptfoo resources, tutorials, and guidance will find them here.
+For developers who want evaluation tooling that remains independent of any single provider, the ecosystem still offers alternatives: PromptFlow, Braintrust, LangSmith, and the open-source promptfoo core itself. The open-source `promptfoo` npm package remains Apache 2.0 licensed — the acquisition doesn't immediately change what you can run locally.
 
 ## Should You Still Use Promptfoo?
 

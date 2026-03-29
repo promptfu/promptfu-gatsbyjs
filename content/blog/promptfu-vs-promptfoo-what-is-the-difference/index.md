@@ -2,7 +2,7 @@
 author: Matthew Hassel
 categories: ["ai", "prompt engineering", "promptfoo", "brand"]
 created: 2026-03-25 08:00:00 -0500
-description: PromptFu vs promptfoo — what's the difference? This guide explains the distinction between the promptfoo open-source framework (now acquired by OpenAI) and PromptFu, an independent knowledge hub for prompt engineering at promptfu.com.
+description: PromptFu vs promptfoo — what's the difference? This guide explains the distinction between the promptfoo open-source framework (now acquired by OpenAI) and PromptFu, an independent prompt engineering resource at promptfu.dev.
 feature: true
 image: null
 show: true
@@ -65,12 +65,9 @@ We are **not affiliated with OpenAI** or the original promptfoo team. Our goal i
 
 ## Why Does PromptFu Exist?
 
-When the promptfoo.dev acquisition was announced, many in the community wanted an independent destination — a place not controlled by OpenAI or any single company — where prompt engineering knowledge and best practices would live on.
+PromptFu exists to be a vendor-neutral reference for prompt engineers and AI developers. As the AI tooling landscape consolidates around large providers, having an independent source for prompt engineering techniques, CLI references, framework comparisons, and LLM evaluation guides becomes increasingly valuable.
 
-PromptFu fills that role:
-
-- **promptfoo.dev** → The official OpenAI-owned tool and documentation
-- **promptfu.com** → The PromptFu knowledge hub (this site) — independent, vendor-neutral
+We cover the full ecosystem — not any single tool or provider.
 
 ---
 
