@@ -3,7 +3,7 @@ author: Matthew Hassel
 categories: ["ai", "prompt engineering", "developer tools", "promptfoo"]
 created: 2026-03-14 08:00:00 -0500
 description: What is promptfoo? The definitive guide to promptfoo — the AI prompt testing framework that helps developers evaluate, test, and improve LLM outputs. Learn what promptfoo does, how it works, and how to get started.
-feature: true
+feature: false
 image: null
 show: true
 tags: ["promptfoo", "prompt foo", "ai prompt testing", "llm testing", "prompt engineering", "ai testing", "llm evaluation"]

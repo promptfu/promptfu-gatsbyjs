@@ -3,6 +3,7 @@ author: Matthew Hassel
 categories: ["AI"]
 created: 2026-03-19 10:00:00 -0500
 description: Practical Claude API tips for developers. Learn how to use system prompts, streaming, tool use, caching, and model selection to build reliable AI-powered applications with Anthropic's Claude.
+feature: true
 show: true
 tags: ["claude", "anthropic", "API", "AI", "developer-tools", "llm"]
 title: "Claude API Tips for Developers"

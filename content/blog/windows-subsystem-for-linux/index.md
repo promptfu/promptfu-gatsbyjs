@@ -3,7 +3,7 @@ author: Matthew Hassel
 categories: ["windows"]
 created: 2019-08-22 14:00:00 -0500
 description: How to make Windows useful someone may ask. The answer? Enable Windows Subsystem for Linux.
-feature: true
+feature: false
 image: bike-chain-forming-1-and-0-large.jpg
 show: true
 tags: ["linux", "windows"]
