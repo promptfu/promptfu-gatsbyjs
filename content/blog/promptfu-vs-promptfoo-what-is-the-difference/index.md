@@ -3,7 +3,7 @@ author: Matthew Hassel
 categories: ["ai", "prompt engineering", "promptfoo", "brand"]
 created: 2026-03-25 08:00:00 -0500
 description: PromptFu vs promptfoo — what's the difference? This guide explains the distinction between the promptfoo open-source framework (now acquired by OpenAI) and PromptFu, an independent prompt engineering resource at promptfu.dev.
-feature: true
+feature: false
 image: null
 show: true
 tags: ["promptfoo", "promptfu", "prompt foo", "promptfoo vs promptfu", "ai prompt testing", "llm evaluation", "openai acquisition"]

@@ -3,6 +3,7 @@ author: Matthew Hassel
 categories: ["AI", "Developer Tools"]
 created: 2026-04-10 22:58:00 -0500
 description: A developer's honest breakdown of what separates Claude Code from every other AI coding tool. Covers the agentic loop, CLAUDE.md memory, GitHub Actions CI integration, MCP extensibility, and computer use.
+feature: true
 show: true
 tags: ["claude", "claude-code", "anthropic", "AI", "developer-tools", "agentic-ai", "cli"]
 title: "Claude Code's Top 5 Features: What Actually Makes It Different"
